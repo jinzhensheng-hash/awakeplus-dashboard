@@ -529,11 +529,27 @@
       text-align: center;
     }
 
+    .mini-bar.active {
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .mini-bar.active i {
+      background: #0f5138;
+      box-shadow: 0 0 0 2px #d9eee5;
+    }
+
     .mini-bar i {
       display: block;
       min-height: 8px;
       border-radius: 5px 5px 2px 2px;
       background: var(--green);
+    }
+
+    .mini-bar small {
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1;
     }
 
     .metric-strip {
@@ -9037,12 +9053,12 @@ window.awakeplusData = {
       document.querySelector("#kpiRepeats").textContent = `${repeatedInRows}${K.count}`;
       document.querySelector("#kpiTheme").textContent = topTheme;
       document.querySelector("#kpiThemeNote").textContent = topThemeCount ? `${topThemeCount}\uac74 \uc5f0\uacb0` : "-";
-      const scopeLabel = dateSelect.value === "all" ? K.all : dateSelect.value;
+      const scopePrefix = dateSelect.value === "all" ? `\uae30\uc900: ${summary.range_start || dates[0]} ~ ${summary.range_end || dates[dates.length - 1]}` : `\uae30\uc900\uc77c: ${dateSelect.value}`;
       document.querySelector("#pulseHeadline").textContent = rows.length
-        ? `${scopeLabel} \u00b7 \uc8fc\ub3c4 \ud14c\ub9c8 ${topTheme} \u00b7 \ud45c\uc2dc ${rows.length}${K.count} \u00b7 \ud3c9\uade0 ${pct(avg)}`
+        ? `${scopePrefix} \u00b7 ${rows.length}${K.count} \ud45c\uc2dc \u00b7 \ud3c9\uade0 ${pct(avg)}`
         : K.noData;
       document.querySelector("#pulseSubline").textContent = themeCounts.length
-        ? `\ud14c\ub9c8 \ube44\uc911: ${themeCounts.slice(0, 3).map(([theme, count]) => `${theme} ${count}${K.count}`).join(" \u00b7 ")}`
+        ? `\uc8fc\ub3c4 \ud14c\ub9c8: ${topTheme} \u00b7 \ud14c\ub9c8 \ube44\uc911: ${themeCounts.slice(0, 3).map(([theme, count]) => `${theme} ${count}${K.count}`).join(" \u00b7 ")}`
         : "\ud544\ud130 \uc870\uac74\uc744 \uc870\uc815\ud558\uba74 \ub2e4\uc2dc \uc9d1\uacc4\ub429\ub2c8\ub2e4.";
       renderDayCompare(rows, avg, limitCount, signalCount);
     }
@@ -9082,7 +9098,8 @@ window.awakeplusData = {
         return { date, avg, count: rows.length };
       }).filter((day) => day.count);
       const max = Math.max(...daily.map((day) => Math.abs(day.avg)), 1);
-      document.querySelector("#dailySparkline").innerHTML = daily.map((day) => `<button class="mini-bar" type="button" data-date="${day.date}" title="${day.date} \ud3c9\uade0 ${pct(day.avg)} \u00b7 ${day.count}${K.count}"><i style="height:${Math.max(10, (Math.abs(day.avg) / max) * 50)}px"></i><span>${day.date.slice(5)}</span></button>`).join("");
+      const selectedDate = dateSelect.value;
+      document.querySelector("#dailySparkline").innerHTML = daily.map((day) => `<button class="mini-bar ${selectedDate === day.date ? "active" : ""}" type="button" data-date="${day.date}" title="${day.date} \ud3c9\uade0 ${pct(day.avg)} \u00b7 ${day.count}${K.count}"><i style="height:${Math.max(10, (Math.abs(day.avg) / max) * 50)}px"></i><span>${day.date.slice(5)}</span><small>${day.count}${K.count}</small></button>`).join("");
       document.querySelectorAll("#dailySparkline .mini-bar").forEach((button) => button.addEventListener("click", () => { dateSelect.value = button.dataset.date; renderAll(); }));
     }
 
