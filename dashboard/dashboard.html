@@ -810,6 +810,70 @@
       border: 1px solid var(--line);
       border-radius: 7px;
       background: #fff;
+      cursor: zoom-in;
+    }
+
+    .chart-expand-hint {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .chart-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: rgba(12, 23, 18, 0.72);
+    }
+
+    .chart-modal.open {
+      display: grid;
+    }
+
+    .chart-modal-card {
+      display: grid;
+      gap: 10px;
+      width: min(1120px, 96vw);
+      max-height: 92vh;
+      padding: 14px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .chart-modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .chart-modal-title {
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .chart-modal-close {
+      min-width: 36px;
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .chart-modal img {
+      width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
     }
 
     .chart-tools {
@@ -1290,6 +1354,16 @@
       AWAKEPLUS 원문: awakeplus/raw · 누적 데이터: awakeplus/data · 대시보드 기준: 2026-06-01 ~ 2026-07-16
     </footer>
   </main>
+
+  <div class="chart-modal" id="chartModal" aria-hidden="true">
+    <div class="chart-modal-card" role="dialog" aria-modal="true" aria-labelledby="chartModalTitle">
+      <div class="chart-modal-head">
+        <div class="chart-modal-title" id="chartModalTitle">차트 확대</div>
+        <button class="chart-modal-close" type="button" id="chartModalClose" aria-label="차트 닫기">×</button>
+      </div>
+      <img id="chartModalImage" alt="확대 차트" />
+    </div>
+  </div>
 
   <script>
 window.awakeplusData = {
@@ -9162,6 +9236,27 @@ window.awakeplusData = {
       return `https://www.tradingview.com/search/?query=${encodeURIComponent(name)}`;
     }
 
+    function openChartModal(src, title) {
+      const modal = document.querySelector("#chartModal");
+      const image = document.querySelector("#chartModalImage");
+      const heading = document.querySelector("#chartModalTitle");
+      if (!modal || !image || !heading) return;
+      image.src = src;
+      image.alt = title;
+      heading.textContent = title;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeChartModal() {
+      const modal = document.querySelector("#chartModal");
+      const image = document.querySelector("#chartModalImage");
+      if (!modal || !image) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      image.removeAttribute("src");
+    }
+
     function renderNaverChart(name, code = "", period = "day") {
       const resolved = code || resolveStockCode(name);
       const box = document.querySelector("#companyChartBox");
@@ -9192,7 +9287,8 @@ window.awakeplusData = {
           <input id="manualStockCode" inputmode="numeric" maxlength="6" value="${escapeHtml(resolved)}" />
           <button type="button" id="manualChartButton">\ucf54\ub4dc \uc801\uc6a9</button>
         </div>
-        <img src="${naverChartImage(resolved, period)}" alt="${escapeHtml(name)} \ub124\uc774\ubc84 \ucc28\ud2b8" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'muted', textContent:'\ub124\uc774\ubc84 \ucc28\ud2b8 \uc774\ubbf8\uc9c0\ub97c \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4. \ub124\uc774\ubc84 \uc0c1\uc138 \ub9c1\ud06c\ub97c \uc5f4\uc5b4 \ud655\uc778\ud574 \uc8fc\uc138\uc694.'}))" />
+        <img class="naver-chart-image" src="${naverChartImage(resolved, period)}" alt="${escapeHtml(name)} \ub124\uc774\ubc84 \ucc28\ud2b8" data-chart-title="${escapeHtml(name)} \u00b7 ${escapeHtml(resolved)} \u00b7 ${chartPeriodLabel(period)}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'muted', textContent:'\ub124\uc774\ubc84 \ucc28\ud2b8 \uc774\ubbf8\uc9c0\ub97c \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4. \ub124\uc774\ubc84 \uc0c1\uc138 \ub9c1\ud06c\ub97c \uc5f4\uc5b4 \ud655\uc778\ud574 \uc8fc\uc138\uc694.'}))" />
+        <div class="chart-expand-hint">\ucc28\ud2b8\ub97c \ud074\ub9ad\ud558\uba74 \ud06c\uac8c \ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4.</div>
         <div class="chart-links">
           <button type="button" data-chart-period="day">\uc77c\ubd09</button>
           <button type="button" data-chart-period="week">\uc8fc\ubd09</button>
@@ -9207,6 +9303,10 @@ window.awakeplusData = {
       });
       document.querySelectorAll("[data-chart-period]").forEach((button) => {
         button.addEventListener("click", () => renderNaverChart(name, resolved, button.dataset.chartPeriod || "day"));
+      });
+      box.querySelector(".naver-chart-image")?.addEventListener("click", (event) => {
+        const img = event.currentTarget;
+        openChartModal(img.src, img.dataset.chartTitle || img.alt || "\ucc28\ud2b8 \ud655\ub300");
       });
     }
 
@@ -9268,6 +9368,13 @@ window.awakeplusData = {
         selectedCompany = companySearch.value.trim();
         renderCompany();
       }
+    });
+    document.querySelector("#chartModalClose")?.addEventListener("click", closeChartModal);
+    document.querySelector("#chartModal")?.addEventListener("click", (event) => {
+      if (event.target.id === "chartModal") closeChartModal();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeChartModal();
     });
     renderAll();
   </script>
