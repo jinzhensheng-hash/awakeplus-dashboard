@@ -1,0 +1,42 @@
+name: AWAKEPLUS Daily Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 16:20 KST on Korean market weekdays.
+    - cron: "20 7 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect AWAKEPLUS data
+        env:
+          AWAKEPLUS_COOKIE: ${{ secrets.AWAKEPLUS_COOKIE }}
+        run: |
+          python scripts/awakeplus_collect.py --root . --latest-count 3 --board-pages 3
+
+      - name: Commit updated dashboard
+        run: |
+          git config user.name "awakeplus-bot"
+          git config user.email "awakeplus-bot@users.noreply.github.com"
+          git add awakeplus/data data dashboard index.html
+          if git diff --cached --quiet; then
+            echo "No dashboard changes."
+          else
+            git commit -m "Update AWAKEPLUS dashboard"
+            git push
+          fi
