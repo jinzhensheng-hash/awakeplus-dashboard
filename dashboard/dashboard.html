@@ -6,17 +6,22 @@
   <title>주요 상승 종목 시계열 대시보드</title>
   <style>
     :root {
-      --bg: #f5f6f4;
-      --panel: #ffffff;
-      --panel-soft: #eef3f1;
-      --ink: #17211d;
-      --muted: #64716b;
-      --line: #d9e0dc;
-      --green: #0f8f65;
-      --red: #c83f35;
-      --blue: #3366a8;
-      --amber: #a76b18;
-      --shadow: 0 14px 38px rgba(35, 45, 40, 0.09);
+      --bg: #08090b;
+      --panel: #101114;
+      --panel-soft: #17191d;
+      --panel-lift: #1d2026;
+      --ink: #f6f8fb;
+      --muted: #9aa3af;
+      --muted-2: #6f7784;
+      --line: #262a31;
+      --line-strong: #383f49;
+      --green: #3ecf8e;
+      --green-deep: #24b47e;
+      --red: #ff6b6b;
+      --blue: #5e6ad2;
+      --coin-blue: #0052ff;
+      --amber: #f4b000;
+      --shadow: 0 18px 54px rgba(0, 0, 0, 0.32);
     }
 
     * { box-sizing: border-box; }
@@ -25,7 +30,7 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: "Segoe UI", "Malgun Gothic", Arial, sans-serif;
+      font-family: Inter, "Segoe UI", "Malgun Gothic", Arial, sans-serif;
       line-height: 1.5;
     }
 
@@ -1072,6 +1077,288 @@
       color: var(--muted);
       font-size: 12px;
       min-width: 0;
+    }
+
+    /* Linear + Coinbase + Supabase dashboard skin */
+    body {
+      background: #08090b;
+    }
+
+    .page {
+      max-width: 1520px;
+      padding: 30px;
+    }
+
+    .topbar {
+      padding: 18px 0 18px;
+      border-bottom-color: var(--line);
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 850;
+    }
+
+    h1,
+    .topbar h1,
+    h2,
+    .pulse-title,
+    .company-title {
+      color: var(--ink);
+      font-weight: 650;
+      letter-spacing: 0;
+    }
+
+    .topbar h1 {
+      font-size: clamp(27px, 3vw, 38px);
+    }
+
+    .subtitle,
+    .topbar .subtitle {
+      color: var(--muted);
+    }
+
+    .status-pill,
+    .date-box,
+    .section,
+    .kpi,
+    .pulse-panel,
+    .signal-panel,
+    .main-board,
+    .compact-section,
+    .company-panel {
+      border-color: var(--line);
+      background: linear-gradient(180deg, rgba(23, 25, 29, 0.96), rgba(16, 17, 20, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .status-pill,
+    .date-box {
+      background: linear-gradient(180deg, #17191d, #101114);
+    }
+
+    .command-strip {
+      border-color: var(--line);
+      background: rgba(12, 14, 17, 0.9);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .control,
+    .command-strip .control,
+    .chart-tools input {
+      border-color: var(--line);
+      background: #0c0e11;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .control:focus,
+    .chart-tools input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px rgba(94, 106, 210, 0.28);
+    }
+
+    .section-head,
+    th {
+      border-color: var(--line);
+      background: #17191d;
+      color: var(--ink);
+    }
+
+    th {
+      color: #cbd5e1;
+      font-weight: 700;
+    }
+
+    td,
+    th {
+      border-bottom-color: var(--line);
+    }
+
+    tbody tr:hover {
+      background: rgba(62, 207, 142, 0.035);
+    }
+
+    .metric-strip,
+    .metric,
+    .compare-item,
+    .dense-item,
+    .item,
+    .company-card,
+    .company-metric,
+    .timeline-list li,
+    .point-list li,
+    .result-list li,
+    .chart-box,
+    .score-item {
+      border-color: var(--line);
+      background: #121419;
+      color: var(--ink);
+    }
+
+    .metric-strip {
+      background: #111318;
+    }
+
+    .metric {
+      border-right-color: var(--line);
+    }
+
+    .metric .value,
+    .kpi .value,
+    .company-metric strong,
+    .score-badge,
+    .pct {
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      letter-spacing: 0;
+    }
+
+    .pct {
+      color: var(--green);
+    }
+
+    .cap,
+    .muted,
+    .hint,
+    .metric .label,
+    .metric .note,
+    .kpi .label,
+    .kpi .note,
+    .company-subtitle,
+    .dense-item p,
+    .item p,
+    .reason-cell p,
+    .summary,
+    .timeline-list li,
+    .point-list li,
+    .result-list li {
+      color: var(--muted);
+    }
+
+    .chip {
+      border-color: var(--line);
+      background: #181b21;
+      color: #d7dde6;
+      border-radius: 6px;
+    }
+
+    .chip.repeat,
+    .score-badge {
+      border-color: rgba(62, 207, 142, 0.35);
+      background: rgba(62, 207, 142, 0.12);
+      color: var(--green);
+    }
+
+    .chip.report {
+      border-color: rgba(244, 176, 0, 0.34);
+      background: rgba(244, 176, 0, 0.12);
+      color: var(--amber);
+    }
+
+    .theme-icon,
+    .rank-num {
+      background: #20232b;
+      color: #dce3ed;
+    }
+
+    .bar,
+    .theme-bar {
+      background: #232731;
+    }
+
+    .bar span,
+    .theme-bar span,
+    .mini-bar i {
+      background: linear-gradient(180deg, var(--green), var(--green-deep));
+    }
+
+    .theme-bar span {
+      background: linear-gradient(90deg, var(--blue), var(--coin-blue));
+    }
+
+    .mini-bar {
+      border-radius: 6px;
+      color: var(--muted-2);
+    }
+
+    .mini-bar.active {
+      color: var(--ink);
+    }
+
+    .mini-bar.active i {
+      background: var(--green);
+      box-shadow: 0 0 0 2px rgba(62, 207, 142, 0.22);
+    }
+
+    .chart-links a,
+    .chart-links button,
+    .stock-link-btn,
+    .chart-modal-close {
+      border-color: var(--line);
+      background: #181b21;
+      color: var(--ink);
+      border-radius: 6px;
+    }
+
+    .chart-links button:hover,
+    .chart-links a:hover,
+    .stock-link-btn:hover,
+    .chart-modal-close:hover {
+      border-color: rgba(62, 207, 142, 0.45);
+      background: rgba(62, 207, 142, 0.11);
+    }
+
+    #showNaverChart,
+    #expandNaverChart,
+    #manualChartButton {
+      background: var(--green);
+      border-color: var(--green);
+      color: #07110d;
+      font-weight: 800;
+    }
+
+    .stock-link-btn {
+      background: transparent;
+      border: 0;
+      color: var(--ink);
+    }
+
+    .chart-box img,
+    .chart-modal img {
+      border-color: var(--line);
+      background: #0b0d10;
+    }
+
+    .chart-modal {
+      background: rgba(2, 3, 5, 0.78);
+      backdrop-filter: blur(8px);
+    }
+
+    .chart-modal-card {
+      border: 1px solid var(--line-strong);
+      background: #101114;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+    }
+
+    .awake-head {
+      border-color: var(--line-strong);
+      background: linear-gradient(135deg, #101114, #17191d 58%, #112018);
+      color: var(--ink);
+    }
+
+    .awake-head p,
+    .awake-stat span {
+      color: var(--muted);
+    }
+
+    .awake-stat {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted-2);
     }
 
     @media (max-width: 1180px) {
