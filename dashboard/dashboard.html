@@ -1505,6 +1505,417 @@
       background: rgba(255, 255, 255, 0.045);
     }
 
+    /* Bloomberg Terminal Lite + Linear order */
+    body {
+      background:
+        radial-gradient(circle at 18% 0%, rgba(62, 207, 142, 0.06), transparent 28%),
+        linear-gradient(180deg, #050608 0%, #08090b 44%, #050608 100%);
+    }
+
+    .page {
+      max-width: 1560px;
+      padding: 18px 22px 26px;
+    }
+
+    .topbar {
+      padding: 12px 0 10px;
+    }
+
+    .topbar-row {
+      grid-template-columns: minmax(0, 1fr) minmax(210px, 260px);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .topbar h1 {
+      margin-bottom: 5px;
+      font-size: clamp(25px, 2.4vw, 34px);
+      font-weight: 720;
+    }
+
+    .eyebrow {
+      margin-bottom: 4px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      max-width: 920px;
+      font-size: 13px;
+    }
+
+    .status-pill {
+      display: grid;
+      align-content: center;
+      min-width: 0;
+      padding: 12px;
+      border-radius: 6px;
+      text-align: right;
+    }
+
+    .status-pill strong {
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 18px;
+    }
+
+    .market-strip {
+      margin-top: 10px;
+      padding: 9px;
+      border-radius: 6px;
+      background: #090b0e;
+      box-shadow: none;
+    }
+
+    .market-strip-head {
+      margin-bottom: 2px;
+      font-size: 11px;
+    }
+
+    .market-ticker {
+      grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+      gap: 5px;
+    }
+
+    .market-pill {
+      padding: 7px 8px;
+      border-radius: 4px;
+      background: #0f1115;
+    }
+
+    .market-pill span,
+    .market-pill em,
+    .hint,
+    .metric .note,
+    .metric .label {
+      font-size: 11px;
+    }
+
+    .market-pill strong {
+      font-size: 14px;
+    }
+
+    .command-strip {
+      position: sticky;
+      top: 0;
+      z-index: 8;
+      grid-template-columns: 150px 170px minmax(260px, 1fr) 160px;
+      gap: 7px;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(12px);
+    }
+
+    .control,
+    .command-strip .control,
+    .chart-tools input {
+      height: 34px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .awake-board,
+    .cockpit,
+    .focus-grid,
+    .analysis-dock {
+      margin-bottom: 10px;
+    }
+
+    .awake-board {
+      gap: 8px;
+    }
+
+    .awake-head,
+    .pulse-panel,
+    .signal-panel,
+    .main-board,
+    .compact-section,
+    .company-panel,
+    .briefing-card {
+      border-radius: 6px;
+      box-shadow: none;
+    }
+
+    .awake-head {
+      padding: 10px 12px;
+      background: linear-gradient(90deg, #101114, #10161a 48%, #08170f);
+    }
+
+    .awake-head h2,
+    .section-head h2,
+    .company-card h3 {
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .awake-head p {
+      font-size: 11px;
+    }
+
+    .awake-stat {
+      min-width: 72px;
+      padding: 6px 8px;
+      border-radius: 5px;
+    }
+
+    .awake-stat strong {
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 16px;
+    }
+
+    .briefing-panel {
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
+      gap: 8px;
+    }
+
+    .briefing-card {
+      padding: 10px;
+    }
+
+    .briefing-card p,
+    .briefing-list li {
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .awake-grid {
+      gap: 8px;
+    }
+
+    .cockpit {
+      grid-template-columns: minmax(0, 1.9fr) minmax(300px, 0.72fr);
+      gap: 8px;
+    }
+
+    .pulse-panel {
+      padding: 10px;
+    }
+
+    .pulse-head {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .pulse-title {
+      font-size: 18px;
+    }
+
+    .pulse-note {
+      font-size: 12px;
+    }
+
+    .metric-strip {
+      grid-template-columns: repeat(6, minmax(82px, 1fr));
+      border-radius: 5px;
+    }
+
+    .metric {
+      min-height: 58px;
+      padding: 8px 9px;
+    }
+
+    .metric .value {
+      margin-top: 4px;
+      font-size: 18px;
+    }
+
+    .compare-strip {
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .compare-item {
+      padding: 7px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .focus-grid {
+      grid-template-columns: minmax(0, 1.85fr) minmax(330px, 0.7fr);
+      gap: 8px;
+    }
+
+    .section-head,
+    .signal-panel .section-head,
+    .compact-section .section-head,
+    .main-board .section-head {
+      padding: 8px 10px;
+    }
+
+    .dense-list {
+      gap: 5px;
+      padding: 7px;
+    }
+
+    .dense-item,
+    .score-item,
+    .rank-compact,
+    .theme-compact {
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .dense-item,
+    .score-item {
+      padding: 6px 7px;
+    }
+
+    .dense-item strong,
+    .score-item strong {
+      font-size: 12px;
+    }
+
+    .score-badge {
+      height: 22px;
+      min-width: 32px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .table-wrap {
+      max-height: 680px;
+      overflow: auto;
+    }
+
+    .tape-table {
+      min-width: 940px;
+    }
+
+    th,
+    td {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+
+    th {
+      top: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stock-cell span,
+    .reason-cell p {
+      font-size: 11px;
+    }
+
+    .stock-link-btn {
+      font-size: 13px;
+    }
+
+    .pct {
+      color: #39ff9f;
+      text-shadow: 0 0 16px rgba(62, 207, 142, 0.18);
+    }
+
+    .chip {
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+
+    .theme-icon {
+      min-width: 30px;
+      height: 18px;
+      border-radius: 4px;
+      font-size: 9px;
+    }
+
+    .tape-tabs {
+      border-radius: 5px;
+      background: #050608;
+    }
+
+    .tape-tabs button {
+      min-height: 24px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .company-panel.analysis-dock {
+      padding: 10px;
+      background: #0b0d10;
+    }
+
+    .company-head {
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+      gap: 10px;
+    }
+
+    .company-title {
+      font-size: 18px;
+    }
+
+    .company-subtitle {
+      font-size: 12px;
+    }
+
+    .company-grid {
+      grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1fr) minmax(320px, 0.9fr);
+      gap: 8px;
+    }
+
+    .company-card {
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .company-metrics {
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .company-metric {
+      padding: 7px;
+      border-radius: 4px;
+    }
+
+    .company-metric strong {
+      font-size: 14px;
+    }
+
+    .chart-links {
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .chart-links a,
+    .chart-links button {
+      min-height: 27px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .chart-box {
+      gap: 6px;
+      margin-top: 8px;
+      padding: 7px;
+      border-radius: 5px;
+    }
+
+    .chart-box img {
+      min-height: 210px;
+      border-radius: 4px;
+    }
+
+    .timeline-list,
+    .point-list,
+    .result-list {
+      gap: 5px;
+    }
+
+    .timeline-list li,
+    .point-list li,
+    .result-list li {
+      padding: 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted-2);
@@ -1607,43 +2018,6 @@
         <option value="name_asc">종목명 가나다순</option>
       </select>
     </section>
-
-    <section class="company-panel" aria-label="업체 현황">
-      <div class="company-head">
-        <div>
-          <h2 class="company-title" id="companyTitle">업체 현황</h2>
-          <p class="company-subtitle" id="companySubtitle">종목 테이프에서 종목명을 클릭하거나 아래 입력창에서 종목을 선택하면 최근 실적, 투자포인트, 관측 히스토리를 모아 봅니다.</p>
-        </div>
-        <div>
-          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
-          <datalist id="companyList"></datalist>
-        </div>
-      </div>
-      <div class="company-grid">
-        <article class="company-card">
-          <h3>핵심 요약</h3>
-          <div class="chips compact" id="companyThemes"></div>
-          <div class="company-metrics">
-            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
-            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
-            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
-            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
-          </div>
-          <div class="chart-links" id="companyLinks"></div>
-          <div class="chart-box" id="companyChartBox"></div>
-        </article>
-        <article class="company-card">
-          <h3>투자포인트</h3>
-          <ul class="point-list" id="companyPoints"></ul>
-        </article>
-        <article class="company-card">
-          <h3>최근 실적과 관측 히스토리</h3>
-          <ul class="result-list" id="companyResults"></ul>
-          <ul class="timeline-list" id="companyTimeline"></ul>
-        </article>
-      </div>
-    </section>
-
 
     <section class="awake-board" aria-label="AWAKEPLUS 시장 레이더">
       <div class="awake-head">
@@ -1809,6 +2183,43 @@
           <div class="dense-list" id="reportList"></div>
         </section>
       </aside>
+    </section>
+
+    <section class="company-panel analysis-dock" aria-label="업체 현황">
+      <div class="company-head">
+        <div>
+          <p class="eyebrow">Company Drilldown</p>
+          <h2 class="company-title" id="companyTitle">업체 현황</h2>
+          <p class="company-subtitle" id="companySubtitle">종목 테이프에서 종목명을 클릭하거나 아래 입력창에서 종목을 선택하면 최근 실적, 투자포인트, 관측 히스토리를 모아 봅니다.</p>
+        </div>
+        <div>
+          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
+          <datalist id="companyList"></datalist>
+        </div>
+      </div>
+      <div class="company-grid">
+        <article class="company-card">
+          <h3>핵심 요약 · 차트</h3>
+          <div class="chips compact" id="companyThemes"></div>
+          <div class="company-metrics">
+            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
+            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
+            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
+            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
+          </div>
+          <div class="chart-links" id="companyLinks"></div>
+          <div class="chart-box" id="companyChartBox"></div>
+        </article>
+        <article class="company-card">
+          <h3>투자포인트</h3>
+          <ul class="point-list" id="companyPoints"></ul>
+        </article>
+        <article class="company-card">
+          <h3>최근 실적과 관측 히스토리</h3>
+          <ul class="result-list" id="companyResults"></ul>
+          <ul class="timeline-list" id="companyTimeline"></ul>
+        </article>
+      </div>
     </section>
 
     <footer>
