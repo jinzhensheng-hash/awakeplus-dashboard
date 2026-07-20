@@ -9886,7 +9886,8 @@ window.awakeplusData = {
     }
 
     const marketRows = mergeRows(rawRows);
-    const dates = [...new Set(marketRows.map((row) => row.date))].sort();
+    const datesAsc = [...new Set(marketRows.map((row) => row.date))].sort();
+    const dates = [...datesAsc].reverse();
     let selectedCompany = "";
     let tapeMode = "all";
 
@@ -9948,7 +9949,7 @@ window.awakeplusData = {
 
     function renderHeader(rows) {
       const date = dateSelect.value;
-      const label = date === "all" ? `${summary.range_start || dates[0]} ~ ${summary.range_end || dates[dates.length - 1]}` : date;
+      const label = date === "all" ? `${summary.range_start || datesAsc[0]} ~ ${summary.range_end || datesAsc[datesAsc.length - 1]}` : date;
       const topCount = rows.filter((row) => row.sourceKinds.includes("TOP15")).length;
       const highCount = rows.filter((row) => row.sourceKinds.includes(K.high)).length;
       document.querySelector("#currentDateLabel").textContent = label;
@@ -9971,7 +9972,7 @@ window.awakeplusData = {
       document.querySelector("#kpiRepeats").textContent = `${repeatedInRows}${K.count}`;
       document.querySelector("#kpiTheme").textContent = topTheme;
       document.querySelector("#kpiThemeNote").textContent = topThemeCount ? `${topThemeCount}\uac74 \uc5f0\uacb0` : "-";
-      const scopePrefix = dateSelect.value === "all" ? `\uae30\uc900: ${summary.range_start || dates[0]} ~ ${summary.range_end || dates[dates.length - 1]}` : `\uae30\uc900\uc77c: ${dateSelect.value}`;
+      const scopePrefix = dateSelect.value === "all" ? `\uae30\uc900: ${summary.range_start || datesAsc[0]} ~ ${summary.range_end || datesAsc[datesAsc.length - 1]}` : `\uae30\uc900\uc77c: ${dateSelect.value}`;
       document.querySelector("#pulseHeadline").textContent = rows.length
         ? `${scopePrefix} \u00b7 ${rows.length}${K.count} \ud45c\uc2dc \u00b7 \ud3c9\uade0 ${pct(avg)}`
         : K.noData;
@@ -9990,7 +9991,7 @@ window.awakeplusData = {
         box.innerHTML = `<div class="compare-item"><b>${K.all}</b><span class="muted">${dates.length}${K.days} \u00b7 ${uniqueNames}${K.count} \uace0\uc720 \uc885\ubaa9 \u00b7 ${K.high} \uc6d0\ucc9c ${summary.newhigh_raw_count || 0}\uac74</span></div><div class="compare-item"><b>\uc555\ucd95 \ud6c4\ubcf4</b><span class="muted">${leaders || "-"}</span></div><div class="compare-item"><b>\ud45c\uc2dc \uc2e0\ud638</b><span class="muted">${signalCount}/${rows.length}\uac74</span></div>`;
         return;
       }
-      const prevDate = dates[dates.indexOf(date) - 1];
+      const prevDate = dates[dates.indexOf(date) + 1];
       const prevRows = prevDate ? marketRows.filter((row) => row.date === prevDate) : [];
       const prevAvg = prevRows.length ? prevRows.reduce((sum, row) => sum + row.change, 0) / prevRows.length : 0;
       const prevNames = new Set(prevRows.map((row) => row.name));
