@@ -64,6 +64,72 @@
       font-size: 15px;
     }
 
+    .market-strip {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .market-strip-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .market-strip-title {
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .market-ticker {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      gap: 8px;
+    }
+
+    .market-pill {
+      min-width: 0;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #111318;
+    }
+
+    .market-pill span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .market-pill strong {
+      display: block;
+      margin-top: 2px;
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .market-pill em {
+      display: block;
+      margin-top: 2px;
+      font-style: normal;
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 12px;
+      color: var(--green);
+    }
+
+    .market-pill.down em {
+      color: var(--red);
+    }
+
     .date-box {
       min-width: 250px;
       padding: 14px 16px;
@@ -1079,6 +1145,49 @@
       gap: 10px;
     }
 
+    .briefing-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 10px;
+    }
+
+    .briefing-card {
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #121419;
+      box-shadow: var(--shadow);
+    }
+
+    .briefing-card h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+
+    .briefing-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .briefing-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .briefing-list li {
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #171a20;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .score-item {
       display: grid;
       grid-template-columns: minmax(84px, 0.7fr) 42px minmax(0, 1fr);
@@ -1342,6 +1451,12 @@
       background: rgba(62, 207, 142, 0.11);
     }
 
+    .chart-links button.active {
+      border-color: rgba(62, 207, 142, 0.55);
+      background: rgba(62, 207, 142, 0.16);
+      color: var(--green);
+    }
+
     #showNaverChart,
     #expandNaverChart,
     #manualChartButton {
@@ -1399,6 +1514,7 @@
       .cockpit,
       .focus-grid,
       .awake-grid,
+      .briefing-panel,
       .company-grid {
         grid-template-columns: 1fr;
       }
@@ -1463,6 +1579,13 @@
           <p class="eyebrow">Daily Movers Board</p>
           <h1>주요 상승 종목 시계열 대시보드</h1>
         <p class="subtitle">AWAKEPLUS TOP15와 신고가 데이터를 누적해 시장의 강한 테마, 반복 등장 종목, 주도주 후보를 한 화면에서 봅니다.</p>
+          <section class="market-strip" aria-label="글로벌 증시와 환율">
+            <div class="market-strip-head">
+              <span class="market-strip-title">글로벌 증시 · 환율</span>
+              <span id="marketSnapshotTime">업데이트 대기</span>
+            </div>
+            <div class="market-ticker" id="marketTicker"></div>
+          </section>
         </div>
         <div class="status-pill">
           <strong id="currentDateLabel">-</strong>
@@ -1542,6 +1665,16 @@
             <strong id="awakeScoreCount">-</strong>
           </div>
         </div>
+      </div>
+      <div class="briefing-panel" aria-label="TOP15와 신고가 시장 브리핑">
+        <article class="briefing-card">
+          <h3>시장 브리핑</h3>
+          <p id="marketBriefingText">선택한 기간의 TOP15와 신고가를 교차 분석하고 있습니다.</p>
+        </article>
+        <article class="briefing-card">
+          <h3>관찰 포인트</h3>
+          <ul class="briefing-list" id="marketBriefingPoints"></ul>
+        </article>
       </div>
       <div class="awake-grid">
         <section class="compact-section">
@@ -1679,7 +1812,7 @@
     </section>
 
     <footer>
-      AWAKEPLUS 원문: awakeplus/raw · 누적 데이터: awakeplus/data · 대시보드 기준: 2026-06-01 ~ 2026-07-16
+      AWAKEPLUS 원문: awakeplus/raw · 누적 데이터: awakeplus/data · GitHub Actions로 장 마감 후 자동 업데이트
     </footer>
   </main>
 
@@ -1695,7 +1828,7 @@
 
   <script>
 window.awakeplusData = {
-  "generated_at": "2026-07-20 21:45:17",
+  "generated_at": "2026-07-20 22:16:59",
   "todaytop15": [
     {
       "date": "2026-07-20",
@@ -1710,7 +1843,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "HBM용 프로브카드 수요 증가와 세라믹 STF 설비 풀가동에 따른 성장 기대감. / 지속적인 탑라인 성장과 수익성 방어로 인한 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1725,7 +1858,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "청년 탈모 관련 건강보험 적용 정책 모멘텀에 의한 기대감. / 장기지속형 주사제 플랫폼 기술 특허 등록에 따른 성장동력 부각.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1740,7 +1873,7 @@ window.awakeplusData = {
       "special_signal": "52주 최대 거래량",
       "reason": "애국 매수에 따른 투자자들의 관심 증가. / 손오공아이비 흡수합병을 통한 재무구조 개선 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1755,7 +1888,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "흑해 곡물운반선 피격으로 인한 국제 곡물값 상승 우려에 따른 사료 관련주 상승 기대감. / 중동 지역의 긴장 고조로 인한 식량 인플레이션 우려에 따른 투자자 관심 증가.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1770,7 +1903,7 @@ window.awakeplusData = {
       "special_signal": "역사적 신고가",
       "reason": "맥쿼리의 공개매수 및 자진 상장폐지 추진 소식에 따른 주가 상승 기대감. / 하이퍼스케일 데이터센터 플랫폼 구축을 위한 전략적 파트너십 체결에 따른 사업 확대 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1785,7 +1918,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "한국항공우주연구원과의 우주부품 개발 계약 체결에 따른 기대감. / 우주 핵심부품 국산화 착수로 인한 기술 경쟁력 강화 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1800,7 +1933,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "사료 테마 상승세에 따른 수혜 기대감. / 식량 위기 우려 속 안정적 공급망 보유 평가.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1815,7 +1948,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "사료 테마 상승세에 따른 시장 관심 증가. / 관련 산업 내 경쟁력 강화 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1830,7 +1963,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "국제유가가 90달러를 돌파하며 상승에 대한 기대감. / 미-이란 갈등으로 인한 지정학적 리스크가 부각되며 윤활유 테마 상승세.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1845,7 +1978,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "트럼프의 조선 협력 발언에 따른 조선주 강세에 힘입어 상승 기대감. / 항만크레인 사업 본궤도 진입을 통한 고부가 설비 기업으로의 도약 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1860,7 +1993,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "AI 기반 MLCC 전수검사 시스템 개발 소식에 따른 기술 혁신 기대감. / 검사 플랫폼 양산 협의 개시로 인해 시장에서의 제품 상용화 가능성 부각.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1875,7 +2008,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "레몬헬스케어의 코스닥 상장과 의료데이터 AI 사업 확장 기대감. / 상장 이후 주목받는 의료데이터 중계 및 유통 인프라 구축 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1890,7 +2023,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "국제유가 급등으로 인해 신재생에너지 주식에 대한 투자심리가 개선된 결과. / 신재생에너지 시장에서의 경쟁력 강화에 대한 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1905,7 +2038,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "AI 장기재생 시장 공략 속도에 따른 기대감. / 美 AMA 재생의학 CPT 코드 확대 수혜 기대.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -1920,7 +2053,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "경구용 비만·당뇨 치료제 관련 美 FDA 'Pre-ANDA' 답변서 수령 소식. / 혁신적인 경구용 세마글루타이드 개발 절차 확인 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-17",
@@ -2598,7 +2731,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 425억/ 89억/ 77억 / 2025.4Q 412억/ 69억/ 74억 / 2025.3Q 395억/ 62억/ 48억 / 2025.2Q 392억/ 58억/ 58억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -2614,7 +2747,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 3,194억/ 90억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -2630,7 +2763,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 18억/ 6억/ 16억 / 2025.4Q 6억/ 15억/ 20억 / 2025.3Q 17억/ 2억/ 36억 / 2025.2Q 29억/ 2억/ 2억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -2646,7 +2779,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 850억/ 107억/ 90억 / 2025.4Q 975억/ 191억/ 166억 / 2025.3Q 806억/ 75억/ 47억 / 2025.2Q 806억/ 80억/ 80억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-16",
@@ -9283,7 +9416,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/572",
       "row_count": "4",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "source": "allnewhigh",
@@ -9292,7 +9425,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/572",
       "row_count": "4",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     }
   ],
   "leader_scores": [
@@ -9631,6 +9764,123 @@ window.awakeplusData = {
       "theme": "금융/지주/밸류업"
     }
   ],
+  "market_snapshot": {
+    "generated_at": "2026-07-20 22:17:03",
+    "source": "Yahoo Finance chart API",
+    "items": [
+      {
+        "group": "한국",
+        "name": "KOSPI",
+        "symbol": "^KS11",
+        "kind": "index",
+        "value": 6516.27,
+        "change": -304.33,
+        "change_pct": -4.46,
+        "asof": "2026-07-20 09:00"
+      },
+      {
+        "group": "한국",
+        "name": "KOSDAQ",
+        "symbol": "^KQ11",
+        "kind": "index",
+        "value": 749.64,
+        "change": -42.2,
+        "change_pct": -5.33,
+        "asof": "2026-07-20 09:00"
+      },
+      {
+        "group": "미국",
+        "name": "S&P500",
+        "symbol": "^GSPC",
+        "kind": "index",
+        "value": 7457.69,
+        "change": -76.08,
+        "change_pct": -1.01,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "미국",
+        "name": "NASDAQ",
+        "symbol": "^IXIC",
+        "kind": "index",
+        "value": 25520.24,
+        "change": -361.71,
+        "change_pct": -1.4,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "미국",
+        "name": "DOW",
+        "symbol": "^DJI",
+        "kind": "index",
+        "value": 52146.42,
+        "change": -406.55,
+        "change_pct": -0.77,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "일본",
+        "name": "Nikkei225",
+        "symbol": "^N225",
+        "kind": "index",
+        "value": 64141.12,
+        "change": -2694.42,
+        "change_pct": -4.03,
+        "asof": "2026-07-17 09:00"
+      },
+      {
+        "group": "중국",
+        "name": "Shanghai",
+        "symbol": "000001.SS",
+        "kind": "index",
+        "value": 3796.28,
+        "change": 32.13,
+        "change_pct": 0.85,
+        "asof": "2026-07-20 10:30"
+      },
+      {
+        "group": "대만",
+        "name": "TAIEX",
+        "symbol": "^TWII",
+        "kind": "index",
+        "value": 42449.7,
+        "change": -221.57,
+        "change_pct": -0.52,
+        "asof": "2026-07-20 10:00"
+      },
+      {
+        "group": "환율",
+        "name": "USD/KRW",
+        "symbol": "KRW=X",
+        "kind": "fx",
+        "value": 1481.54,
+        "change": 2.6901,
+        "change_pct": 0.18,
+        "asof": "2026-07-20 22:16"
+      },
+      {
+        "group": "환율",
+        "name": "JPY/KRW",
+        "symbol": "JPYKRW=X",
+        "kind": "fx",
+        "value": 9.1,
+        "change": -0.0064,
+        "change_pct": -0.07,
+        "asof": "2026-07-20 22:14"
+      },
+      {
+        "group": "환율",
+        "name": "CNY/KRW",
+        "symbol": "CNYKRW=X",
+        "kind": "fx",
+        "value": 218.903,
+        "change": 0.0,
+        "change_pct": 0.0,
+        "asof": "2026-07-20 22:14"
+      }
+    ],
+    "errors": []
+  },
   "summary": {
     "range_start": "",
     "range_end": "",
@@ -9679,6 +9929,7 @@ window.awakeplusData = {
     const companyList = document.querySelector("#companyList");
     const data = window.awakeplusData || {};
     const summary = data.summary || {};
+    const marketSnapshot = data.market_snapshot || {};
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
@@ -9696,6 +9947,12 @@ window.awakeplusData = {
 
     function pct(value) {
       return `${value >= 0 ? "+" : ""}${Number(value || 0).toFixed(1)}%`;
+    }
+
+    function formatNumber(value, digits = 2) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return "-";
+      return number.toLocaleString("ko-KR", { maximumFractionDigits: digits, minimumFractionDigits: 0 });
     }
 
     function themeCode(theme) {
@@ -9778,6 +10035,22 @@ window.awakeplusData = {
       "\ub85c\ubcf4\uc2a4\ud0c0": "090360",
       "\uacc4\uc591\uc804\uae30": "012200",
       "\ub85c\ud0b7\ud5ec\uc2a4\ucf00\uc5b4": "376900",
+      "\uc0bc\ucc9c\ub2f9\uc81c\uc57d": "000250",
+      "\ub808\ubaac\ud5ec\uc2a4\ucf00\uc5b4": "294140",
+      "\ud55c\uc6b8\ubc18\ub3c4\uccb4": "320000",
+      "\ud604\ub300\ud798\uc2a4": "460930",
+      "\ud765\uad6c\uc11d\uc720": "024060",
+      "\ud55c\uc77c\uc0ac\ub8cc": "005860",
+      "\uace0\ub824\uc0b0\uc5c5": "002140",
+      "\uae30\uac00\ub808\uc778": "049080",
+      "\uac00\ube44\uc544": "079940",
+      "\ubbf8\ub798\uc0dd\uba85\uc790\uc6d0": "218150",
+      "\uc190\uc624\uacf5": "066910",
+      "\uc0bc\uc775\uc81c\uc57d": "014950",
+      "\uc0d8\uc528\uc5d4\uc5d0\uc2a4": "252990",
+      "\uc790\uc774\uc5d0\uc2a4\uc564\ub514": "317400",
+      "\ucf00\uc774\uc544\uc774\uc5d4\uc5d1\uc2a4": "093320",
+      "\ube14\ub8e8\ucf64": "033560",
       "\uc528\ud53c\uc2dc\uc2a4\ud15c": "413630",
       "\uc5d1\uc2a4\uac8c\uc774\ud2b8": "356680",
       "\uc640\uc774\uc81c\uc774\ub9c1\ud06c": "209640",
@@ -9937,6 +10210,56 @@ window.awakeplusData = {
       }).sort((a, b) => b.score - a.score || b.change - a.change || a.name.localeCompare(b.name, "ko"));
     }
 
+    function renderMarketSnapshot() {
+      const items = Array.isArray(marketSnapshot.items) ? marketSnapshot.items : [];
+      const ticker = document.querySelector("#marketTicker");
+      const time = document.querySelector("#marketSnapshotTime");
+      if (!ticker || !time) return;
+      if (!items.length) {
+        ticker.innerHTML = `<div class="market-pill"><span>상태</span><strong>업데이트 대기</strong><em>다음 수집 때 반영</em></div>`;
+        time.textContent = "시장 데이터 수집 전";
+        return;
+      }
+      time.textContent = `${marketSnapshot.generated_at || ""} 기준`;
+      ticker.innerHTML = items.map((item) => {
+        const change = Number(item.change_pct || 0);
+        const digits = item.kind === "fx" ? 2 : 2;
+        return `<div class="market-pill ${change < 0 ? "down" : ""}"><span>${escapeHtml(item.group)} · ${escapeHtml(item.name)}</span><strong>${formatNumber(item.value, digits)}</strong><em>${change >= 0 ? "+" : ""}${change.toFixed(2)}%</em></div>`;
+      }).join("");
+    }
+
+    function renderMarketBriefing(rows) {
+      const text = document.querySelector("#marketBriefingText");
+      const points = document.querySelector("#marketBriefingPoints");
+      if (!text || !points) return;
+      if (!rows.length) {
+        text.textContent = "선택한 조건에 맞는 데이터가 없어 시장 브리핑을 만들 수 없습니다.";
+        points.innerHTML = `<li>필터를 전체 또는 최근 날짜로 바꾸면 다시 집계됩니다.</li>`;
+        return;
+      }
+      const topRows = rows.filter((row) => row.sourceKinds.includes("TOP15"));
+      const highRows = rows.filter((row) => row.sourceKinds.includes(K.high));
+      const topNames = new Set(topRows.map((row) => row.name));
+      const highNames = new Set(highRows.map((row) => row.name));
+      const overlap = [...topNames].filter((name) => highNames.has(name));
+      const themeCounts = getThemeCounts(rows);
+      const topTheme = themeCounts[0]?.[0] || K.noTheme;
+      const topThemeCount = themeCounts[0]?.[1] || 0;
+      const scored = scoreRows(rows);
+      const leaders = scored.slice(0, 4).map((row) => row.name);
+      const repeats = scored.filter((row) => row.repeated).slice(0, 4).map((row) => row.name);
+      const limitCount = rows.filter((row) => row.change >= 29).length;
+      const breadth = highRows.length >= topRows.length ? "신고가 확산이 TOP15보다 넓게 퍼져 추세 확인에 유리합니다." : "TOP15 상승은 강하지만 신고가 확산은 아직 제한적입니다.";
+      const overlapText = overlap.length ? `${overlap.slice(0, 4).join(", ")}가 TOP15와 신고가에 동시에 잡혔습니다.` : "TOP15와 신고가의 직접 교집합은 약해 순환매 성격도 함께 확인해야 합니다.";
+      text.textContent = `${topTheme}가 ${topThemeCount}건으로 가장 강한 테마입니다. ${overlapText} 주도주 후보는 ${leaders.join(", ") || "-"} 순으로 압축됩니다. ${breadth}`;
+      points.innerHTML = [
+        `TOP15 ${topRows.length}건 · 신고가 ${highRows.length}건 · 교집합 ${overlap.length}종목`,
+        `반복 등장: ${repeats.length ? repeats.join(", ") : "아직 뚜렷하지 않음"}`,
+        `상한가권 ${limitCount}종목 · 과열보다 지속성을 보려면 다음 거래일 신고가 재등장 여부 확인`,
+        `투자포인트 우선 확인: ${highRows.slice(0, 3).map((row) => row.name).join(", ") || "신고가 종목 없음"}`
+      ].map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    }
+
     function renderSelectors() {
       dateSelect.innerHTML = `<option value="all">${K.all}</option>` + dates.map((date) => `<option value="${date}">${date}</option>`).join("");
       dateSelect.value = "all";
@@ -10086,10 +10409,6 @@ window.awakeplusData = {
       return `https://finance.naver.com/search/searchList.naver?query=${encodeURIComponent(name)}`;
     }
 
-    function tradingViewUrl(name) {
-      return `https://www.tradingview.com/search/?query=${encodeURIComponent(name)}`;
-    }
-
     function openChartModal(src, title) {
       const modal = document.querySelector("#chartModal");
       const image = document.querySelector("#chartModalImage");
@@ -10117,7 +10436,8 @@ window.awakeplusData = {
       if (!box) return;
       if (!resolved) {
         box.innerHTML = `
-          <div class="muted">\uc885\ubaa9\ucf54\ub4dc\ub97c \ud655\uc778\ud558\uba74 \ub124\uc774\ubc84 \ucc28\ud2b8\ub97c \ub300\uc2dc\ubcf4\ub4dc \uc548\uc5d0 \ud45c\uc2dc\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</div>
+          <div class="chart-state">${escapeHtml(name)} · 종목코드 확인 필요</div>
+          <div class="muted">아직 코드맵에 없는 종목입니다. 6자리 종목코드를 입력하면 이 자리에서 바로 일봉/주봉/월봉 차트를 볼 수 있습니다.</div>
           <div class="chart-tools">
             <input id="manualStockCode" inputmode="numeric" maxlength="6" placeholder="6\uc790\ub9ac \uc885\ubaa9\ucf54\ub4dc" />
             <button type="button" id="manualChartButton">\ucc28\ud2b8 \ud45c\uc2dc</button>
@@ -10143,12 +10463,12 @@ window.awakeplusData = {
           <input id="manualStockCode" inputmode="numeric" maxlength="6" value="${escapeHtml(resolved)}" />
           <button type="button" id="manualChartButton">\ucf54\ub4dc \uc801\uc6a9</button>
         </div>
-        <img class="naver-chart-image" src="${chartSrc}" alt="${escapeHtml(name)} \ub124\uc774\ubc84 \ucc28\ud2b8" data-chart-title="${escapeHtml(chartTitle)}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'muted', textContent:'\ub124\uc774\ubc84 \ucc28\ud2b8 \uc774\ubbf8\uc9c0\ub97c \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4. \ub124\uc774\ubc84 \uc0c1\uc138 \ub9c1\ud06c\ub97c \uc5f4\uc5b4 \ud655\uc778\ud574 \uc8fc\uc138\uc694.'}))" />
+        <img class="naver-chart-image" src="${chartSrc}" alt="${escapeHtml(name)} \ub124\uc774\ubc84 \ucc28\ud2b8" data-chart-src="${chartSrc}" data-chart-title="${escapeHtml(chartTitle)}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'muted', textContent:'네이버 차트 이미지를 불러오지 못했습니다. 아래 네이버 상세 링크에서 확인해 주세요.'}))" />
         <div class="chart-expand-hint">\ucc28\ud2b8\ub97c \ud074\ub9ad\ud558\uba74 \ud06c\uac8c \ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4.</div>
         <div class="chart-links">
-          <button type="button" data-chart-period="day">\uc77c\ubd09</button>
-          <button type="button" data-chart-period="week">\uc8fc\ubd09</button>
-          <button type="button" data-chart-period="month">\uc6d4\ubd09</button>
+          <button type="button" data-chart-period="day" class="${period === "day" ? "active" : ""}">\uc77c\ubd09</button>
+          <button type="button" data-chart-period="week" class="${period === "week" ? "active" : ""}">\uc8fc\ubd09</button>
+          <button type="button" data-chart-period="month" class="${period === "month" ? "active" : ""}">\uc6d4\ubd09</button>
           <button type="button" id="expandNaverChart">\ud06c\uac8c \ubcf4\uae30</button>
           <a href="https://finance.naver.com/item/main.naver?code=${resolved}" target="_blank" rel="noreferrer">\ub124\uc774\ubc84 \uc0c1\uc138</a>
         </div>
@@ -10164,7 +10484,7 @@ window.awakeplusData = {
       document.querySelector("#expandNaverChart")?.addEventListener("click", () => openChartModal(chartSrc, chartTitle));
       box.querySelector(".naver-chart-image")?.addEventListener("click", (event) => {
         const img = event.currentTarget;
-        openChartModal(img.src, img.dataset.chartTitle || img.alt || "\ucc28\ud2b8 \ud655\ub300");
+        openChartModal(img.dataset.chartSrc || img.src, img.dataset.chartTitle || img.alt || "\ucc28\ud2b8 \ud655\ub300");
       });
       if (expand) openChartModal(chartSrc, chartTitle);
     }
@@ -10190,8 +10510,8 @@ window.awakeplusData = {
       document.querySelector("#companyChange").textContent = latest ? pct(latest.change) : "-";
       document.querySelector("#companyAppearances").textContent = `${new Set(rows.map((row) => row.date)).size}${K.days}`;
       document.querySelector("#companySignals").textContent = signalText;
-      document.querySelector("#companyLinks").innerHTML = `<button type="button" id="showNaverChart">\ub124\uc774\ubc84 ${K.chart}</button><a href="${tradingViewUrl(name)}" target="_blank" rel="noreferrer">TradingView</a>`;
-      document.querySelector("#companyChartBox").innerHTML = `<div class="muted">\ub124\uc774\ubc84 ${K.chart}\ub97c \ub204\ub974\uba74 \uc774 \uc601\uc5ed\uc5d0 \uc77c\ubd09 \ucc28\ud2b8\uac00 \ud45c\uc2dc\ub429\ub2c8\ub2e4.</div>`;
+      document.querySelector("#companyLinks").innerHTML = `<button type="button" id="showNaverChart">\ub124\uc774\ubc84 ${K.chart} \uc0c8\ub85c\uace0\uce68</button><a href="${chartUrl(name)}" target="_blank" rel="noreferrer">\ub124\uc774\ubc84 \uc885\ubaa9 \uac80\uc0c9</a>`;
+      renderNaverChart(name, "", "day", false);
       document.querySelector("#showNaverChart")?.addEventListener("click", () => renderNaverChart(name, "", "day", true));
       document.querySelector("#companyPoints").innerHTML = points.length ? points.map((point) => `<li>${escapeHtml(point)}</li>`).join("") : `<li>\ud22c\uc790\ud3ec\uc778\ud2b8 \ub370\uc774\ud130\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.</li>`;
       document.querySelector("#companyResults").innerHTML = results.length ? results.map((item) => `<li>${escapeHtml(item)}</li>`).join("") : `<li>\ucd5c\uadfc \uc2e4\uc801 \ub370\uc774\ud130\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.</li>`;
@@ -10200,6 +10520,7 @@ window.awakeplusData = {
 
     function renderAll() {
       const rows = visibleRows();
+      renderMarketSnapshot();
       renderHeader(rows);
       renderKpis(rows);
       renderTable(rows);
@@ -10209,6 +10530,7 @@ window.awakeplusData = {
       renderThemes(rows);
       renderReports(rows);
       renderAwakeplus(rows);
+      renderMarketBriefing(rows);
       renderCompany();
     }
 

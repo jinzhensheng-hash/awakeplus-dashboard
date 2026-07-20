@@ -24,6 +24,20 @@ SOURCES = {
     "allnewhigh": f"{BASE_URL}/board/allnewhigh",
 }
 
+MARKET_SYMBOLS = [
+    {"group": "한국", "name": "KOSPI", "symbol": "^KS11", "kind": "index"},
+    {"group": "한국", "name": "KOSDAQ", "symbol": "^KQ11", "kind": "index"},
+    {"group": "미국", "name": "S&P500", "symbol": "^GSPC", "kind": "index"},
+    {"group": "미국", "name": "NASDAQ", "symbol": "^IXIC", "kind": "index"},
+    {"group": "미국", "name": "DOW", "symbol": "^DJI", "kind": "index"},
+    {"group": "일본", "name": "Nikkei225", "symbol": "^N225", "kind": "index"},
+    {"group": "중국", "name": "Shanghai", "symbol": "000001.SS", "kind": "index"},
+    {"group": "대만", "name": "TAIEX", "symbol": "^TWII", "kind": "index"},
+    {"group": "환율", "name": "USD/KRW", "symbol": "KRW=X", "kind": "fx"},
+    {"group": "환율", "name": "JPY/KRW", "symbol": "JPYKRW=X", "kind": "fx"},
+    {"group": "환율", "name": "CNY/KRW", "symbol": "CNYKRW=X", "kind": "fx"},
+]
+
 
 @dataclass
 class Link:
@@ -484,6 +498,47 @@ def read_csv_rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
+def fetch_market_snapshot() -> dict[str, object]:
+    items: list[dict[str, object]] = []
+    errors: list[str] = []
+    for item in MARKET_SYMBOLS:
+        symbol = item["symbol"]
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?range=5d&interval=1d"
+        try:
+            payload = json.loads(fetch(url))
+            result = (payload.get("chart", {}).get("result") or [])[0]
+            quote = result.get("indicators", {}).get("quote", [{}])[0]
+            closes = [value for value in quote.get("close", []) if isinstance(value, (int, float))]
+            if not closes:
+                raise ValueError("empty close data")
+            current = float(closes[-1])
+            previous = float(closes[-2]) if len(closes) > 1 else current
+            change = current - previous
+            change_pct = (change / previous * 100) if previous else 0
+            timestamps = result.get("timestamp") or []
+            asof = datetime.fromtimestamp(timestamps[-1]).strftime("%Y-%m-%d %H:%M") if timestamps else ""
+            items.append(
+                {
+                    "group": item["group"],
+                    "name": item["name"],
+                    "symbol": symbol,
+                    "kind": item["kind"],
+                    "value": round(current, 4 if item["kind"] == "fx" else 2),
+                    "change": round(change, 4 if item["kind"] == "fx" else 2),
+                    "change_pct": round(change_pct, 2),
+                    "asof": asof,
+                }
+            )
+        except Exception as exc:  # noqa: BLE001 - snapshot should never break stock collection.
+            errors.append(f"{symbol}: {exc}")
+    return {
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "source": "Yahoo Finance chart API",
+        "items": items,
+        "errors": errors[:5],
+    }
+
+
 def build_leader_scores(today_rows: list[dict[str, str]], newhigh_rows: list[dict[str, str]]) -> list[dict[str, object]]:
     scores: dict[str, dict[str, object]] = {}
 
@@ -560,6 +615,7 @@ def write_dashboard_data(root: Path, start_date: date | None = None, end_date: d
         "newhigh": newhigh_rows,
         "posts": posts[-20:],
         "leader_scores": build_leader_scores(today_rows, newhigh_rows),
+        "market_snapshot": fetch_market_snapshot(),
         "summary": {
             "range_start": start_date.isoformat() if start_date else "",
             "range_end": end_date.isoformat() if end_date else "",

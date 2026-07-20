@@ -1,5 +1,5 @@
 window.awakeplusData = {
-  "generated_at": "2026-07-20 21:45:17",
+  "generated_at": "2026-07-20 22:16:59",
   "todaytop15": [
     {
       "date": "2026-07-20",
@@ -14,7 +14,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "HBM용 프로브카드 수요 증가와 세라믹 STF 설비 풀가동에 따른 성장 기대감. / 지속적인 탑라인 성장과 수익성 방어로 인한 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -29,7 +29,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "청년 탈모 관련 건강보험 적용 정책 모멘텀에 의한 기대감. / 장기지속형 주사제 플랫폼 기술 특허 등록에 따른 성장동력 부각.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -44,7 +44,7 @@ window.awakeplusData = {
       "special_signal": "52주 최대 거래량",
       "reason": "애국 매수에 따른 투자자들의 관심 증가. / 손오공아이비 흡수합병을 통한 재무구조 개선 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -59,7 +59,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "흑해 곡물운반선 피격으로 인한 국제 곡물값 상승 우려에 따른 사료 관련주 상승 기대감. / 중동 지역의 긴장 고조로 인한 식량 인플레이션 우려에 따른 투자자 관심 증가.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -74,7 +74,7 @@ window.awakeplusData = {
       "special_signal": "역사적 신고가",
       "reason": "맥쿼리의 공개매수 및 자진 상장폐지 추진 소식에 따른 주가 상승 기대감. / 하이퍼스케일 데이터센터 플랫폼 구축을 위한 전략적 파트너십 체결에 따른 사업 확대 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -89,7 +89,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "한국항공우주연구원과의 우주부품 개발 계약 체결에 따른 기대감. / 우주 핵심부품 국산화 착수로 인한 기술 경쟁력 강화 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -104,7 +104,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "사료 테마 상승세에 따른 수혜 기대감. / 식량 위기 우려 속 안정적 공급망 보유 평가.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -119,7 +119,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "사료 테마 상승세에 따른 시장 관심 증가. / 관련 산업 내 경쟁력 강화 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -134,7 +134,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "국제유가가 90달러를 돌파하며 상승에 대한 기대감. / 미-이란 갈등으로 인한 지정학적 리스크가 부각되며 윤활유 테마 상승세.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -149,7 +149,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "트럼프의 조선 협력 발언에 따른 조선주 강세에 힘입어 상승 기대감. / 항만크레인 사업 본궤도 진입을 통한 고부가 설비 기업으로의 도약 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -164,7 +164,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "AI 기반 MLCC 전수검사 시스템 개발 소식에 따른 기술 혁신 기대감. / 검사 플랫폼 양산 협의 개시로 인해 시장에서의 제품 상용화 가능성 부각.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -179,7 +179,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "레몬헬스케어의 코스닥 상장과 의료데이터 AI 사업 확장 기대감. / 상장 이후 주목받는 의료데이터 중계 및 유통 인프라 구축 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -194,7 +194,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "국제유가 급등으로 인해 신재생에너지 주식에 대한 투자심리가 개선된 결과. / 신재생에너지 시장에서의 경쟁력 강화에 대한 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -209,7 +209,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "AI 장기재생 시장 공략 속도에 따른 기대감. / 美 AMA 재생의학 CPT 코드 확대 수혜 기대.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -224,7 +224,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "경구용 비만·당뇨 치료제 관련 美 FDA 'Pre-ANDA' 답변서 수령 소식. / 혁신적인 경구용 세마글루타이드 개발 절차 확인 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-17",
@@ -902,7 +902,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 425억/ 89억/ 77억 / 2025.4Q 412억/ 69억/ 74억 / 2025.3Q 395억/ 62억/ 48억 / 2025.2Q 392억/ 58억/ 58억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -918,7 +918,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 3,194억/ 90억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -934,7 +934,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 18억/ 6억/ 16억 / 2025.4Q 6억/ 15억/ 20억 / 2025.3Q 17억/ 2억/ 36억 / 2025.2Q 29억/ 2억/ 2억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-20",
@@ -950,7 +950,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 850억/ 107억/ 90억 / 2025.4Q 975억/ 191억/ 166억 / 2025.3Q 806억/ 75억/ 47억 / 2025.2Q 806억/ 80억/ 80억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "date": "2026-07-16",
@@ -7587,7 +7587,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/572",
       "row_count": "4",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     },
     {
       "source": "allnewhigh",
@@ -7596,7 +7596,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/572",
       "row_count": "4",
-      "collected_at": "2026-07-20 21:45:14"
+      "collected_at": "2026-07-20 22:16:57"
     }
   ],
   "leader_scores": [
@@ -7935,6 +7935,123 @@ window.awakeplusData = {
       "theme": "금융/지주/밸류업"
     }
   ],
+  "market_snapshot": {
+    "generated_at": "2026-07-20 22:17:03",
+    "source": "Yahoo Finance chart API",
+    "items": [
+      {
+        "group": "한국",
+        "name": "KOSPI",
+        "symbol": "^KS11",
+        "kind": "index",
+        "value": 6516.27,
+        "change": -304.33,
+        "change_pct": -4.46,
+        "asof": "2026-07-20 09:00"
+      },
+      {
+        "group": "한국",
+        "name": "KOSDAQ",
+        "symbol": "^KQ11",
+        "kind": "index",
+        "value": 749.64,
+        "change": -42.2,
+        "change_pct": -5.33,
+        "asof": "2026-07-20 09:00"
+      },
+      {
+        "group": "미국",
+        "name": "S&P500",
+        "symbol": "^GSPC",
+        "kind": "index",
+        "value": 7457.69,
+        "change": -76.08,
+        "change_pct": -1.01,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "미국",
+        "name": "NASDAQ",
+        "symbol": "^IXIC",
+        "kind": "index",
+        "value": 25520.24,
+        "change": -361.71,
+        "change_pct": -1.4,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "미국",
+        "name": "DOW",
+        "symbol": "^DJI",
+        "kind": "index",
+        "value": 52146.42,
+        "change": -406.55,
+        "change_pct": -0.77,
+        "asof": "2026-07-17 22:30"
+      },
+      {
+        "group": "일본",
+        "name": "Nikkei225",
+        "symbol": "^N225",
+        "kind": "index",
+        "value": 64141.12,
+        "change": -2694.42,
+        "change_pct": -4.03,
+        "asof": "2026-07-17 09:00"
+      },
+      {
+        "group": "중국",
+        "name": "Shanghai",
+        "symbol": "000001.SS",
+        "kind": "index",
+        "value": 3796.28,
+        "change": 32.13,
+        "change_pct": 0.85,
+        "asof": "2026-07-20 10:30"
+      },
+      {
+        "group": "대만",
+        "name": "TAIEX",
+        "symbol": "^TWII",
+        "kind": "index",
+        "value": 42449.7,
+        "change": -221.57,
+        "change_pct": -0.52,
+        "asof": "2026-07-20 10:00"
+      },
+      {
+        "group": "환율",
+        "name": "USD/KRW",
+        "symbol": "KRW=X",
+        "kind": "fx",
+        "value": 1481.54,
+        "change": 2.6901,
+        "change_pct": 0.18,
+        "asof": "2026-07-20 22:16"
+      },
+      {
+        "group": "환율",
+        "name": "JPY/KRW",
+        "symbol": "JPYKRW=X",
+        "kind": "fx",
+        "value": 9.1,
+        "change": -0.0064,
+        "change_pct": -0.07,
+        "asof": "2026-07-20 22:14"
+      },
+      {
+        "group": "환율",
+        "name": "CNY/KRW",
+        "symbol": "CNYKRW=X",
+        "kind": "fx",
+        "value": 218.903,
+        "change": 0.0,
+        "change_pct": 0.0,
+        "asof": "2026-07-20 22:14"
+      }
+    ],
+    "errors": []
+  },
   "summary": {
     "range_start": "",
     "range_end": "",
