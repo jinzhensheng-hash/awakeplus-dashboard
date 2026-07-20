@@ -1,6 +1,456 @@
 window.awakeplusData = {
-  "generated_at": "2026-07-18 20:30:37",
+  "generated_at": "2026-07-20 10:21:55",
   "todaytop15": [
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "15",
+      "stock": "샘씨엔에스",
+      "theme": "반도체/소부장",
+      "change_pct": "7.1",
+      "market_cap": "9,400억",
+      "trading_value": "359억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "HBM용 프로브카드 수요 증가와 세라믹 STF 설비 풀가동에 따른 성장 기대감. / 지속적인 탑라인 성장과 수익성 방어로 인한 긍정적 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "14",
+      "stock": "삼익제약",
+      "theme": "바이오/헬스케어",
+      "change_pct": "12.6",
+      "market_cap": "627억",
+      "trading_value": "710억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "청년 탈모 관련 건강보험 적용 정책 모멘텀에 의한 기대감. / 장기지속형 주사제 플랫폼 기술 특허 등록에 따른 성장동력 부각.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "13",
+      "stock": "손오공",
+      "theme": "",
+      "change_pct": "30.0",
+      "market_cap": "398억",
+      "trading_value": "109억",
+      "stars": "0",
+      "special_signal": "52주 최대 거래량",
+      "reason": "애국 매수에 따른 투자자들의 관심 증가. / 손오공아이비 흡수합병을 통한 재무구조 개선 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "12",
+      "stock": "미래생명자원",
+      "theme": "식량자원",
+      "change_pct": "29.8",
+      "market_cap": "538억",
+      "trading_value": "141억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "흑해 곡물운반선 피격으로 인한 국제 곡물값 상승 우려에 따른 사료 관련주 상승 기대감. / 중동 지역의 긴장 고조로 인한 식량 인플레이션 우려에 따른 투자자 관심 증가.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "11",
+      "stock": "가비아",
+      "theme": "보안#데이터센터",
+      "change_pct": "29.9",
+      "market_cap": "5,912억",
+      "trading_value": "43억",
+      "stars": "0",
+      "special_signal": "역사적 신고가",
+      "reason": "맥쿼리의 공개매수 및 자진 상장폐지 추진 소식에 따른 주가 상승 기대감. / 하이퍼스케일 데이터센터 플랫폼 구축을 위한 전략적 파트너십 체결에 따른 사업 확대 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "10",
+      "stock": "기가레인",
+      "theme": "통신장비/6G",
+      "change_pct": "13.8",
+      "market_cap": "1,091억",
+      "trading_value": "763억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "한국항공우주연구원과의 우주부품 개발 계약 체결에 따른 기대감. / 우주 핵심부품 국산화 착수로 인한 기술 경쟁력 강화 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "9",
+      "stock": "고려산업",
+      "theme": "식량자원",
+      "change_pct": "30.0",
+      "market_cap": "592억",
+      "trading_value": "163억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "사료 테마 상승세에 따른 수혜 기대감. / 식량 위기 우려 속 안정적 공급망 보유 평가.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "8",
+      "stock": "한일사료",
+      "theme": "식량자원",
+      "change_pct": "14.9",
+      "market_cap": "1,091억",
+      "trading_value": "694억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "사료 테마 상승세에 따른 시장 관심 증가. / 관련 산업 내 경쟁력 강화 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "7",
+      "stock": "흥구석유",
+      "theme": "유가",
+      "change_pct": "11.7",
+      "market_cap": "2,013억",
+      "trading_value": "1,232억",
+      "stars": "1",
+      "special_signal": "",
+      "reason": "국제유가가 90달러를 돌파하며 상승에 대한 기대감. / 미-이란 갈등으로 인한 지정학적 리스크가 부각되며 윤활유 테마 상승세.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "6",
+      "stock": "현대힘스",
+      "theme": "조선/에너지",
+      "change_pct": "13.6",
+      "market_cap": "4,897억",
+      "trading_value": "1,185억",
+      "stars": "1",
+      "special_signal": "",
+      "reason": "트럼프의 조선 협력 발언에 따른 조선주 강세에 힘입어 상승 기대감. / 항만크레인 사업 본궤도 진입을 통한 고부가 설비 기업으로의 도약 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "5",
+      "stock": "한울반도체",
+      "theme": "반도체/소부장",
+      "change_pct": "23.4",
+      "market_cap": "1,087억",
+      "trading_value": "668억",
+      "stars": "2",
+      "special_signal": "",
+      "reason": "AI 기반 MLCC 전수검사 시스템 개발 소식에 따른 기술 혁신 기대감. / 검사 플랫폼 양산 협의 개시로 인해 시장에서의 제품 상용화 가능성 부각.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "4",
+      "stock": "레몬헬스케어",
+      "theme": "바이오/헬스케어",
+      "change_pct": "29.9",
+      "market_cap": "933억",
+      "trading_value": "594억",
+      "stars": "2",
+      "special_signal": "",
+      "reason": "레몬헬스케어의 코스닥 상장과 의료데이터 AI 사업 확장 기대감. / 상장 이후 주목받는 의료데이터 중계 및 유통 인프라 구축 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "3",
+      "stock": "SK이터닉스",
+      "theme": "신재생#ESS#수소",
+      "change_pct": "7.5",
+      "market_cap": "1.9조",
+      "trading_value": "4,098억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "국제유가 급등으로 인해 신재생에너지 주식에 대한 투자심리가 개선된 결과. / 신재생에너지 시장에서의 경쟁력 강화에 대한 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "2",
+      "stock": "로킷헬스케어",
+      "theme": "바이오/헬스케어",
+      "change_pct": "23.7",
+      "market_cap": "9,493억",
+      "trading_value": "1,138억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "AI 장기재생 시장 공략 속도에 따른 기대감. / 美 AMA 재생의학 CPT 코드 확대 수혜 기대.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "15:20",
+      "rank": "1",
+      "stock": "삼천당제약",
+      "theme": "바이오/헬스케어",
+      "change_pct": "29.8",
+      "market_cap": "5.6조",
+      "trading_value": "657억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "경구용 비만·당뇨 치료제 관련 美 FDA 'Pre-ANDA' 답변서 수령 소식. / 혁신적인 경구용 세마글루타이드 개발 절차 확인 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "15",
+      "stock": "HD현대중공업",
+      "theme": "조선/에너지",
+      "change_pct": "2.8",
+      "market_cap": "50.8조",
+      "trading_value": "1,330억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "중속엔진 생산능력 확장 전망 및 상선 수주 목표 초과 달성 기대감. / 최근 데이터 센터 관련 수주로 인한 사업 다각화 및 경쟁력 강화 전망. / window._selectedDate = \"2026-07-17\"; window._todayDate = \"2026-07-17\"; const isLoggedIn = false; const isMarketstarPro = false; const dates = [\"2026-07-17\",\"2026-07-16\",\"2026-07-15\",\"2026-07-14\",\"2026-07-13\",\"2026-07-10\",\"2026-07-09\",\"2026-07-08\",\"2026-07-07\",\"2026-07-06\",\"2026-07-03\",\"2026-07-02\",\"2026-07-01\",\"2026-06-30\",\"2026-06-29\",\"2026-06-26\",\"2026-06-25\",\"2026-06-24\",\"2026-06-23\",\"2026-06-22\",\"2026-06-19\",\"2026-06-18\",\"2026-06-17\",\"2026-06-16\",\"2026-06-15\",\"2026-06-12\",\"2026-06-11\",\"2026-06-10\",\"2026-06-09\",\"2026-06-08\",\"2026-06-05\",\"2026-06-04\",\"2026-06-03\",\"2026-06-02\",\"2026-06-01\",\"2026-05-29\",\"2026-05-28\",\"2026-05-27\",\"2026-05-26\",\"2026-05-25\",\"2026-05-22\",\"2026-05-21\",\"2026-05-20\",\"2026-05-19\",\"2026-05-18\",\"2026-05-15\",\"2026-05-14\",\"2026-05-13\",\"2026-05-12\",\"2026-05-11\",\"2026-05-08\",\"2026-05-07\",\"2026-05-06\",\"2026-05-05\",\"2026-05-04\",\"2026-05-01\",\"2026-04-30\",\"2026-04-29\",\"2026-04-28\",\"2026-04-27\",\"2026-04-24\",\"2026-04-23\",\"2026-04-22\",\"2026-04-21\",\"2026-04-20\",\"2026-04-17\",\"2026-04-16\",\"2026-04-15\",\"2026-04-14\",\"2026-04-13\",\"2026-04-10\",\"2026-04-09\",\"2026-04-08\",\"2026-04-07\",\"2026-04-06\",\"2026-04-03\",\"2026-04-02\",\"2026-04-01\",\"2026-03-31\",\"2026-03-30\"]; const selected = \"2026-07-17\"; const idx = dates.indexOf(selected); let maxDates = 1; if (isMarketstarPro) maxDates = dates.length; else if (isLoggedIn) maxDates = 3; document.getElementById('prevDate').addEventListener('click', () => { const nextIdx = idx + 1; if (nextIdx >= dates.length) return; if (!isLoggedIn) { alert('\\uacfc\\uac70 \\uc8fc\\ub3c4\\uc8fc\\ub97c \\ubcf4\\uae30 \\uc704\\ud574\\uc120 \\ub85c\\uadf8\\uc778\\uc774 \\ud544\\uc694\\ud569\\ub2c8\\ub2e4.'); return; } if (!isMarketstarPro && nextIdx >= maxDates) { alert('\\ub9c8\\ucf13\\uc2a4\\ud0c0Pro\\u2b50\\uc5d0 \\uac00\\uc785\\ud558\\uc2dc\\uba74 \\uacfc\\uac70 \\uc8fc\\ub3c4\\uc8fc\\ub97c \\ubaa8\\ub450 \\ud655\\uc778\\ud560 \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4.'); return; } location.href = '?date=' + dates[nextIdx]; }); document.getElementById('nextDate').addEventListener('click', () => { if (idx > 0) location.href = '?date=' + dates[idx - 1]; }); if (idx >= dates.length - 1) document.getElementById('prevDate').disabled = true; if (idx <= 0) document.getElementById('nextDate').disabled = true; (function(){ const dd = document.querySelector('.title-dropdown'); if (!dd) return; const btn = dd.querySelector('.title-dropdown-btn'); btn.addEventListener('click', e => { e.stopPropagation(); dd.classList.toggle('open'); }); document.addEventListener('click', () => dd.classList.remove('open')); })();",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "14",
+      "stock": "씨피시스템",
+      "theme": "",
+      "change_pct": "12.4",
+      "market_cap": "1,224억",
+      "trading_value": "761억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "중국 최대 D램 기업 CXMT에 이어 국내 글로벌 반도체 클린룸 진입 소식에 따른 기대감. / 반도체 클린룸 진입을 통한 글로벌 시장 확장 가능성.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "13",
+      "stock": "깨끗한나라",
+      "theme": "저출산/재택",
+      "change_pct": "26.5",
+      "market_cap": "710억",
+      "trading_value": "168억",
+      "stars": "0",
+      "special_signal": "52주 최대 거래량",
+      "reason": "마스크 테마 상승세에 따른 기대감 / 공공생리대 지원 시범 사업 공급사 선정에 의한 호재",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "12",
+      "stock": "삼익제약",
+      "theme": "바이오/헬스케어",
+      "change_pct": "29.8",
+      "market_cap": "557억",
+      "trading_value": "157억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "탈모 치료제 관련 정책 모멘텀으로 인한 주목. / 중증원형탈모치료제 건강보험 급여 약가 협상 타결에 따른 시장 확대 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "11",
+      "stock": "기아",
+      "theme": "자동차/부품",
+      "change_pct": "3.2",
+      "market_cap": "58.4조",
+      "trading_value": "1,424억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "카카오모빌리티 자율주행 시범사업에 PV5가 투입되며 자율주행 기술 경쟁력 강화 기대감. / 하반기 신차 효과와 글로벌 판매 확대에 따른 성장세 지속 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "10",
+      "stock": "SK이노베이션",
+      "theme": "정유/화학#배터리/2차전지",
+      "change_pct": "3.8",
+      "market_cap": "20.5조",
+      "trading_value": "2,275억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "윤활유 사업의 최대 실적 기대감에 따른 상승세. / 2분기 깜짝 실적 전망에 따른 투자자 관심 증가.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "9",
+      "stock": "HD한국조선해양",
+      "theme": "조선/에너지",
+      "change_pct": "5.7",
+      "market_cap": "25.1조",
+      "trading_value": "869억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "연이은 수주 공시로 인한 사업 확장 기대감. / 트럼프의 한국 조선업체에 대한 긍정적 발언에 따른 협력 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "8",
+      "stock": "모나리자",
+      "theme": "",
+      "change_pct": "29.9",
+      "market_cap": "794억",
+      "trading_value": "263억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "마스크 테마 상승세에 따른 주가 상승 기대감. / 정부의 저출생 대응 정책 확대 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "7",
+      "stock": "SK텔레콤",
+      "theme": "금융/지주/밸류업",
+      "change_pct": "5.5",
+      "market_cap": "19.3조",
+      "trading_value": "1,234억",
+      "stars": "1",
+      "special_signal": "",
+      "reason": "AI 데이터센터 구축 속도의 가속화로 인한 성장 기대감. / 2분기 호실적 발표에 따른 긍정적 시장 반응.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "6",
+      "stock": "삼성공조",
+      "theme": "",
+      "change_pct": "17.1",
+      "market_cap": "1,104억",
+      "trading_value": "1,067억",
+      "stars": "1",
+      "special_signal": "",
+      "reason": "냉각 수혜주로 부각되며 시장의 주목을 받은 점이 상승 요인. / 유럽과 중동의 폭염으로 인한 냉방·공조 시스템의 수요 증가 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "5",
+      "stock": "삼성화재",
+      "theme": "은행/보험",
+      "change_pct": "6.0",
+      "market_cap": "31.3조",
+      "trading_value": "994억",
+      "stars": "2",
+      "special_signal": "",
+      "reason": "강북삼성병원과의 '라이프케어 이노베이션 센터' 공동 설립 발표에 따른 기대감. / 2분기 예상 실적이 시장 컨센서스를 크게 상회하는 호실적 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "4",
+      "stock": "현대약품",
+      "theme": "",
+      "change_pct": "13.3",
+      "market_cap": "2,432억",
+      "trading_value": "1,853억",
+      "stars": "2",
+      "special_signal": "",
+      "reason": "이 대통령의 '미프진 도입' 언급에 따른 기대감. / 임신중절 약물 관련 정책 변화 가능성에 대한 긍정적 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "3",
+      "stock": "케이뱅크",
+      "theme": "가상자산/STO",
+      "change_pct": "11.1",
+      "market_cap": "2.6조",
+      "trading_value": "886억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "인터넷은행 업황 기대감과 금리 상승으로 인한 수익성 개선 전망. / 코픽스 상승에 따른 은행주 동반 강세로 투자 매력 증가.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "2",
+      "stock": "온코닉테라퓨틱스",
+      "theme": "바이오/헬스케어",
+      "change_pct": "20.3",
+      "market_cap": "6,584억",
+      "trading_value": "541억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "자큐보의 국내 처방 성장과 해외 허가 진행이 주목받으며 투자 기대감 상승. / 네수파립의 전이성 췌장암 완전관해 및 장기 생존 데이터가 긍정적으로 작용한 호재.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
+    {
+      "date": "2026-07-17",
+      "time": "12:50",
+      "rank": "1",
+      "stock": "한화오션",
+      "theme": "조선/에너지",
+      "change_pct": "5.7",
+      "market_cap": "26.6조",
+      "trading_value": "2,343억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "트럼프 대통령의 해외 건조 선박 구매 가능성 발언에 따라 조선업체들에 대한 긍정적 기대감. / 미국과의 협력 가능성에 대한 기대감이 고조되며 조선 테마 전체의 상승세.",
+      "source": "todaytop15",
+      "collected_at": "2026-07-18 17:47:09"
+    },
     {
       "date": "2026-07-16",
       "time": "15:20",
@@ -439,6 +889,70 @@ window.awakeplusData = {
   ],
   "newhigh": [
     {
+      "date": "2026-07-20",
+      "time": "",
+      "stock": "케이아이엔엑스",
+      "category": "건설/주택",
+      "newhigh_type": "역사적 신고가 신규 돌파",
+      "change_pct": "-2.1",
+      "trading_value": "21억",
+      "market_cap": "6,373억",
+      "current_price": "130,600원",
+      "investment_point": "데이터 트래픽 증가로 인한 인터넷 인프라 서비스 수요 확대 기대감. / Miri Capital Management LLC의 지분 증가로 인한 투자 신뢰도 상승.",
+      "recent_results": "2026.1Q 425억/ 89억/ 77억 / 2025.4Q 412억/ 69억/ 74억 / 2025.3Q 395억/ 62억/ 48억 / 2025.2Q 392억/ 58억/ 58억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "",
+      "stock": "자이에스앤디",
+      "category": "건설/주택",
+      "newhigh_type": "52주",
+      "change_pct": "+7.2",
+      "trading_value": "61억",
+      "market_cap": "2,133억",
+      "current_price": "5,500원",
+      "investment_point": "서초동 부지 매각 결정으로 인한 재무 유동성 개선 기대감. / 2분기 영업이익 흑자기조 지속으로 인한 실적 안정성 전망.",
+      "recent_results": "2026.2Q 3,194억/ 90억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "",
+      "stock": "블루콤",
+      "category": "건설/주택",
+      "newhigh_type": "52주 신고가 돌파 이어감",
+      "change_pct": "+5.3",
+      "trading_value": "8억",
+      "market_cap": "734억",
+      "current_price": "4,295원",
+      "investment_point": "최근 부동산 투자 및 임대사업에 집중하면서 투자부동산이 전체 자산의 70%를 차지하는 안정적 수익 구조 기대감. / NH투자증권과의 40억 자기주식 신탁계약 체결로 주가 안정성 확보 기대감.",
+      "recent_results": "2026.1Q 18억/ 6억/ 16억 / 2025.4Q 6억/ 15억/ 20억 / 2025.3Q 17억/ 2억/ 36억 / 2025.2Q 29억/ 2억/ 2억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "",
+      "stock": "가비아",
+      "category": "클라우드/보안",
+      "newhigh_type": "역사적",
+      "change_pct": "+29.9",
+      "trading_value": "4억",
+      "market_cap": "5,912억",
+      "current_price": "44,050원",
+      "investment_point": "맥쿼리자산운용의 공개매수 및 자진 상장폐지 추진 소식에 의한 상승 기대감. / 디씨케이인베스트먼트의 공개매수 소식에 의한 상한가.",
+      "recent_results": "2026.1Q 850억/ 107억/ 90억 / 2025.4Q 975억/ 191억/ 166억 / 2025.3Q 806억/ 75억/ 47억 / 2025.2Q 806억/ 80억/ 80억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/572",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
       "date": "2026-07-16",
       "time": "",
       "stock": "신한지주",
@@ -451,8 +965,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -467,8 +981,8 @@ window.awakeplusData = {
       "investment_point": "주요 계열사인 인피니트헬스케어의 의료영상처리시스템(PACS) 사업 성장 기대감. / 키네마스터 주식 지분 증가를 통한 기업 가치 상승 전망.",
       "recent_results": "2026.1Q 353억/ 36억/ 82억 / 2025.4Q 287억/ 44억/ 11억 / 2025.3Q 270억/ 44억/ 221억 / 2025.2Q 402억/ 218억/ 218억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -483,8 +997,8 @@ window.awakeplusData = {
       "investment_point": "일본 제품 불매운동 테마에 따른 주목도 상승. / \"주식 사서 상폐 막자\"라는 애국 테마의 영향.",
       "recent_results": "2026.1Q 328억/ -27억/ -28억 / 2025.4Q 331억/ -14억/ -33억 / 2025.3Q 326억/ -21억/ -24억 / 2025.2Q 318억/ -16억/ -16억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -499,8 +1013,8 @@ window.awakeplusData = {
       "investment_point": "코웨이와의 서비스 제휴를 통해 신차 장기렌터카에 3.5% 캐시백 혜택 제공이 소비자 매력 상승 요인. / TPG의 인수 추진으로 인한 사업 시너지 기대감.",
       "recent_results": "2026.2Q 7,735억/ 868억/ 353억(E) / 2026.1Q 7,309억/ 836억/ 303억 / 2025.4Q 7,264억/ 793억/ 281억 / 2025.3Q 7,580억/ 890억/ 387억 / 2025.2Q 7,488억/ 772억/ 772억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -515,8 +1029,8 @@ window.awakeplusData = {
       "investment_point": "베트남 유통체인 TS Care 인수를 통한 해외시장 진출 확대 기대감. / 항암제 중심 신약 개발을 통한 성장 가능성 부각.",
       "recent_results": "2026.1Q 1,306억/ 112억/ 97억 / 2025.4Q 1,237억/ -40억/ -17억 / 2025.3Q 1,220억/ 14억/ 2억 / 2025.2Q 1,250억/ 6억/ 6억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -531,8 +1045,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-16",
@@ -547,8 +1061,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-16",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/571",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -563,8 +1077,8 @@ window.awakeplusData = {
       "investment_point": "'애국 테마' 붐으로 인한 개인 투자자들의 주식 매수 운동에 따른 주가 상승 기대감. / 수산 테마 상승세와 결합하여 기업의 핵심 제품인 게맛살 및 수산가공품에 대한 관심 증가 전망.",
       "recent_results": "2026.1Q 777억/ 30억/ 19억 / 2025.4Q 823억/ -3억/ 2억 / 2025.3Q 764억/ 4억/ -12억 / 2025.2Q 787억/ 30억/ 30억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -579,8 +1093,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -595,8 +1109,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -611,8 +1125,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -627,8 +1141,8 @@ window.awakeplusData = {
       "investment_point": "HBM 검사 기판 수요 확대 기대감에 따른 주가 상승 기대감. / 판가 상승으로 인한 구조적 수익성 개선 전망.",
       "recent_results": "2026.2Q 314억/ 60억/ 57억(E) / 2026.1Q 268억/ 35억/ 28억 / 2025.4Q 241억/ 23억/ 19억 / 2025.3Q 204억/ 10억/ 13억 / 2025.2Q 192억/ 29억/ 29억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -643,8 +1157,8 @@ window.awakeplusData = {
       "investment_point": "제형 축소 및 근거 기반 마케팅을 통한 '페바로젯'의 고지혈증 시장 점유율 확대 기대감. / 1분기 '어닝 서프라이즈'로 인한 실적 호조 전망.",
       "recent_results": "2026.1Q 989억/ 160억/ 124억 / 2025.4Q 766억/ -59억/ -26억 / 2025.3Q 777억/ 49억/ 34억 / 2025.2Q 768억/ 50억/ 50억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -659,8 +1173,8 @@ window.awakeplusData = {
       "investment_point": "생체인식 기술을 활용한 보안 시스템의 수요 증가에 따른 성장 기대감. / 자사주 소각 결정으로 인한 주주가치 제고 기대감.",
       "recent_results": "2026.1Q 73억/ 10억/ 25억 / 2025.4Q 54억/ 10억/ 29억 / 2025.3Q 46억/ 7억/ 53억 / 2025.2Q 53억/ 8억/ 8억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -675,8 +1189,8 @@ window.awakeplusData = {
       "investment_point": "자회사 인피니트헬스케어의 의료 IT 사업 확장과 관련된 기대감. / 키네마스터 지분 증가에 따른 사업 다각화 및 성장 기대감.",
       "recent_results": "2026.1Q 353억/ 36억/ 82억 / 2025.4Q 287억/ 44억/ 11억 / 2025.3Q 270억/ 44억/ 221억 / 2025.2Q 402억/ 218억/ 218억",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -691,8 +1205,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-15",
@@ -707,8 +1221,8 @@ window.awakeplusData = {
       "investment_point": "",
       "recent_results": "",
       "source": "sin+allnewhigh",
-      "detail_url": "https://www.awakeplus.co.kr/board/sin/2026-07-15",
-      "collected_at": "reparsed-local-2026-07-18"
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/570",
+      "collected_at": "2026-07-20 10:21:34"
     },
     {
       "date": "2026-07-14",
@@ -2522,7 +3036,7 @@ window.awakeplusData = {
       "date": "2026-06-25",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+5.6",
       "trading_value": "2.8조",
@@ -2730,7 +3244,7 @@ window.awakeplusData = {
       "date": "2026-06-22",
       "time": "",
       "stock": "한솔테크닉스",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "52주",
       "change_pct": "+18.2",
       "trading_value": "1,886억",
@@ -2922,7 +3436,7 @@ window.awakeplusData = {
       "date": "2026-06-22",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+10.7",
       "trading_value": "2.7조",
@@ -3226,7 +3740,7 @@ window.awakeplusData = {
       "date": "2026-06-19",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "금융/지주/밸류업",
+      "category": "반도체/소부장",
       "newhigh_type": "역사적",
       "change_pct": "+4.7",
       "trading_value": "2.7조",
@@ -3642,7 +4156,7 @@ window.awakeplusData = {
       "date": "2026-06-17",
       "time": "",
       "stock": "한솔테크닉스",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "52주",
       "change_pct": "+30.0",
       "trading_value": "810억",
@@ -3866,7 +4380,7 @@ window.awakeplusData = {
       "date": "2026-06-17",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+6.3",
       "trading_value": "1.5조",
@@ -4106,7 +4620,7 @@ window.awakeplusData = {
       "date": "2026-06-16",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "금융/지주/밸류업",
+      "category": "반도체/소부장",
       "newhigh_type": "역사적",
       "change_pct": "+6.2",
       "trading_value": "1.2조",
@@ -4426,7 +4940,7 @@ window.awakeplusData = {
       "date": "2026-06-15",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+4.0",
       "trading_value": "1.5조",
@@ -4858,7 +5372,7 @@ window.awakeplusData = {
       "date": "2026-06-12",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+10.6",
       "trading_value": "2.1조",
@@ -6330,7 +6844,7 @@ window.awakeplusData = {
       "date": "2026-06-04",
       "time": "",
       "stock": "SK스퀘어",
-      "category": "반도체/소부장",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+1.1",
       "trading_value": "1.2조",
@@ -6554,7 +7068,7 @@ window.awakeplusData = {
       "date": "2026-06-02",
       "time": "",
       "stock": "LG전자",
-      "category": "금융/지주/밸류업",
+      "category": "로봇",
       "newhigh_type": "역사적",
       "change_pct": "+3.1",
       "trading_value": "3.9조",
@@ -6570,7 +7084,7 @@ window.awakeplusData = {
       "date": "2026-06-01",
       "time": "",
       "stock": "현대차",
-      "category": "로봇",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+3.7",
       "trading_value": "2.1조",
@@ -6826,7 +7340,7 @@ window.awakeplusData = {
       "date": "2026-06-01",
       "time": "",
       "stock": "LG전자",
-      "category": "로봇",
+      "category": "금융/지주/밸류업",
       "newhigh_type": "역사적",
       "change_pct": "+29.9",
       "trading_value": "1.9조",
@@ -6874,7 +7388,7 @@ window.awakeplusData = {
       "date": "2026-06-01",
       "time": "",
       "stock": "LG씨엔에스",
-      "category": "로봇",
+      "category": "가상자산/STO/핀테크",
       "newhigh_type": "역사적",
       "change_pct": "+26.3",
       "trading_value": "1.6조",
@@ -6904,24 +7418,6 @@ window.awakeplusData = {
     }
   ],
   "posts": [
-    {
-      "source": "allnewhigh",
-      "date": "2026-06-29",
-      "time": "",
-      "title": "52주 신고가 돌파종목(2026년 06월 29일) - AWAKEPLUS",
-      "url": "https://www.awakeplus.co.kr/board/allnewhigh/558",
-      "row_count": "8",
-      "collected_at": "2026-07-18 18:21:48"
-    },
-    {
-      "source": "allnewhigh",
-      "date": "2026-06-26",
-      "time": "",
-      "title": "52주 신고가 돌파종목(2026년 06월 26일) - AWAKEPLUS",
-      "url": "https://www.awakeplus.co.kr/board/allnewhigh/557",
-      "row_count": "11",
-      "collected_at": "2026-07-18 18:21:48"
-    },
     {
       "source": "allnewhigh",
       "date": "2026-06-25",
@@ -7083,6 +7579,24 @@ window.awakeplusData = {
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/539",
       "row_count": "25",
       "collected_at": "2026-07-18 18:21:48"
+    },
+    {
+      "source": "sin",
+      "date": "2026-07-20",
+      "time": "",
+      "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
+      "url": "https://www.awakeplus.co.kr/board/sin/572",
+      "row_count": "4",
+      "collected_at": "2026-07-20 10:21:34"
+    },
+    {
+      "source": "allnewhigh",
+      "date": "2026-07-20",
+      "time": "",
+      "title": "52주 신고가 돌파종목(2026년 07월 20일) - AWAKEPLUS",
+      "url": "https://www.awakeplus.co.kr/board/allnewhigh/572",
+      "row_count": "4",
+      "collected_at": "2026-07-20 10:21:34"
     }
   ],
   "leader_scores": [
@@ -7265,6 +7779,18 @@ window.awakeplusData = {
       "theme": "비만 치료제"
     },
     {
+      "stock": "삼성화재",
+      "score": 22,
+      "sources": [
+        "TOP15",
+        "sin+allnewhigh"
+      ],
+      "signals": [
+        "신고가 4회"
+      ],
+      "theme": "은행/보험"
+    },
+    {
       "stock": "금호건설",
       "score": 21,
       "sources": [
@@ -7365,18 +7891,6 @@ window.awakeplusData = {
       "theme": "금융/지주/밸류업"
     },
     {
-      "stock": "삼성화재",
-      "score": 19,
-      "sources": [
-        "TOP15",
-        "sin+allnewhigh"
-      ],
-      "signals": [
-        "신고가 4회"
-      ],
-      "theme": "은행/보험"
-    },
-    {
       "stock": "JW신약",
       "score": 17,
       "sources": [
@@ -7422,13 +7936,13 @@ window.awakeplusData = {
     }
   ],
   "summary": {
-    "range_start": "2026-06-01",
-    "range_end": "2026-07-16",
-    "todaytop15_date": "2026-07-16",
-    "todaytop15_count": 29,
-    "newhigh_date": "2026-07-16",
-    "newhigh_count": 404,
-    "newhigh_raw_count": 836,
-    "post_count": 66
+    "range_start": "",
+    "range_end": "",
+    "todaytop15_date": "2026-07-20",
+    "todaytop15_count": 59,
+    "newhigh_date": "2026-07-20",
+    "newhigh_count": 408,
+    "newhigh_raw_count": 816,
+    "post_count": 68
   }
 };
