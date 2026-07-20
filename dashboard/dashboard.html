@@ -1916,6 +1916,116 @@
       line-height: 1.45;
     }
 
+    .mini-bars {
+      display: grid;
+      gap: 0;
+      align-content: start;
+      justify-content: stretch;
+      min-width: 220px;
+      height: 230px;
+      max-height: 230px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #090b0e;
+    }
+
+    .mini-bar {
+      position: relative;
+      display: grid;
+      grid-template-columns: 68px 1fr auto;
+      gap: 8px;
+      align-items: center;
+      width: 100%;
+      min-height: 34px;
+      padding: 5px 7px 5px 18px;
+      border: 0;
+      border-left: 1px solid #2b3038;
+      border-radius: 0;
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .mini-bar::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #2b3038;
+      border-radius: 50%;
+      background: #08090b;
+      transform: translateY(-50%);
+    }
+
+    .mini-bar::after {
+      content: "↓";
+      position: absolute;
+      left: -7px;
+      bottom: -8px;
+      color: #3c4654;
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    .mini-bar:last-child::after {
+      content: "";
+    }
+
+    .mini-bar:hover,
+    .mini-bar.active {
+      color: var(--ink);
+      background: rgba(62, 207, 142, 0.08);
+    }
+
+    .mini-bar.active {
+      border-left-color: var(--green);
+    }
+
+    .mini-bar.active::before {
+      border-color: var(--green);
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(62, 207, 142, 0.14);
+    }
+
+    .mini-bar i {
+      display: block;
+      width: 100%;
+      height: 5px;
+      min-height: 5px;
+      border-radius: 999px;
+      background: #232731;
+      overflow: hidden;
+    }
+
+    .mini-bar i span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--green), var(--green-deep));
+    }
+
+    .mini-bar strong,
+    .mini-bar small {
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      letter-spacing: 0;
+    }
+
+    .mini-bar strong {
+      font-size: 11px;
+    }
+
+    .mini-bar small {
+      justify-self: end;
+      color: inherit;
+      font-size: 10px;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted-2);
@@ -2004,6 +2114,43 @@
         </div>
       </div>
     </header>
+
+    <section class="company-panel analysis-dock" aria-label="업체 현황">
+      <div class="company-head">
+        <div>
+          <p class="eyebrow">Company Drilldown</p>
+          <h2 class="company-title" id="companyTitle">업체 현황</h2>
+          <p class="company-subtitle" id="companySubtitle">종목 테이프에서 종목명을 클릭하거나 아래 입력창에서 종목을 선택하면 최근 실적, 투자포인트, 관측 히스토리를 모아 봅니다.</p>
+        </div>
+        <div>
+          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
+          <datalist id="companyList"></datalist>
+        </div>
+      </div>
+      <div class="company-grid">
+        <article class="company-card">
+          <h3>핵심 요약 · 차트</h3>
+          <div class="chips compact" id="companyThemes"></div>
+          <div class="company-metrics">
+            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
+            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
+            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
+            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
+          </div>
+          <div class="chart-links" id="companyLinks"></div>
+          <div class="chart-box" id="companyChartBox"></div>
+        </article>
+        <article class="company-card">
+          <h3>투자포인트</h3>
+          <ul class="point-list" id="companyPoints"></ul>
+        </article>
+        <article class="company-card">
+          <h3>최근 실적과 관측 히스토리</h3>
+          <ul class="result-list" id="companyResults"></ul>
+          <ul class="timeline-list" id="companyTimeline"></ul>
+        </article>
+      </div>
+    </section>
 
     <section class="command-strip" aria-label="필터">
       <select class="control" id="dateSelect" aria-label="날짜 선택"></select>
@@ -2183,43 +2330,6 @@
           <div class="dense-list" id="reportList"></div>
         </section>
       </aside>
-    </section>
-
-    <section class="company-panel analysis-dock" aria-label="업체 현황">
-      <div class="company-head">
-        <div>
-          <p class="eyebrow">Company Drilldown</p>
-          <h2 class="company-title" id="companyTitle">업체 현황</h2>
-          <p class="company-subtitle" id="companySubtitle">종목 테이프에서 종목명을 클릭하거나 아래 입력창에서 종목을 선택하면 최근 실적, 투자포인트, 관측 히스토리를 모아 봅니다.</p>
-        </div>
-        <div>
-          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
-          <datalist id="companyList"></datalist>
-        </div>
-      </div>
-      <div class="company-grid">
-        <article class="company-card">
-          <h3>핵심 요약 · 차트</h3>
-          <div class="chips compact" id="companyThemes"></div>
-          <div class="company-metrics">
-            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
-            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
-            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
-            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
-          </div>
-          <div class="chart-links" id="companyLinks"></div>
-          <div class="chart-box" id="companyChartBox"></div>
-        </article>
-        <article class="company-card">
-          <h3>투자포인트</h3>
-          <ul class="point-list" id="companyPoints"></ul>
-        </article>
-        <article class="company-card">
-          <h3>최근 실적과 관측 히스토리</h3>
-          <ul class="result-list" id="companyResults"></ul>
-          <ul class="timeline-list" id="companyTimeline"></ul>
-        </article>
-      </div>
     </section>
 
     <footer>
@@ -10761,7 +10871,10 @@ window.awakeplusData = {
       }).filter((day) => day.count);
       const max = Math.max(...daily.map((day) => Math.abs(day.avg)), 1);
       const selectedDate = dateSelect.value;
-      document.querySelector("#dailySparkline").innerHTML = daily.map((day) => `<button class="mini-bar ${selectedDate === day.date ? "active" : ""}" type="button" data-date="${day.date}" title="${day.date} \ud3c9\uade0 ${pct(day.avg)} \u00b7 ${day.count}${K.count}"><i style="height:${Math.max(10, (Math.abs(day.avg) / max) * 50)}px"></i><span>${day.date.slice(5)}</span><small>${day.count}${K.count}</small></button>`).join("");
+      document.querySelector("#dailySparkline").innerHTML = daily.map((day) => {
+        const width = Math.max(8, (Math.abs(day.avg) / max) * 100);
+        return `<button class="mini-bar ${selectedDate === day.date ? "active" : ""}" type="button" data-date="${day.date}" title="${day.date} \ud3c9\uade0 ${pct(day.avg)} \u00b7 ${day.count}${K.count}"><strong>${day.date.slice(5)}</strong><i><span style="width:${width}%"></span></i><small>${pct(day.avg)} · ${day.count}${K.count}</small></button>`;
+      }).join("");
       document.querySelectorAll("#dailySparkline .mini-bar").forEach((button) => button.addEventListener("click", () => { dateSelect.value = button.dataset.date; renderAll(); }));
     }
 
