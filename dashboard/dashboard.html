@@ -912,6 +912,40 @@
       min-width: 860px;
     }
 
+    .tape-head-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .tape-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #0c0e11;
+    }
+
+    .tape-tabs button {
+      min-height: 28px;
+      padding: 5px 10px;
+      border: 0;
+      border-radius: 5px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .tape-tabs button.active {
+      background: var(--green);
+      color: #07110d;
+    }
+
     .tape-table th,
     .tape-table td {
       padding: 9px 11px;
@@ -1593,7 +1627,14 @@
       <div class="main-board">
         <div class="section-head">
           <h2>종목 테이프</h2>
-          <span class="hint" id="tableCount">-</span>
+          <div class="tape-head-actions">
+            <div class="tape-tabs" aria-label="종목 테이프 구분">
+              <button type="button" class="active" data-tape-mode="all">전체</button>
+              <button type="button" data-tape-mode="top15">TOP15</button>
+              <button type="button" data-tape-mode="newhigh">신고가</button>
+            </div>
+            <span class="hint" id="tableCount">-</span>
+          </div>
         </div>
         <div class="table-wrap">
           <table class="tape-table">
@@ -9633,6 +9674,7 @@ window.awakeplusData = {
     const sortSelect = document.querySelector("#sortSelect");
     const stockRows = document.querySelector("#stockRows");
     const tableCount = document.querySelector("#tableCount");
+    const tapeModeButtons = document.querySelectorAll("[data-tape-mode]");
     const companySearch = document.querySelector("#companySearch");
     const companyList = document.querySelector("#companyList");
     const data = window.awakeplusData || {};
@@ -9846,6 +9888,7 @@ window.awakeplusData = {
     const marketRows = mergeRows(rawRows);
     const dates = [...new Set(marketRows.map((row) => row.date))].sort();
     let selectedCompany = "";
+    let tapeMode = "all";
 
     function selectedRowsBase() {
       return dateSelect.value === "all" ? marketRows : marketRows.filter((row) => row.date === dateSelect.value);
@@ -9957,8 +10000,17 @@ window.awakeplusData = {
 
     function renderTable(rows) {
       const repeated = repeatSet();
-      tableCount.textContent = `${rows.length}${K.shown}`;
-      stockRows.innerHTML = rows.length ? rows.map((row) => `<tr><td class="stock-cell"><button class="stock-link-btn" type="button" data-stock="${escapeHtml(row.name)}">${escapeHtml(row.name)}</button><span>${escapeHtml(row.date)} \u00b7 ${escapeHtml(row.cap)}${row.tradingValue ? ` \u00b7 ${K.trading} ${escapeHtml(row.tradingValue)}` : ""}</span></td><td class="pct">${pct(row.change)}</td><td class="reason-cell"><div class="chips compact">${row.themes.map(themeChip).join("") || `<span class="chip">${K.noTheme}</span>`}</div><p>${escapeHtml(row.summary)}</p></td><td><div class="status-stack">${row.sourceKinds.map((kind) => `<span class="chip">${escapeHtml(kind)}</span>`).join("")}${repeated.has(row.name) ? `<span class="chip repeat">${K.repeat}</span>` : ""}${row.change >= 29 ? `<span class="chip report">${K.limit}</span>` : ""}${row.statusLabels.slice(0, 3).map((label) => `<span class="chip">${escapeHtml(label)}</span>`).join("")}</div></td></tr>`).join("") : `<tr><td colspan="4" class="muted">${K.noData}</td></tr>`;
+      const top15Count = rows.filter((row) => row.sourceKinds.includes("TOP15")).length;
+      const highCount = rows.filter((row) => row.sourceKinds.includes(K.high)).length;
+      const tapeRows = tapeMode === "top15"
+        ? rows.filter((row) => row.sourceKinds.includes("TOP15"))
+        : tapeMode === "newhigh"
+          ? rows.filter((row) => row.sourceKinds.includes(K.high))
+          : rows;
+      tapeModeButtons.forEach((button) => button.classList.toggle("active", button.dataset.tapeMode === tapeMode));
+      const modeLabel = tapeMode === "top15" ? "TOP15" : tapeMode === "newhigh" ? K.high : "\uc804\uccb4";
+      tableCount.textContent = `${modeLabel} ${tapeRows.length}${K.shown} \u00b7 TOP15 ${top15Count}${K.count} \u00b7 ${K.high} ${highCount}${K.count}`;
+      stockRows.innerHTML = tapeRows.length ? tapeRows.map((row) => `<tr><td class="stock-cell"><button class="stock-link-btn" type="button" data-stock="${escapeHtml(row.name)}">${escapeHtml(row.name)}</button><span>${escapeHtml(row.date)} \u00b7 ${escapeHtml(row.cap)}${row.tradingValue ? ` \u00b7 ${K.trading} ${escapeHtml(row.tradingValue)}` : ""}</span></td><td class="pct">${pct(row.change)}</td><td class="reason-cell"><div class="chips compact">${row.themes.map(themeChip).join("") || `<span class="chip">${K.noTheme}</span>`}</div><p>${escapeHtml(row.summary)}</p></td><td><div class="status-stack">${row.sourceKinds.map((kind) => `<span class="chip">${escapeHtml(kind)}</span>`).join("")}${repeated.has(row.name) ? `<span class="chip repeat">${K.repeat}</span>` : ""}${row.change >= 29 ? `<span class="chip report">${K.limit}</span>` : ""}${row.statusLabels.slice(0, 3).map((label) => `<span class="chip">${escapeHtml(label)}</span>`).join("")}</div></td></tr>`).join("") : `<tr><td colspan="4" class="muted">${modeLabel} 조건에 맞는 종목이 없습니다.</td></tr>`;
       document.querySelectorAll(".stock-link-btn").forEach((button) => button.addEventListener("click", () => {
         selectedCompany = button.dataset.stock || "";
         companySearch.value = selectedCompany;
@@ -10163,6 +10215,12 @@ window.awakeplusData = {
     [dateSelect, themeSelect, searchInput, sortSelect].forEach((control) => {
       control.addEventListener("input", renderAll);
       control.addEventListener("change", renderAll);
+    });
+    tapeModeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        tapeMode = button.dataset.tapeMode || "all";
+        renderTable(visibleRows());
+      });
     });
     companySearch.addEventListener("change", () => {
       selectedCompany = companySearch.value.trim();
