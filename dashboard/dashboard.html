@@ -1762,6 +1762,19 @@
       padding: 6px 7px;
     }
 
+    .pick-item {
+      width: 100%;
+      border-color: var(--line);
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .pick-item:hover {
+      border-color: rgba(62, 207, 142, 0.45);
+      background: rgba(62, 207, 142, 0.08);
+    }
+
     .dense-item strong,
     .score-item strong {
       font-size: 12px;
@@ -2115,43 +2128,6 @@
       </div>
     </header>
 
-    <section class="company-panel analysis-dock" aria-label="업체 현황">
-      <div class="company-head">
-        <div>
-          <p class="eyebrow">Company Drilldown</p>
-          <h2 class="company-title" id="companyTitle">업체 현황</h2>
-          <p class="company-subtitle" id="companySubtitle">종목 테이프에서 종목명을 클릭하거나 아래 입력창에서 종목을 선택하면 최근 실적, 투자포인트, 관측 히스토리를 모아 봅니다.</p>
-        </div>
-        <div>
-          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
-          <datalist id="companyList"></datalist>
-        </div>
-      </div>
-      <div class="company-grid">
-        <article class="company-card">
-          <h3>핵심 요약 · 차트</h3>
-          <div class="chips compact" id="companyThemes"></div>
-          <div class="company-metrics">
-            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
-            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
-            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
-            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
-          </div>
-          <div class="chart-links" id="companyLinks"></div>
-          <div class="chart-box" id="companyChartBox"></div>
-        </article>
-        <article class="company-card">
-          <h3>투자포인트</h3>
-          <ul class="point-list" id="companyPoints"></ul>
-        </article>
-        <article class="company-card">
-          <h3>최근 실적과 관측 히스토리</h3>
-          <ul class="result-list" id="companyResults"></ul>
-          <ul class="timeline-list" id="companyTimeline"></ul>
-        </article>
-      </div>
-    </section>
-
     <section class="command-strip" aria-label="필터">
       <select class="control" id="dateSelect" aria-label="날짜 선택"></select>
       <select class="control" id="themeSelect" aria-label="테마 선택">
@@ -2219,6 +2195,43 @@
           </div>
           <div class="dense-list" id="awakeNewhigh"></div>
         </section>
+      </div>
+    </section>
+
+    <section class="company-panel analysis-dock" aria-label="업체 현황">
+      <div class="company-head">
+        <div>
+          <p class="eyebrow">Company Drilldown</p>
+          <h2 class="company-title" id="companyTitle">업체 현황</h2>
+          <p class="company-subtitle" id="companySubtitle">위 TOP15·신고가·주도주 후보에서 종목을 선택하면 최근 실적, 투자포인트, 차트, 관측 히스토리를 이어서 봅니다.</p>
+        </div>
+        <div>
+          <input class="control" id="companySearch" list="companyList" type="search" placeholder="업체 현황 종목 검색" />
+          <datalist id="companyList"></datalist>
+        </div>
+      </div>
+      <div class="company-grid">
+        <article class="company-card">
+          <h3>핵심 요약 · 차트</h3>
+          <div class="chips compact" id="companyThemes"></div>
+          <div class="company-metrics">
+            <div class="company-metric"><span>최근 관측</span><strong id="companyLatest">-</strong></div>
+            <div class="company-metric"><span>최근 상승률</span><strong id="companyChange">-</strong></div>
+            <div class="company-metric"><span>등장 횟수</span><strong id="companyAppearances">-</strong></div>
+            <div class="company-metric"><span>주요 신호</span><strong id="companySignals">-</strong></div>
+          </div>
+          <div class="chart-links" id="companyLinks"></div>
+          <div class="chart-box" id="companyChartBox"></div>
+        </article>
+        <article class="company-card">
+          <h3>투자포인트</h3>
+          <ul class="point-list" id="companyPoints"></ul>
+        </article>
+        <article class="company-card">
+          <h3>최근 실적과 관측 히스토리</h3>
+          <ul class="result-list" id="companyResults"></ul>
+          <ul class="timeline-list" id="companyTimeline"></ul>
+        </article>
       </div>
     </section>
 
@@ -11033,24 +11046,37 @@ window.awakeplusData = {
       const leaders = scored.slice(0, 4).map((row) => row.name);
       const repeats = scored.filter((row) => row.repeated).slice(0, 4).map((row) => row.name);
       const limitCount = rows.filter((row) => row.change >= 29).length;
-      const breadth = highRows.length >= topRows.length ? "신고가 확산이 TOP15보다 넓게 퍼져 추세 확인에 유리합니다." : "TOP15 상승은 강하지만 신고가 확산은 아직 제한적입니다.";
-      const overlapText = overlap.length ? `${overlap.slice(0, 4).join(", ")}가 TOP15와 신고가에 동시에 잡혔습니다.` : "TOP15와 신고가의 직접 교집합은 약해 순환매 성격도 함께 확인해야 합니다.";
-      text.textContent = `${topTheme}가 ${topThemeCount}건으로 가장 강한 테마입니다. ${overlapText} 주도주 후보는 ${leaders.join(", ") || "-"} 순으로 압축됩니다. ${breadth}`;
+      const topAvg = topRows.length ? topRows.reduce((sum, row) => sum + row.change, 0) / topRows.length : 0;
+      const highAvg = highRows.length ? highRows.reduce((sum, row) => sum + row.change, 0) / highRows.length : 0;
+      const topThemeShare = rows.length ? Math.round((topThemeCount / rows.length) * 100) : 0;
+      const megaCaps = topRows.filter((row) => /조/.test(row.cap) && !/^0/.test(row.cap)).slice(0, 5).map((row) => row.name);
+      const kospi = (marketSnapshot.items || []).find((item) => item.name === "KOSPI");
+      const kosdaq = (marketSnapshot.items || []).find((item) => item.name === "KOSDAQ");
+      const koreaTone = [kospi, kosdaq].filter(Boolean).map((item) => `${item.name} ${Number(item.change_pct || 0) >= 0 ? "+" : ""}${Number(item.change_pct || 0).toFixed(2)}%`).join(" · ");
+      const leadershipType = megaCaps.length >= 5 ? "대형주가 시장 방향을 끌고 가는 장세" : limitCount >= 2 ? "상한가권 종목이 체감 강도를 높인 테마 장세" : "선별 종목 중심의 압축 장세";
+      const validation = overlap.length
+        ? `${overlap.slice(0, 4).join(", ")}가 TOP15와 신고가에 동시에 잡혀 가격 모멘텀과 신고가 검증이 겹쳤습니다.`
+        : highRows.length
+          ? `신고가는 ${highRows.slice(0, 4).map((row) => row.name).join(", ")}로 확인되지만 TOP15와 직접 겹치는 종목은 약합니다.`
+          : "신고가 검증은 약해 당일 상승 종목의 지속성 확인이 필요합니다.";
+      const marketTone = koreaTone ? `${koreaTone} 흐름 속에서 ` : "";
+      text.textContent = `${marketTone}${leadershipType}입니다. ${topTheme}가 ${topThemeCount}건(${topThemeShare}%)으로 가장 강하고, TOP15 평균은 ${pct(topAvg)}, 신고가 평균은 ${highRows.length ? pct(highAvg) : "-"}입니다. ${validation} 오늘의 우선 관찰 후보는 ${leaders.join(", ") || "-"}입니다.`;
       points.innerHTML = [
-        `TOP15 ${topRows.length}건 · 신고가 ${highRows.length}건 · 교집합 ${overlap.length}종목`,
-        `반복 등장: ${repeats.length ? repeats.join(", ") : "아직 뚜렷하지 않음"}`,
-        `상한가권 ${limitCount}종목 · 과열보다 지속성을 보려면 다음 거래일 신고가 재등장 여부 확인`,
-        `투자포인트 우선 확인: ${highRows.slice(0, 3).map((row) => row.name).join(", ") || "신고가 종목 없음"}`
+        `주도 구조: TOP15 ${topRows.length}건 · 신고가 ${highRows.length}건 · 교집합 ${overlap.length}종목 · 상한가권 ${limitCount}종목`,
+        `대형주 온도: ${megaCaps.length ? megaCaps.join(", ") : "대형주보다는 중소형/테마 개별주 중심"}`,
+        `연속성 후보: ${repeats.length ? repeats.join(", ") : "반복 등장은 아직 약함"} · 다음 거래일 재등장 여부가 핵심`,
+        `신고가 투자포인트 우선 확인: ${highRows.slice(0, 3).map((row) => row.name).join(", ") || "신고가 종목 없음"}`,
+        `해석 포커스: ${overlap.length ? "교집합 종목은 추세 지속 후보, 비교집합 TOP15는 단기 뉴스성 여부 점검" : "TOP15 강세가 신고가로 확산되는지 확인"}`
       ].map((item) => `<li>${escapeHtml(item)}</li>`).join("");
     }
 
     function renderSelectors() {
       dateSelect.innerHTML = `<option value="all">${K.all}</option>` + dates.map((date) => `<option value="${date}">${date}</option>`).join("");
-      dateSelect.value = "all";
+      dateSelect.value = dates[0] || "all";
       const themes = [...new Set(marketRows.flatMap((row) => row.themes))].sort((a, b) => a.localeCompare(b, "ko"));
       themeSelect.innerHTML = `<option value="">${K.allTheme}</option>` + themes.map((theme) => `<option value="${escapeHtml(theme)}">${escapeHtml(theme)}</option>`).join("");
       companyList.innerHTML = [...new Set(marketRows.map((row) => row.name))].sort((a, b) => a.localeCompare(b, "ko")).map((name) => `<option value="${escapeHtml(name)}"></option>`).join("");
-      selectedCompany = scoreRows(marketRows)[0]?.name || marketRows[0]?.name || "";
+      selectedCompany = scoreRows(selectedRowsBase())[0]?.name || scoreRows(marketRows)[0]?.name || marketRows[0]?.name || "";
       companySearch.value = selectedCompany;
     }
 
@@ -11123,6 +11149,16 @@ window.awakeplusData = {
         selectedCompany = button.dataset.stock || "";
         companySearch.value = selectedCompany;
         renderCompany();
+        document.querySelector(".analysis-dock")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }));
+    }
+
+    function bindCompanyPickers(scope = document) {
+      scope.querySelectorAll("[data-pick-stock]").forEach((button) => button.addEventListener("click", () => {
+        selectedCompany = button.dataset.pickStock || "";
+        companySearch.value = selectedCompany;
+        renderCompany();
+        document.querySelector(".analysis-dock")?.scrollIntoView({ behavior: "smooth", block: "start" });
       }));
     }
 
@@ -11173,9 +11209,10 @@ window.awakeplusData = {
       document.querySelector("#awakeTopDate").textContent = dateSelect.value === "all" ? K.cumulative : dateSelect.value;
       document.querySelector("#awakeNewhighDate").textContent = dateSelect.value === "all" ? K.dedup : dateSelect.value;
       document.querySelector("#awakeSubtitle").textContent = data.generated_at ? `${K.update}: ${data.generated_at} \u00b7 \ud604\uc7ac \ud544\ud130 \uae30\uc900\uc73c\ub85c \ubaa8\ub4e0 \uc601\uc5ed\uc744 \uc7ac\uc9d1\uacc4\ud588\uc2b5\ub2c8\ub2e4.` : "\uc218\uc9d1 \ub370\uc774\ud130\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.";
-      document.querySelector("#awakeScores").innerHTML = scored.slice(0, 8).map((row) => `<div class="score-item"><strong>${escapeHtml(row.name)}</strong><span class="score-badge">${row.score}</span><p>${escapeHtml(row.sourceKind)} \u00b7 ${row.themes.slice(0, 2).map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${row.dateCount}${K.days} \ub4f1\uc7a5</p></div>`).join("") || `<div class="dense-item"><p>\ud6c4\ubcf4 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
-      document.querySelector("#awakeTop15").innerHTML = topRows.slice(0, 10).map((row) => `<div class="dense-item"><strong>${row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong><p>${row.themes.map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></div>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 TOP15 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
-      document.querySelector("#awakeNewhigh").innerHTML = highRows.slice(0, 10).map((row) => `<div class="dense-item"><strong>${escapeHtml(row.name)}</strong><p>${escapeHtml(row.themes[0] || K.noTheme)} \u00b7 ${escapeHtml(row.newhighType || K.high)} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></div>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 ${K.high} \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
+      document.querySelector("#awakeScores").innerHTML = scored.slice(0, 8).map((row) => `<button type="button" class="score-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><span class="score-badge">${row.score}</span><p>${escapeHtml(row.sourceKind)} \u00b7 ${row.themes.slice(0, 2).map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${row.dateCount}${K.days} \ub4f1\uc7a5</p></button>`).join("") || `<div class="dense-item"><p>\ud6c4\ubcf4 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
+      document.querySelector("#awakeTop15").innerHTML = topRows.slice(0, 10).map((row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong><p>${row.themes.map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 TOP15 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
+      document.querySelector("#awakeNewhigh").innerHTML = highRows.slice(0, 10).map((row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><p>${escapeHtml(row.themes[0] || K.noTheme)} \u00b7 ${escapeHtml(row.newhighType || K.high)} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 ${K.high} \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
+      bindCompanyPickers(document.querySelector(".awake-board"));
     }
 
     function rowsForCompany(name) {
