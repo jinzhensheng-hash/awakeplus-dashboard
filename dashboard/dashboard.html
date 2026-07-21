@@ -1795,6 +1795,20 @@
       font-size: 10px;
     }
 
+    select.panel-period {
+      max-width: 152px;
+      height: 25px;
+      padding: 3px 22px 3px 8px;
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+    }
+
+    select.panel-period:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(22, 163, 127, 0.18);
+    }
+
     .date-label {
       color: var(--muted);
       font-size: 10px;
@@ -2221,21 +2235,21 @@
         <section class="compact-section">
           <div class="section-head">
             <h2>주도주 후보</h2>
-            <span class="hint panel-period" id="awakeScoreDate">-</span>
+            <select class="hint panel-period panel-date-select" id="awakeScoreDate" aria-label="주도주 후보 날짜 선택"></select>
           </div>
           <div class="dense-list" id="awakeScores"></div>
         </section>
         <section class="compact-section">
           <div class="section-head">
             <h2>오늘의 TOP15</h2>
-            <span class="hint panel-period" id="awakeTopDate">-</span>
+            <select class="hint panel-period panel-date-select" id="awakeTopDate" aria-label="오늘의 TOP15 날짜 선택"></select>
           </div>
           <div class="dense-list" id="awakeTop15"></div>
         </section>
         <section class="compact-section">
           <div class="section-head">
             <h2>신고가 추적</h2>
-            <span class="hint panel-period" id="awakeNewhighDate">-</span>
+            <select class="hint panel-period panel-date-select" id="awakeNewhighDate" aria-label="신고가 추적 날짜 선택"></select>
           </div>
           <div class="dense-list" id="awakeNewhigh"></div>
         </section>
@@ -10760,6 +10774,7 @@ window.awakeplusData = {
     };
 
     const dateSelect = document.querySelector("#dateSelect");
+    const panelDateSelects = document.querySelectorAll(".panel-date-select");
     const themeSelect = document.querySelector("#themeSelect");
     const searchInput = document.querySelector("#searchInput");
     const sortSelect = document.querySelector("#sortSelect");
@@ -11150,8 +11165,11 @@ window.awakeplusData = {
     }
 
     function renderSelectors() {
-      dateSelect.innerHTML = `<option value="all">${K.all}</option>` + dates.map((date) => `<option value="${date}">${date}</option>`).join("");
+      const dateOptions = `<option value="all">전체 날짜</option>` + dates.map((date) => `<option value="${date}">${date}</option>`).join("");
+      dateSelect.innerHTML = dateOptions;
+      panelDateSelects.forEach((select) => { select.innerHTML = dateOptions; });
       dateSelect.value = dates[0] || "all";
+      panelDateSelects.forEach((select) => { select.value = dateSelect.value; });
       const themes = [...new Set(marketRows.flatMap((row) => row.themes))].sort((a, b) => a.localeCompare(b, "ko"));
       themeSelect.innerHTML = `<option value="">${K.allTheme}</option>` + themes.map((theme) => `<option value="${escapeHtml(theme)}">${escapeHtml(theme)}</option>`).join("");
       renderCompanyOptions(selectedRowsBase());
@@ -11285,12 +11303,7 @@ window.awakeplusData = {
       document.querySelector("#awakeTopCount").textContent = `${topRows.length}`;
       document.querySelector("#awakeNewhighCount").textContent = `${highRows.length}`;
       document.querySelector("#awakeScoreCount").textContent = `${scored.length}`;
-      const periodText = dateSelect.value === "all"
-        ? `날짜별 · ${dates[dates.length - 1] || "-"}~${dates[0] || "-"}`
-        : `${dateSelect.value} 기준`;
-      document.querySelector("#awakeScoreDate").textContent = `${periodText} · 점수순`;
-      document.querySelector("#awakeTopDate").textContent = periodText;
-      document.querySelector("#awakeNewhighDate").textContent = periodText;
+      panelDateSelects.forEach((select) => { select.value = dateSelect.value; });
       document.querySelector("#awakeSubtitle").textContent = data.generated_at ? `${K.update}: ${data.generated_at} \u00b7 \ud604\uc7ac \ud544\ud130 \uae30\uc900\uc73c\ub85c \ubaa8\ub4e0 \uc601\uc5ed\uc744 \uc7ac\uc9d1\uacc4\ud588\uc2b5\ub2c8\ub2e4.` : "\uc218\uc9d1 \ub370\uc774\ud130\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.";
       document.querySelector("#awakeScores").innerHTML = renderDateGroups(
         scored,
@@ -11466,6 +11479,12 @@ window.awakeplusData = {
     [dateSelect, themeSelect, searchInput, sortSelect].forEach((control) => {
       control.addEventListener("input", renderAll);
       control.addEventListener("change", renderAll);
+    });
+    panelDateSelects.forEach((select) => {
+      select.addEventListener("change", () => {
+        dateSelect.value = select.value;
+        renderAll();
+      });
     });
     tapeModeButtons.forEach((button) => {
       button.addEventListener("click", () => {
