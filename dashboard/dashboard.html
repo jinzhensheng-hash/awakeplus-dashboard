@@ -1762,6 +1762,31 @@
       padding: 6px 7px;
     }
 
+    .date-group {
+      display: grid;
+      gap: 5px;
+    }
+
+    .date-divider {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 5px 7px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #090b0e;
+      color: var(--muted);
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0;
+    }
+
+    .date-divider strong {
+      color: var(--green);
+      font-size: 11px;
+    }
+
     .pick-item {
       width: 100%;
       border-color: var(--line);
@@ -2136,6 +2161,7 @@
       <input class="control" id="searchInput" type="search" placeholder="종목명, 테마, 상승 사유 검색" />
       <select class="control" id="sortSelect" aria-label="정렬 선택">
         <option value="date_desc">최근 날짜 순</option>
+        <option value="name_date_desc">종목별 날짜 순</option>
         <option value="change_desc">상승률 높은 순</option>
         <option value="cap_desc">시가총액 큰 순</option>
         <option value="name_asc">종목명 가나다순</option>
@@ -10975,9 +11001,44 @@ window.awakeplusData = {
       return rows.sort((a, b) => {
         if (sortSelect.value === "change_desc") return b.change - a.change || a.rank - b.rank;
         if (sortSelect.value === "cap_desc") return String(b.cap).localeCompare(String(a.cap), "ko") || b.change - a.change;
+        if (sortSelect.value === "name_date_desc") return a.name.localeCompare(b.name, "ko") || b.date.localeCompare(a.date) || a.rank - b.rank || b.change - a.change;
         if (sortSelect.value === "name_asc") return a.name.localeCompare(b.name, "ko") || b.date.localeCompare(a.date);
         return b.date.localeCompare(a.date) || a.rank - b.rank || b.change - a.change;
       });
+    }
+
+    function groupRowsByDate(rows) {
+      return dates.map((date) => [date, rows.filter((row) => row.date === date)]).filter(([, items]) => items.length);
+    }
+
+    function renderDateGroups(rows, itemRenderer, emptyHtml, maxPerDate = 10) {
+      const groups = groupRowsByDate(rows);
+      if (!groups.length) return emptyHtml;
+      return groups.map(([date, items]) => `
+        <div class="date-group">
+          <div class="date-divider"><strong>${escapeHtml(date)}</strong><span>${items.length}${K.count}</span></div>
+          ${items.slice(0, maxPerDate).map(itemRenderer).join("")}
+        </div>
+      `).join("");
+    }
+
+    function renderCompanyOptions(rows = selectedRowsBase()) {
+      if (!companyList) return;
+      const currentNames = new Set(rows.map((row) => row.name));
+      const latestByName = new Map();
+      marketRows.forEach((row) => {
+        const current = latestByName.get(row.name);
+        if (!current || row.date > current.date) latestByName.set(row.name, row);
+      });
+      const names = [...latestByName.keys()].sort((a, b) => {
+        const aCurrent = currentNames.has(a) ? 1 : 0;
+        const bCurrent = currentNames.has(b) ? 1 : 0;
+        if (aCurrent !== bCurrent) return bCurrent - aCurrent;
+        const aDate = latestByName.get(a)?.date || "";
+        const bDate = latestByName.get(b)?.date || "";
+        return bDate.localeCompare(aDate) || a.localeCompare(b, "ko");
+      });
+      companyList.innerHTML = names.map((name) => `<option value="${escapeHtml(name)}"></option>`).join("");
     }
 
     function getThemeCounts(rows) {
@@ -11075,7 +11136,7 @@ window.awakeplusData = {
       dateSelect.value = dates[0] || "all";
       const themes = [...new Set(marketRows.flatMap((row) => row.themes))].sort((a, b) => a.localeCompare(b, "ko"));
       themeSelect.innerHTML = `<option value="">${K.allTheme}</option>` + themes.map((theme) => `<option value="${escapeHtml(theme)}">${escapeHtml(theme)}</option>`).join("");
-      companyList.innerHTML = [...new Set(marketRows.map((row) => row.name))].sort((a, b) => a.localeCompare(b, "ko")).map((name) => `<option value="${escapeHtml(name)}"></option>`).join("");
+      renderCompanyOptions(selectedRowsBase());
       selectedCompany = scoreRows(selectedRowsBase())[0]?.name || scoreRows(marketRows)[0]?.name || marketRows[0]?.name || "";
       companySearch.value = selectedCompany;
     }
@@ -11209,9 +11270,24 @@ window.awakeplusData = {
       document.querySelector("#awakeTopDate").textContent = dateSelect.value === "all" ? K.cumulative : dateSelect.value;
       document.querySelector("#awakeNewhighDate").textContent = dateSelect.value === "all" ? K.dedup : dateSelect.value;
       document.querySelector("#awakeSubtitle").textContent = data.generated_at ? `${K.update}: ${data.generated_at} \u00b7 \ud604\uc7ac \ud544\ud130 \uae30\uc900\uc73c\ub85c \ubaa8\ub4e0 \uc601\uc5ed\uc744 \uc7ac\uc9d1\uacc4\ud588\uc2b5\ub2c8\ub2e4.` : "\uc218\uc9d1 \ub370\uc774\ud130\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.";
-      document.querySelector("#awakeScores").innerHTML = scored.slice(0, 8).map((row) => `<button type="button" class="score-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><span class="score-badge">${row.score}</span><p>${escapeHtml(row.sourceKind)} \u00b7 ${row.themes.slice(0, 2).map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${row.dateCount}${K.days} \ub4f1\uc7a5</p></button>`).join("") || `<div class="dense-item"><p>\ud6c4\ubcf4 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
-      document.querySelector("#awakeTop15").innerHTML = topRows.slice(0, 10).map((row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong><p>${row.themes.map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 TOP15 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
-      document.querySelector("#awakeNewhigh").innerHTML = highRows.slice(0, 10).map((row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><p>${escapeHtml(row.themes[0] || K.noTheme)} \u00b7 ${escapeHtml(row.newhighType || K.high)} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`).join("") || `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 ${K.high} \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`;
+      document.querySelector("#awakeScores").innerHTML = renderDateGroups(
+        scored,
+        (row) => `<button type="button" class="score-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><span class="score-badge">${row.score}</span><p>${escapeHtml(row.sourceKind)} \u00b7 ${row.themes.slice(0, 2).map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${row.dateCount}${K.days} \ub4f1\uc7a5</p></button>`,
+        `<div class="dense-item"><p>\ud6c4\ubcf4 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`,
+        dateSelect.value === "all" ? 8 : 12
+      );
+      document.querySelector("#awakeTop15").innerHTML = renderDateGroups(
+        topRows,
+        (row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong><p>${row.themes.map(escapeHtml).join(" \u00b7 ") || K.noTheme} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`,
+        `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 TOP15 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`,
+        15
+      );
+      document.querySelector("#awakeNewhigh").innerHTML = renderDateGroups(
+        highRows,
+        (row) => `<button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}"><strong>${escapeHtml(row.name)}</strong><p>${escapeHtml(row.themes[0] || K.noTheme)} \u00b7 ${escapeHtml(row.newhighType || K.high)} \u00b7 ${escapeHtml(row.summary)}</p><span class="pct">${pct(row.change)}</span></button>`,
+        `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 ${K.high} \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`,
+        15
+      );
       bindCompanyPickers(document.querySelector(".awake-board"));
     }
 
@@ -11344,6 +11420,12 @@ window.awakeplusData = {
 
     function renderAll() {
       const rows = visibleRows();
+      const companyScopeRows = selectedRowsBase();
+      renderCompanyOptions(companyScopeRows);
+      if (!companyScopeRows.some((row) => row.name === selectedCompany)) {
+        selectedCompany = scoreRows(companyScopeRows)[0]?.name || companyScopeRows[0]?.name || selectedCompany;
+        companySearch.value = selectedCompany;
+      }
       renderMarketSnapshot();
       renderHeader(rows);
       renderKpis(rows);
