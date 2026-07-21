@@ -1145,6 +1145,66 @@
       gap: 10px;
     }
 
+    .daily-signal-board {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f1116;
+      box-shadow: var(--shadow);
+    }
+
+    .daily-signal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .daily-signal-head h3 {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .daily-signal-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 8px;
+    }
+
+    .daily-signal-column {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #121419;
+      overflow: hidden;
+    }
+
+    .daily-signal-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 9px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .daily-signal-title strong {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .daily-signal-list {
+      display: grid;
+      gap: 5px;
+      padding: 7px;
+      max-height: 282px;
+      overflow: auto;
+    }
+
     .briefing-panel {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
@@ -2105,6 +2165,7 @@
       .cockpit,
       .focus-grid,
       .awake-grid,
+      .daily-signal-grid,
       .briefing-panel,
       .company-grid {
         grid-template-columns: 1fr;
@@ -2219,6 +2280,28 @@
             <span>후보</span>
             <strong id="awakeScoreCount">-</strong>
           </div>
+        </div>
+      </div>
+      <div class="daily-signal-board" aria-label="당일 TOP15와 신고가 확인">
+        <div class="daily-signal-head">
+          <h3>당일 TOP15 · 신고가 확인</h3>
+          <select class="hint panel-period panel-date-select" id="dailySignalDate" aria-label="당일 TOP15와 신고가 날짜 선택"></select>
+        </div>
+        <div class="daily-signal-grid">
+          <article class="daily-signal-column">
+            <div class="daily-signal-title">
+              <strong>당일 TOP15</strong>
+              <span id="dailyTopCount">-</span>
+            </div>
+            <div class="daily-signal-list" id="dailyTopList"></div>
+          </article>
+          <article class="daily-signal-column">
+            <div class="daily-signal-title">
+              <strong>당일 신고가</strong>
+              <span id="dailyHighCount">-</span>
+            </div>
+            <div class="daily-signal-list" id="dailyHighList"></div>
+          </article>
         </div>
       </div>
       <div class="briefing-panel" aria-label="TOP15와 신고가 시장 브리핑">
@@ -11296,6 +11379,32 @@ window.awakeplusData = {
       document.querySelector("#reportList").innerHTML = reports.length ? reports.map((row) => `<div class="dense-item"><strong>${escapeHtml(row.name)} <span class="pct">${pct(row.change)}</span></strong><p>${escapeHtml(row.date)} \u00b7 ${escapeHtml(row.sourceKind)} \u00b7 ${escapeHtml(row.summary)}</p><span class="chip report">${K.score} ${row.score}</span></div>`).join("") : `<div class="dense-item"><p>${K.noSignal}</p></div>`;
     }
 
+    function renderDailySignal() {
+      const signalDate = dateSelect.value === "all" ? dates[0] : dateSelect.value;
+      const dayRows = marketRows.filter((row) => row.date === signalDate);
+      const topRows = dayRows.filter((row) => row.sourceKinds.includes("TOP15")).sort((a, b) => a.rank - b.rank || b.change - a.change);
+      const highRows = dayRows.filter((row) => row.sourceKinds.includes(K.high)).sort((a, b) => b.scoreBonus - a.scoreBonus || b.change - a.change);
+      const dailySelect = document.querySelector("#dailySignalDate");
+      if (dailySelect && signalDate) dailySelect.value = signalDate;
+      document.querySelector("#dailyTopCount").textContent = `${signalDate || "-"} · ${topRows.length}${K.count}`;
+      document.querySelector("#dailyHighCount").textContent = `${signalDate || "-"} · ${highRows.length}${K.count}`;
+      document.querySelector("#dailyTopList").innerHTML = topRows.slice(0, 15).map((row) => `
+        <button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}">
+          <strong>${row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong>
+          <p>${escapeHtml(row.themes.slice(0, 2).join(" \u00b7 ") || K.noTheme)} \u00b7 ${escapeHtml(row.summary)}</p>
+          <span class="pct">${pct(row.change)}</span>
+        </button>
+      `).join("") || `<div class="dense-item"><p>${signalDate || "-"} TOP15 데이터가 없습니다.</p></div>`;
+      document.querySelector("#dailyHighList").innerHTML = highRows.slice(0, 15).map((row) => `
+        <button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}">
+          <strong>${escapeHtml(row.name)}</strong>
+          <p>${escapeHtml(row.newhighType || K.high)} \u00b7 ${escapeHtml(row.themes[0] || K.noTheme)} \u00b7 ${escapeHtml(row.summary)}</p>
+          <span class="pct">${pct(row.change)}</span>
+        </button>
+      `).join("") || `<div class="dense-item"><p>${signalDate || "-"} 신고가 데이터가 없습니다.</p></div>`;
+      bindCompanyPickers(document.querySelector(".daily-signal-board"));
+    }
+
     function renderAwakeplus(rows) {
       const topRows = rows.filter((row) => row.sourceKinds.includes("TOP15")).sort((a, b) => a.rank - b.rank || b.change - a.change);
       const highRows = rows.filter((row) => row.sourceKinds.includes(K.high)).sort((a, b) => b.scoreBonus - a.scoreBonus || b.change - a.change);
@@ -11471,6 +11580,7 @@ window.awakeplusData = {
       renderThemes(rows);
       renderReports(rows);
       renderAwakeplus(rows);
+      renderDailySignal();
       renderMarketBriefing(rows);
       renderCompany();
     }
