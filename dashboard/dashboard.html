@@ -11373,7 +11373,23 @@ window.awakeplusData = {
       "\ubaa8\ub098\ubbf8": "005360",
       "\ub86f\ub370\ub80c\ud0c8": "089860",
       "\ub3d9\ud654\uc57d\ud488": "000020",
-      "\uc194\ubcf8": "035610"
+      "\uc194\ubcf8": "035610",
+      "가온전선": "000500",
+      "두산": "000150",
+      "레인보우로보틱스": "277810",
+      "로보티즈": "108490",
+      "브이엠": "089970",
+      "삼현": "437730",
+      "슈피겐코리아": "192440",
+      "에스피지": "058610",
+      "현대모비스": "012330",
+      "현대오토에버": "307950",
+      "현대차": "005380",
+      "화신정공": "126640",
+      "GS": "078930",
+      "GS건설": "006360",
+      "LG전자": "066570",
+      "SK텔레콤": "017670"
 };
 
     function normalizeStockName(name) {
@@ -11884,7 +11900,9 @@ window.awakeplusData = {
             <button type="button" id="manualChartButton">\ucc28\ud2b8 \ud45c\uc2dc</button>
           </div>
           <div class="muted" id="manualChartMessage">\uc608: \uc0bc\uc131\uc804\uc790 005930, SK\ud558\uc774\ub2c9\uc2a4 000660</div>
-          <a href="${chartUrl(name)}" target="_blank" rel="noreferrer">\ub124\uc774\ubc84\uc5d0\uc11c \uc885\ubaa9\ucf54\ub4dc \ucc3e\uae30</a>
+          <div class="chart-links">
+            <a href="${chartUrl(name)}" target="_blank" rel="noreferrer">\ub124\uc774\ubc84\uc5d0\uc11c \uc885\ubaa9\ucf54\ub4dc \ucc3e\uae30</a>
+          </div>
         `;
         document.querySelector("#manualChartButton")?.addEventListener("click", () => {
           const manual = document.querySelector("#manualStockCode")?.value.trim() || "";
