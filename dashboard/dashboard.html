@@ -1124,7 +1124,9 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 7px;
       background: rgba(255, 255, 255, 0.08);
+      color: inherit;
       text-align: right;
+      cursor: pointer;
     }
 
     .awake-stat span {
@@ -1137,6 +1139,42 @@
       display: block;
       margin-top: 2px;
       font-size: 16px;
+    }
+
+    .awake-stat:hover,
+    .awake-stat.active {
+      border-color: rgba(62, 207, 142, 0.55);
+      background: rgba(62, 207, 142, 0.12);
+    }
+
+    .awake-stat-panel {
+      display: grid;
+      gap: 7px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f1116;
+    }
+
+    .awake-stat-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .awake-stat-panel-head strong {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .awake-stat-list {
+      display: grid;
+      gap: 5px;
+      max-height: 240px;
+      overflow: auto;
     }
 
     .awake-grid {
@@ -2268,19 +2306,26 @@
           <p id="awakeSubtitle">오늘의 주도주 TOP15, 52주 신고가, 국내 신고가 전체를 교차해서 주도주 후보를 압축합니다.</p>
         </div>
         <div class="awake-stats">
-          <div class="awake-stat">
+          <button class="awake-stat active" type="button" data-stat-mode="top15" aria-pressed="true">
             <span>TOP15</span>
             <strong id="awakeTopCount">-</strong>
-          </div>
-          <div class="awake-stat">
+          </button>
+          <button class="awake-stat" type="button" data-stat-mode="newhigh" aria-pressed="false">
             <span>신고가</span>
             <strong id="awakeNewhighCount">-</strong>
-          </div>
-          <div class="awake-stat">
+          </button>
+          <button class="awake-stat" type="button" data-stat-mode="candidate" aria-pressed="false">
             <span>후보</span>
             <strong id="awakeScoreCount">-</strong>
-          </div>
+          </button>
         </div>
+      </div>
+      <div class="awake-stat-panel" aria-label="요약 타일 선택 종목 목록">
+        <div class="awake-stat-panel-head">
+          <strong id="awakeStatTitle">TOP15 종목</strong>
+          <span id="awakeStatMeta">-</span>
+        </div>
+        <div class="awake-stat-list" id="awakeStatList"></div>
       </div>
       <div class="daily-signal-board" aria-label="당일 TOP15와 신고가 확인">
         <div class="daily-signal-head">
@@ -11185,6 +11230,7 @@ window.awakeplusData = {
     const stockRows = document.querySelector("#stockRows");
     const tableCount = document.querySelector("#tableCount");
     const tapeModeButtons = document.querySelectorAll("[data-tape-mode]");
+    const statModeButtons = document.querySelectorAll("[data-stat-mode]");
     const companySearch = document.querySelector("#companySearch");
     const companyList = document.querySelector("#companyList");
     const data = window.awakeplusData || {};
@@ -11423,6 +11469,7 @@ window.awakeplusData = {
     const dates = [...datesAsc].reverse();
     let selectedCompany = "";
     let tapeMode = "all";
+    let activeStatMode = "top15";
 
     function selectedRowsBase() {
       return dateSelect.value === "all" ? marketRows : marketRows.filter((row) => row.date === dateSelect.value);
@@ -11726,6 +11773,34 @@ window.awakeplusData = {
       bindCompanyPickers(document.querySelector(".daily-signal-board"));
     }
 
+    function renderAwakeStatList(topRows, highRows, scoredRows) {
+      const list = document.querySelector("#awakeStatList");
+      const title = document.querySelector("#awakeStatTitle");
+      const meta = document.querySelector("#awakeStatMeta");
+      if (!list || !title || !meta) return;
+      const configs = {
+        top15: { title: "TOP15 종목", rows: topRows, limit: 15 },
+        newhigh: { title: "신고가 종목", rows: highRows, limit: 15 },
+        candidate: { title: "주도주 후보", rows: scoredRows, limit: 15 }
+      };
+      const config = configs[activeStatMode] || configs.top15;
+      title.textContent = config.title;
+      meta.textContent = `${dateSelect.value === "all" ? "전체 날짜" : dateSelect.value} · ${config.rows.length}${K.count}`;
+      statModeButtons.forEach((button) => {
+        const active = button.dataset.statMode === activeStatMode;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      list.innerHTML = config.rows.slice(0, config.limit).map((row) => `
+        <button type="button" class="dense-item pick-item" data-pick-stock="${escapeHtml(row.name)}">
+          <strong>${activeStatMode === "top15" && row.rank < 999 ? `${row.rank}. ` : ""}${escapeHtml(row.name)}</strong>
+          <p>${escapeHtml(row.date)} \u00b7 ${escapeHtml(row.sourceKind)} \u00b7 ${escapeHtml(row.themes.slice(0, 2).join(" \u00b7 ") || K.noTheme)} \u00b7 ${escapeHtml(row.summary)}</p>
+          <span class="pct">${activeStatMode === "candidate" ? `${K.score} ${row.score}` : pct(row.change)}</span>
+        </button>
+      `).join("") || `<div class="dense-item"><p>${config.title} 데이터가 없습니다.</p></div>`;
+      bindCompanyPickers(document.querySelector(".awake-stat-panel"));
+    }
+
     function renderAwakeplus(rows) {
       const topRows = rows.filter((row) => row.sourceKinds.includes("TOP15")).sort((a, b) => a.rank - b.rank || b.change - a.change);
       const highRows = rows.filter((row) => row.sourceKinds.includes(K.high)).sort((a, b) => b.scoreBonus - a.scoreBonus || b.change - a.change);
@@ -11753,6 +11828,7 @@ window.awakeplusData = {
         `<div class="dense-item"><p>\uc120\ud0dd \uae30\uc900 ${K.high} \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.</p></div>`,
         15
       );
+      renderAwakeStatList(topRows, highRows, scored);
       bindCompanyPickers(document.querySelector(".awake-board"));
     }
 
@@ -11921,6 +11997,12 @@ window.awakeplusData = {
       button.addEventListener("click", () => {
         tapeMode = button.dataset.tapeMode || "all";
         renderTable(visibleRows());
+      });
+    });
+    statModeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeStatMode = button.dataset.statMode || "top15";
+        renderAwakeplus(visibleRows());
       });
     });
     companySearch.addEventListener("change", () => {
