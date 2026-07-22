@@ -214,16 +214,38 @@
     }
 
     .market-chart-label {
-      fill: var(--text);
-      font-size: 10px;
+      fill: #f8fafc;
+      font-size: 11px;
       font-weight: 800;
       font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      paint-order: stroke;
+      stroke: rgba(0, 0, 0, 0.68);
+      stroke-width: 2.4px;
     }
 
     .market-chart-label-bg {
-      fill: rgba(8, 9, 11, 0.88);
-      stroke: rgba(148, 163, 184, 0.28);
-      stroke-width: 1;
+      fill: rgba(2, 6, 12, 0.96);
+      stroke: rgba(248, 250, 252, 0.55);
+      stroke-width: 1.2;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.55));
+    }
+
+    .market-chart-label-bg.high,
+    .market-chart-label-bg.current {
+      stroke: rgba(62, 207, 142, 0.86);
+    }
+
+    .market-chart-label-bg.low {
+      stroke: rgba(250, 204, 21, 0.9);
+    }
+
+    .market-chart-label.low {
+      fill: #fde68a;
+    }
+
+    .market-chart-label.high,
+    .market-chart-label.current {
+      fill: #d1fae5;
     }
 
     .market-chart-marker {
@@ -31690,7 +31712,7 @@ window.awakeplusData = {
       const minPoint = points.reduce((best, point) => point.value < best.value ? point : best, points[0]);
       const maxPoint = points.reduce((best, point) => point.value > best.value ? point : best, points[0]);
       const lastPoint = points[points.length - 1];
-      const labelFor = (label, point, offsetY = -12) => {
+      const labelFor = (label, point, offsetY = -12, tone = "") => {
         const text = `${label} ${formatNumber(point.value, item.kind === "fx" ? 2 : 2)}`;
         const boxWidth = Math.max(74, text.length * 6 + 12);
         const boxHeight = 20;
@@ -31699,14 +31721,14 @@ window.awakeplusData = {
         return `
           <line x1="${point.x.toFixed(1)}" y1="${point.y.toFixed(1)}" x2="${(x + boxWidth / 2).toFixed(1)}" y2="${(y + boxHeight).toFixed(1)}" stroke="rgba(148,163,184,.35)" stroke-width="1" />
           <circle class="market-chart-marker" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="4"></circle>
-          <rect class="market-chart-label-bg" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${boxWidth.toFixed(1)}" height="${boxHeight}" rx="4"></rect>
-          <text class="market-chart-label" x="${(x + 6).toFixed(1)}" y="${(y + 14).toFixed(1)}">${escapeHtml(text)}</text>
+          <rect class="market-chart-label-bg ${tone}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${boxWidth.toFixed(1)}" height="${boxHeight}" rx="4"></rect>
+          <text class="market-chart-label ${tone}" x="${(x + 6).toFixed(1)}" y="${(y + 14).toFixed(1)}">${escapeHtml(text)}</text>
         `;
       };
       const labels = [
-        labelFor("고점", maxPoint, maxPoint.y < 34 ? 10 : -26),
-        labelFor("저점", minPoint, minPoint.y > height - 52 ? -28 : 12),
-        labelFor("현재", lastPoint, lastPoint.y < 34 ? 10 : -26)
+        labelFor("고점", maxPoint, maxPoint.y < 34 ? 10 : -26, "high"),
+        labelFor("저점", minPoint, minPoint.y > height - 52 ? -28 : 12, "low"),
+        labelFor("현재", lastPoint, lastPoint.y < 34 ? 10 : -26, "current")
       ].join("");
       panel.className = `market-chart-panel open ${periodChangePct < 0 ? "down" : ""}`;
       panel.innerHTML = `
