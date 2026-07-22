@@ -508,6 +508,9 @@ def fetch_market_snapshot() -> dict[str, object]:
             payload = json.loads(fetch(url))
             result = (payload.get("chart", {}).get("result") or [])[0]
             quote = result.get("indicators", {}).get("quote", [{}])[0]
+            opens = quote.get("open", [])
+            highs = quote.get("high", [])
+            lows = quote.get("low", [])
             closes = [value for value in quote.get("close", []) if isinstance(value, (int, float))]
             if not closes:
                 raise ValueError("empty close data")
@@ -518,11 +521,18 @@ def fetch_market_snapshot() -> dict[str, object]:
             timestamps = result.get("timestamp") or []
             asof = datetime.fromtimestamp(timestamps[-1]).strftime("%Y-%m-%d %H:%M") if timestamps else ""
             history = []
-            for ts, close in zip(timestamps, quote.get("close", []), strict=False):
+            for idx, (ts, close) in enumerate(zip(timestamps, quote.get("close", []), strict=False)):
                 if isinstance(close, (int, float)):
+                    open_value = opens[idx] if idx < len(opens) and isinstance(opens[idx], (int, float)) else close
+                    high_value = highs[idx] if idx < len(highs) and isinstance(highs[idx], (int, float)) else max(open_value, close)
+                    low_value = lows[idx] if idx < len(lows) and isinstance(lows[idx], (int, float)) else min(open_value, close)
                     history.append(
                         {
                             "date": datetime.fromtimestamp(ts).strftime("%m-%d"),
+                            "open": round(float(open_value), 4 if item["kind"] == "fx" else 2),
+                            "high": round(float(high_value), 4 if item["kind"] == "fx" else 2),
+                            "low": round(float(low_value), 4 if item["kind"] == "fx" else 2),
+                            "close": round(float(close), 4 if item["kind"] == "fx" else 2),
                             "value": round(float(close), 4 if item["kind"] == "fx" else 2),
                         }
                     )

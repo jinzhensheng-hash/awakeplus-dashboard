@@ -190,6 +190,23 @@
       fill: rgba(248, 113, 113, 0.11);
     }
 
+    .market-candle-up {
+      fill: rgba(62, 207, 142, 0.25);
+      stroke: var(--green);
+      stroke-width: 1.6;
+    }
+
+    .market-candle-down {
+      fill: rgba(248, 113, 113, 0.24);
+      stroke: var(--red);
+      stroke-width: 1.6;
+    }
+
+    .market-candle-wick {
+      stroke-width: 1.4;
+      stroke-linecap: round;
+    }
+
     .market-chart-axis {
       color: var(--muted);
       font-size: 10px;
@@ -11640,14 +11657,18 @@ window.awakeplusData = {
       if (Array.isArray(item.history) && item.history.length) {
         return item.history.map((point) => ({
           date: point.date || "",
-          value: Number(point.value || 0)
+          open: Number(point.open ?? point.value ?? 0),
+          high: Number(point.high ?? point.value ?? 0),
+          low: Number(point.low ?? point.value ?? 0),
+          close: Number(point.close ?? point.value ?? 0),
+          value: Number(point.close ?? point.value ?? 0)
         })).filter((point) => Number.isFinite(point.value));
       }
       const current = Number(item.value || 0);
       const previous = current - Number(item.change || 0);
       return [
-        { date: "전일", value: Number.isFinite(previous) ? previous : current },
-        { date: "현재", value: current }
+        { date: "전일", open: previous, high: Math.max(previous, current), low: Math.min(previous, current), close: previous, value: Number.isFinite(previous) ? previous : current },
+        { date: "현재", open: previous, high: Math.max(previous, current), low: Math.min(previous, current), close: current, value: current }
       ];
     }
 
@@ -11664,30 +11685,51 @@ window.awakeplusData = {
       const width = 640;
       const height = 120;
       const pad = 12;
-      const values = history.map((point) => point.value);
+      const values = history.flatMap((point) => [point.high, point.low, point.open, point.close, point.value]).filter(Number.isFinite);
       const min = Math.min(...values);
       const max = Math.max(...values);
       const span = max - min || Math.max(Math.abs(max), 1);
+      const yFor = (value) => height - pad - ((value - min) / span) * (height - pad * 2);
       const points = history.map((point, index) => {
         const x = history.length === 1 ? width / 2 : pad + (index / (history.length - 1)) * (width - pad * 2);
-        const y = height - pad - ((point.value - min) / span) * (height - pad * 2);
+        const y = yFor(point.value);
         return { ...point, x, y };
       });
       const line = points.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
       const area = `${pad},${height - pad} ${line} ${width - pad},${height - pad}`;
+      const candleWidth = Math.max(8, Math.min(28, (width - pad * 2) / Math.max(points.length, 2) * 0.42));
+      const candles = points.map((point) => {
+        const open = Number.isFinite(point.open) ? point.open : point.value;
+        const close = Number.isFinite(point.close) ? point.close : point.value;
+        const high = Number.isFinite(point.high) ? point.high : Math.max(open, close);
+        const low = Number.isFinite(point.low) ? point.low : Math.min(open, close);
+        const yOpen = yFor(open);
+        const yClose = yFor(close);
+        const yHigh = yFor(high);
+        const yLow = yFor(low);
+        const top = Math.min(yOpen, yClose);
+        const bodyHeight = Math.max(3, Math.abs(yClose - yOpen));
+        const klass = close >= open ? "market-candle-up" : "market-candle-down";
+        return `
+          <line class="market-candle-wick ${klass}" x1="${point.x.toFixed(1)}" x2="${point.x.toFixed(1)}" y1="${yHigh.toFixed(1)}" y2="${yLow.toFixed(1)}"></line>
+          <rect class="${klass}" x="${(point.x - candleWidth / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${candleWidth.toFixed(1)}" height="${bodyHeight.toFixed(1)}" rx="2">
+            <title>${escapeHtml(point.date)} O ${formatNumber(open, item.kind === "fx" ? 2 : 2)} H ${formatNumber(high, item.kind === "fx" ? 2 : 2)} L ${formatNumber(low, item.kind === "fx" ? 2 : 2)} C ${formatNumber(close, item.kind === "fx" ? 2 : 2)}</title>
+          </rect>
+        `;
+      }).join("");
       panel.className = `market-chart-panel open ${change < 0 ? "down" : ""}`;
       panel.innerHTML = `
         <div class="market-chart-head">
           <strong>${escapeHtml(item.group)} · ${escapeHtml(item.name)}</strong>
-          <span>${escapeHtml(item.symbol || "")} · ${history.length}${K.count} 포인트 · ${change >= 0 ? "+" : ""}${change.toFixed(2)}%</span>
+          <span>${escapeHtml(item.symbol || "")} · 일봉 ${history.length}${K.count} · ${change >= 0 ? "+" : ""}${change.toFixed(2)}%</span>
         </div>
-        <svg class="market-chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(item.name)} 차트">
+        <svg class="market-chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(item.name)} 일봉 차트">
           <polyline class="market-chart-area" points="${area}"></polyline>
           <polyline class="market-chart-line" points="${line}"></polyline>
-          ${points.map((point) => `<circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="3.2" fill="currentColor"><title>${escapeHtml(point.date)} ${formatNumber(point.value, item.kind === "fx" ? 2 : 2)}</title></circle>`).join("")}
+          ${candles}
         </svg>
         <div class="market-chart-axis">
-          ${escapeHtml(history[0]?.date || "-")} ${formatNumber(values[0], item.kind === "fx" ? 2 : 2)} · ${escapeHtml(history[history.length - 1]?.date || "-")} ${formatNumber(values[values.length - 1], item.kind === "fx" ? 2 : 2)}
+          ${escapeHtml(history[0]?.date || "-")} ${formatNumber(history[0]?.close ?? history[0]?.value, item.kind === "fx" ? 2 : 2)} · ${escapeHtml(history[history.length - 1]?.date || "-")} ${formatNumber(history[history.length - 1]?.close ?? history[history.length - 1]?.value, item.kind === "fx" ? 2 : 2)}
         </div>
       `;
     }
