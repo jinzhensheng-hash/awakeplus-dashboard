@@ -503,7 +503,7 @@ def fetch_market_snapshot() -> dict[str, object]:
     errors: list[str] = []
     for item in MARKET_SYMBOLS:
         symbol = item["symbol"]
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?range=5d&interval=1d"
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?range=1y&interval=1d"
         try:
             payload = json.loads(fetch(url))
             result = (payload.get("chart", {}).get("result") or [])[0]
@@ -546,7 +546,7 @@ def fetch_market_snapshot() -> dict[str, object]:
                     "change": round(change, 4 if item["kind"] == "fx" else 2),
                     "change_pct": round(change_pct, 2),
                     "asof": asof,
-                    "history": history[-5:],
+                    "history": history[-260:],
                 }
             )
         except Exception as exc:  # noqa: BLE001 - snapshot should never break stock collection.
