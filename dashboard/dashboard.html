@@ -101,6 +101,9 @@
       border: 1px solid var(--line);
       border-radius: 7px;
       background: #111318;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
     }
 
     .market-pill span {
@@ -128,6 +131,69 @@
 
     .market-pill.down em {
       color: var(--red);
+    }
+
+    .market-pill:hover,
+    .market-pill.active {
+      border-color: rgba(62, 207, 142, 0.58);
+      background: rgba(62, 207, 142, 0.08);
+    }
+
+    .market-chart-panel {
+      display: none;
+      margin-top: 8px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #0f1116;
+    }
+
+    .market-chart-panel.open {
+      display: grid;
+      gap: 8px;
+    }
+
+    .market-chart-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .market-chart-head strong {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .market-chart-svg {
+      width: 100%;
+      height: 120px;
+      overflow: visible;
+    }
+
+    .market-chart-line {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 2.4;
+    }
+
+    .market-chart-area {
+      fill: rgba(62, 207, 142, 0.11);
+    }
+
+    .market-chart-panel.down .market-chart-line {
+      stroke: var(--red);
+    }
+
+    .market-chart-panel.down .market-chart-area {
+      fill: rgba(248, 113, 113, 0.11);
+    }
+
+    .market-chart-axis {
+      color: var(--muted);
+      font-size: 10px;
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
     }
 
     .date-box {
@@ -2275,6 +2341,7 @@
               <span id="marketSnapshotTime">업데이트 대기</span>
             </div>
             <div class="market-ticker" id="marketTicker"></div>
+            <div class="market-chart-panel" id="marketChartPanel" aria-live="polite"></div>
           </section>
         </div>
         <div class="status-pill">
@@ -11486,6 +11553,7 @@ window.awakeplusData = {
     let selectedCompany = "";
     let tapeMode = "all";
     let activeStatMode = "top15";
+    let activeMarketSymbol = "";
 
     function selectedRowsBase() {
       return dateSelect.value === "all" ? marketRows : marketRows.filter((row) => row.date === dateSelect.value);
@@ -11568,6 +11636,62 @@ window.awakeplusData = {
       }).sort((a, b) => b.score - a.score || b.change - a.change || a.name.localeCompare(b.name, "ko"));
     }
 
+    function marketHistory(item) {
+      if (Array.isArray(item.history) && item.history.length) {
+        return item.history.map((point) => ({
+          date: point.date || "",
+          value: Number(point.value || 0)
+        })).filter((point) => Number.isFinite(point.value));
+      }
+      const current = Number(item.value || 0);
+      const previous = current - Number(item.change || 0);
+      return [
+        { date: "전일", value: Number.isFinite(previous) ? previous : current },
+        { date: "현재", value: current }
+      ];
+    }
+
+    function renderMarketChart(item) {
+      const panel = document.querySelector("#marketChartPanel");
+      if (!panel || !item) return;
+      const history = marketHistory(item);
+      const change = Number(item.change_pct || 0);
+      if (!history.length) {
+        panel.className = "market-chart-panel open";
+        panel.innerHTML = `<div class="muted">표시할 차트 데이터가 없습니다.</div>`;
+        return;
+      }
+      const width = 640;
+      const height = 120;
+      const pad = 12;
+      const values = history.map((point) => point.value);
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      const span = max - min || Math.max(Math.abs(max), 1);
+      const points = history.map((point, index) => {
+        const x = history.length === 1 ? width / 2 : pad + (index / (history.length - 1)) * (width - pad * 2);
+        const y = height - pad - ((point.value - min) / span) * (height - pad * 2);
+        return { ...point, x, y };
+      });
+      const line = points.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+      const area = `${pad},${height - pad} ${line} ${width - pad},${height - pad}`;
+      panel.className = `market-chart-panel open ${change < 0 ? "down" : ""}`;
+      panel.innerHTML = `
+        <div class="market-chart-head">
+          <strong>${escapeHtml(item.group)} · ${escapeHtml(item.name)}</strong>
+          <span>${escapeHtml(item.symbol || "")} · ${history.length}${K.count} 포인트 · ${change >= 0 ? "+" : ""}${change.toFixed(2)}%</span>
+        </div>
+        <svg class="market-chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(item.name)} 차트">
+          <polyline class="market-chart-area" points="${area}"></polyline>
+          <polyline class="market-chart-line" points="${line}"></polyline>
+          ${points.map((point) => `<circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="3.2" fill="currentColor"><title>${escapeHtml(point.date)} ${formatNumber(point.value, item.kind === "fx" ? 2 : 2)}</title></circle>`).join("")}
+        </svg>
+        <div class="market-chart-axis">
+          ${escapeHtml(history[0]?.date || "-")} ${formatNumber(values[0], item.kind === "fx" ? 2 : 2)} · ${escapeHtml(history[history.length - 1]?.date || "-")} ${formatNumber(values[values.length - 1], item.kind === "fx" ? 2 : 2)}
+        </div>
+      `;
+    }
+
     function renderMarketSnapshot() {
       const items = Array.isArray(marketSnapshot.items) ? marketSnapshot.items : [];
       const ticker = document.querySelector("#marketTicker");
@@ -11579,11 +11703,20 @@ window.awakeplusData = {
         return;
       }
       time.textContent = `${marketSnapshot.generated_at || ""} 기준`;
+      if (!activeMarketSymbol) activeMarketSymbol = items[0]?.symbol || "";
       ticker.innerHTML = items.map((item) => {
         const change = Number(item.change_pct || 0);
         const digits = item.kind === "fx" ? 2 : 2;
-        return `<div class="market-pill ${change < 0 ? "down" : ""}"><span>${escapeHtml(item.group)} · ${escapeHtml(item.name)}</span><strong>${formatNumber(item.value, digits)}</strong><em>${change >= 0 ? "+" : ""}${change.toFixed(2)}%</em></div>`;
+        const active = activeMarketSymbol === item.symbol;
+        return `<button type="button" class="market-pill ${change < 0 ? "down" : ""} ${active ? "active" : ""}" data-market-symbol="${escapeHtml(item.symbol || "")}"><span>${escapeHtml(item.group)} · ${escapeHtml(item.name)}</span><strong>${formatNumber(item.value, digits)}</strong><em>${change >= 0 ? "+" : ""}${change.toFixed(2)}%</em></button>`;
       }).join("");
+      ticker.querySelectorAll("[data-market-symbol]").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeMarketSymbol = button.dataset.marketSymbol || "";
+          renderMarketSnapshot();
+        });
+      });
+      renderMarketChart(items.find((item) => item.symbol === activeMarketSymbol) || items[0]);
     }
 
     function renderMarketBriefing(rows) {

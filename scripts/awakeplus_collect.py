@@ -517,6 +517,15 @@ def fetch_market_snapshot() -> dict[str, object]:
             change_pct = (change / previous * 100) if previous else 0
             timestamps = result.get("timestamp") or []
             asof = datetime.fromtimestamp(timestamps[-1]).strftime("%Y-%m-%d %H:%M") if timestamps else ""
+            history = []
+            for ts, close in zip(timestamps, quote.get("close", []), strict=False):
+                if isinstance(close, (int, float)):
+                    history.append(
+                        {
+                            "date": datetime.fromtimestamp(ts).strftime("%m-%d"),
+                            "value": round(float(close), 4 if item["kind"] == "fx" else 2),
+                        }
+                    )
             items.append(
                 {
                     "group": item["group"],
@@ -527,6 +536,7 @@ def fetch_market_snapshot() -> dict[str, object]:
                     "change": round(change, 4 if item["kind"] == "fx" else 2),
                     "change_pct": round(change_pct, 2),
                     "asof": asof,
+                    "history": history[-5:],
                 }
             )
         except Exception as exc:  # noqa: BLE001 - snapshot should never break stock collection.
