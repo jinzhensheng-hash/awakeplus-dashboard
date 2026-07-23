@@ -1,5 +1,5 @@
 window.awakeplusData = {
-  "generated_at": "2026-07-23 16:45:51",
+  "generated_at": "2026-07-23 09:40:46",
   "todaytop15": [
     {
       "date": "2026-07-23",
@@ -14,7 +14,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "해상풍력 하부구조물의 핵심 공급자로서 시장 내 입지 강화 기대감. / 부유식 해상풍력 시장 진입과 관련된 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -29,7 +29,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "동해 데이터센터 2.4GW 수주 기대감이 매출 도약 전망으로 이어지는 중. / 주택 사이클 재개에 따른 밸류에이션 상향과 직접적 수혜 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -44,7 +44,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "첨단산업 및 뉴에너지 사업 수주 성과에 따른 기대감. / 2분기 영업이익 51% 증가에 따른 실적 호조 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -59,7 +59,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "윤활유 최대 실적과 정유 사업의 호조로 2분기 실적 컨센서스를 상회할 것으로 예상되는 호재. / 정유 및 윤활유 사업의 강력한 성과에 기반한 기업 가치 상승 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -74,7 +74,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "임원 보고서 발표로 인한 배터리 성장 기대감. / 차세대 배터리 기술 개발에 대한 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -89,7 +89,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "Keytruda SC 상업화에 따른 수익 기반 구축과 후속 제품의 글로벌 임상 진입에 따른 포트폴리오 다변화. / 코스피 이전상장 추진 잠정 유보와 30% 무상증자 결정에 따른 주주가치 제고 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -104,7 +104,7 @@ window.awakeplusData = {
       "special_signal": "역사적 신고가, 52주 최대 거래량",
       "reason": "AI 데이터센터 수혜로 전례 없는 성장 기대감 / 증권가의 호평에 따른 긍정적 전망",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -119,7 +119,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "국제유가 급등으로 인해 신재생에너지 관련주에 대한 투자심리 강화. / 태양광 사업의 확장성과 성장 가능성에 대한 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -134,7 +134,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "자회사 OCI의 흑자전환 기대감에 따른 투자심리 개선. / 태양광 에너지 테마 상승세에 대한 긍정적 기대감. / NAVER ⭐",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -149,7 +149,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "글로벌 대형기업과의 3000억 규모 AI 서버용 MLCC 공급계약 체결 호재. / AI 서버향 초소형·고용량 MLCC 수요 증가에 따른 시장 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -164,7 +164,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "알파벳의 AI 투자 지속에 따른 전력설비주 동반 강세. / 2분기 연결 영업이익 전년 대비 64% 증가에 따른 실적 호조.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -179,7 +179,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "알파벳의 AI 투자 확대에 따른 반도체 수요 증가 기대감. / 2분기 실적 발표에서의 긍정적 전망과 목표주가 상향 조정.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -194,7 +194,7 @@ window.awakeplusData = {
       "special_signal": "역사적 신고가",
       "reason": "국제 유가 급등으로 인해 신재생 에너지에 대한 투자 심리가 강화되며 긍정적 전망. / 해상풍력 사업 참여로 인한 추가적인 성장 기대감.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -209,7 +209,7 @@ window.awakeplusData = {
       "special_signal": "",
       "reason": "알파벳의 AI 투자 확대 소식으로 반도체 수요 증가 기대감. / 반도체 산업 내 AI 중심 기술 발전에 대한 긍정적 전망.",
       "source": "todaytop15",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1547,7 +1547,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 57,196억/ 5,376억/ 3,259억(E) / 2026.1Q 53,139억/ 5,070억/ 3,724억 / 2025.4Q 54,562억/ 5,468억/ 911억 / 2025.3Q 54,127억/ 5,860억/ 3,896억 / 2025.2Q 53,697억/ 3,536억/ 3,536억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1563,7 +1563,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 425억/ 89억/ 77억 / 2025.4Q 412억/ 69억/ 74억 / 2025.3Q 395억/ 62억/ 48억 / 2025.2Q 392억/ 58억/ 58억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1579,7 +1579,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 554억/ 44억/ 123억 / 2025.4Q 660억/ 94억/ 54억 / 2025.3Q 695억/ 128억/ 118억 / 2025.2Q 608억/ 122억/ 122억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1595,7 +1595,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 3,236억/ 90억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1611,7 +1611,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 242억/ 3억/ 7억 / 2025.4Q 332억/ 60억/ 53억 / 2025.3Q 360억/ 97억/ 82억 / 2025.2Q 276억/ 37억/ 37억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1627,7 +1627,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1643,7 +1643,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 2,637억/ 186억/ 10억(E) / 2026.1Q 275억/ 49억/ -51억 / 2025.4Q 2,480억/ 412억/ 205억 / 2025.3Q 464억/ 12억/ -51억 / 2025.2Q 653억/ 96억/ 96억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1659,7 +1659,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 68,973억/ 11,159억/ 4,932억(E) / 2026.1Q 68,423억/ 12,586억/ 8,267억 / 2025.4Q 64,873억/ 7,762억/ 2,505억 / 2025.3Q 65,359억/ 8,706억/ 4,077억 / 2025.2Q 59,380억/ 4,846억/ 4,846억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-23",
@@ -1675,7 +1675,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 567억/ 66억/ 90억 / 2025.4Q 573억/ 59억/ 66억 / 2025.3Q 553억/ 84억/ 59억 / 2025.2Q 616억/ 77억/ 77억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/575",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1691,7 +1691,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 3,278억/ 90억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1707,7 +1707,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 1,132억/ 112억/ 146억 / 2025.4Q 1,289억/ 138억/ 100억 / 2025.3Q 1,300억/ 92억/ 126억 / 2025.2Q 959억/ 10억/ 10억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1723,7 +1723,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 18억/ 6억/ 16억 / 2025.4Q 6억/ 15억/ 20억 / 2025.3Q 17억/ 2억/ 36억 / 2025.2Q 29억/ 2억/ 2억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1739,7 +1739,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 7,820억/ 864억/ 359억(E) / 2026.1Q 7,309억/ 836억/ 303억 / 2025.4Q 7,264억/ 793억/ 281억 / 2025.3Q 7,580억/ 890억/ 387억 / 2025.2Q 7,488억/ 772억/ 772억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1755,7 +1755,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 2,587억/ 185억/ 10억(E) / 2026.1Q 275억/ 49억/ -51억 / 2025.4Q 2,480억/ 412억/ 205억 / 2025.3Q 464억/ 12억/ -51억 / 2025.2Q 653억/ 96억/ 96억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-22",
@@ -1771,7 +1771,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/574",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-21",
@@ -1787,7 +1787,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 3,207억/ 89억/ -(E) / 2026.1Q 2,703억/ 113억/ 85억 / 2025.4Q 3,350억/ -25억/ 34억 / 2025.3Q 4,030억/ 284억/ 374억 / 2025.2Q 3,370억/ -27억/ -27억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/573",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-21",
@@ -1803,7 +1803,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 295억/ 40억/ 36억 / 2025.4Q 284억/ 30억/ 54억 / 2025.3Q 291억/ 36억/ 32억 / 2025.2Q 270억/ 26억/ 26억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/573",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-21",
@@ -1819,7 +1819,7 @@ window.awakeplusData = {
       "recent_results": "2026.1Q 850억/ 107억/ 90억 / 2025.4Q 975억/ 191억/ 166억 / 2025.3Q 806억/ 75억/ 47억 / 2025.2Q 806억/ 80억/ 80억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/573",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "date": "2026-07-20",
@@ -8484,7 +8484,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 21일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/573",
       "row_count": "3",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "source": "allnewhigh",
@@ -8493,7 +8493,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 21일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/573",
       "row_count": "3",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "source": "sin",
@@ -8502,7 +8502,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 22일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/574",
       "row_count": "6",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "source": "allnewhigh",
@@ -8511,7 +8511,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 22일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/574",
       "row_count": "6",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "source": "sin",
@@ -8520,7 +8520,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 23일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/575",
       "row_count": "9",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     },
     {
       "source": "allnewhigh",
@@ -8529,7 +8529,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 07월 23일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/575",
       "row_count": "9",
-      "collected_at": "2026-07-23 16:45:42"
+      "collected_at": "2026-07-23 09:40:30"
     }
   ],
   "leader_scores": [
@@ -8874,7 +8874,7 @@ window.awakeplusData = {
     }
   ],
   "market_snapshot": {
-    "generated_at": "2026-07-23 16:45:55",
+    "generated_at": "2026-07-23 09:40:49",
     "source": "Yahoo Finance chart API",
     "items": [
       {
@@ -8885,7 +8885,7 @@ window.awakeplusData = {
         "value": 7096.89,
         "change": 299.19,
         "change_pct": 4.4,
-        "asof": "2026-07-23 09:00",
+        "asof": "2026-07-23 00:00",
         "history": [
           {
             "date": "07-23",
@@ -10849,7 +10849,7 @@ window.awakeplusData = {
         "value": 790.28,
         "change": 39.19,
         "change_pct": 5.22,
-        "asof": "2026-07-23 09:00",
+        "asof": "2026-07-23 00:00",
         "history": [
           {
             "date": "07-23",
@@ -12813,7 +12813,7 @@ window.awakeplusData = {
         "value": 7498.96,
         "change": -10.24,
         "change_pct": -0.14,
-        "asof": "2026-07-22 22:30",
+        "asof": "2026-07-22 13:30",
         "history": [
           {
             "date": "07-23",
@@ -14833,7 +14833,7 @@ window.awakeplusData = {
         "value": 25690.9,
         "change": -146.31,
         "change_pct": -0.57,
-        "asof": "2026-07-22 22:30",
+        "asof": "2026-07-22 13:30",
         "history": [
           {
             "date": "07-23",
@@ -16853,7 +16853,7 @@ window.awakeplusData = {
         "value": 52218.58,
         "change": -6.06,
         "change_pct": -0.01,
-        "asof": "2026-07-22 22:30",
+        "asof": "2026-07-22 13:30",
         "history": [
           {
             "date": "07-23",
@@ -18873,7 +18873,7 @@ window.awakeplusData = {
         "value": 66422.6,
         "change": 307.0,
         "change_pct": 0.46,
-        "asof": "2026-07-23 09:00",
+        "asof": "2026-07-23 00:00",
         "history": [
           {
             "date": "07-23",
@@ -20837,7 +20837,7 @@ window.awakeplusData = {
         "value": 3876.78,
         "change": 9.74,
         "change_pct": 0.25,
-        "asof": "2026-07-23 10:30",
+        "asof": "2026-07-23 01:30",
         "history": [
           {
             "date": "07-23",
@@ -22793,7 +22793,7 @@ window.awakeplusData = {
         "value": 44850.81,
         "change": 25.03,
         "change_pct": 0.06,
-        "asof": "2026-07-23 10:00",
+        "asof": "2026-07-23 01:00",
         "history": [
           {
             "date": "07-23",
@@ -24746,13 +24746,13 @@ window.awakeplusData = {
         "name": "USD/KRW",
         "symbol": "KRW=X",
         "kind": "fx",
-        "value": 1471.0699,
-        "change": -8.65,
-        "change_pct": -0.58,
-        "asof": "2026-07-23 16:45",
+        "value": 1468.6801,
+        "change": -11.0399,
+        "change_pct": -0.75,
+        "asof": "2026-07-23 09:40",
         "history": [
           {
-            "date": "07-23",
+            "date": "07-22",
             "open": 1379.78,
             "high": 1381.38,
             "low": 1373.39,
@@ -24760,7 +24760,7 @@ window.awakeplusData = {
             "value": 1379.78
           },
           {
-            "date": "07-24",
+            "date": "07-23",
             "open": 1373.72,
             "high": 1373.91,
             "low": 1363.98,
@@ -24768,7 +24768,7 @@ window.awakeplusData = {
             "value": 1373.72
           },
           {
-            "date": "07-25",
+            "date": "07-24",
             "open": 1372.0,
             "high": 1383.45,
             "low": 1370.08,
@@ -24776,7 +24776,7 @@ window.awakeplusData = {
             "value": 1372.0
           },
           {
-            "date": "07-28",
+            "date": "07-27",
             "open": 1382.78,
             "high": 1388.53,
             "low": 1377.0,
@@ -24784,7 +24784,7 @@ window.awakeplusData = {
             "value": 1382.78
           },
           {
-            "date": "07-29",
+            "date": "07-28",
             "open": 1388.29,
             "high": 1394.71,
             "low": 1385.79,
@@ -24792,7 +24792,7 @@ window.awakeplusData = {
             "value": 1388.29
           },
           {
-            "date": "07-30",
+            "date": "07-29",
             "open": 1388.86,
             "high": 1392.23,
             "low": 1376.71,
@@ -24800,7 +24800,7 @@ window.awakeplusData = {
             "value": 1388.86
           },
           {
-            "date": "07-31",
+            "date": "07-30",
             "open": 1392.52,
             "high": 1397.23,
             "low": 1385.38,
@@ -24808,7 +24808,7 @@ window.awakeplusData = {
             "value": 1392.52
           },
           {
-            "date": "08-01",
+            "date": "07-31",
             "open": 1391.51,
             "high": 1406.0,
             "low": 1383.09,
@@ -24816,7 +24816,7 @@ window.awakeplusData = {
             "value": 1391.51
           },
           {
-            "date": "08-04",
+            "date": "08-03",
             "open": 1390.1801,
             "high": 1388.47,
             "low": 1379.05,
@@ -24824,7 +24824,7 @@ window.awakeplusData = {
             "value": 1390.1801
           },
           {
-            "date": "08-05",
+            "date": "08-04",
             "open": 1383.59,
             "high": 1391.62,
             "low": 1381.27,
@@ -24832,7 +24832,7 @@ window.awakeplusData = {
             "value": 1383.59
           },
           {
-            "date": "08-06",
+            "date": "08-05",
             "open": 1386.58,
             "high": 1391.23,
             "low": 1383.9301,
@@ -24840,7 +24840,7 @@ window.awakeplusData = {
             "value": 1386.58
           },
           {
-            "date": "08-07",
+            "date": "08-06",
             "open": 1384.39,
             "high": 1387.88,
             "low": 1377.21,
@@ -24848,7 +24848,7 @@ window.awakeplusData = {
             "value": 1384.39
           },
           {
-            "date": "08-08",
+            "date": "08-07",
             "open": 1384.97,
             "high": 1391.4399,
             "low": 1378.35,
@@ -24856,7 +24856,7 @@ window.awakeplusData = {
             "value": 1384.97
           },
           {
-            "date": "08-11",
+            "date": "08-10",
             "open": 1387.8101,
             "high": 1392.9301,
             "low": 1384.78,
@@ -24864,7 +24864,7 @@ window.awakeplusData = {
             "value": 1387.8101
           },
           {
-            "date": "08-12",
+            "date": "08-11",
             "open": 1389.79,
             "high": 1392.46,
             "low": 1382.55,
@@ -24872,7 +24872,7 @@ window.awakeplusData = {
             "value": 1389.79
           },
           {
-            "date": "08-13",
+            "date": "08-12",
             "open": 1383.09,
             "high": 1386.36,
             "low": 1373.75,
@@ -24880,7 +24880,7 @@ window.awakeplusData = {
             "value": 1383.09
           },
           {
-            "date": "08-14",
+            "date": "08-13",
             "open": 1378.78,
             "high": 1391.28,
             "low": 1377.58,
@@ -24888,7 +24888,7 @@ window.awakeplusData = {
             "value": 1378.78
           },
           {
-            "date": "08-15",
+            "date": "08-14",
             "open": 1387.87,
             "high": 1391.49,
             "low": 1385.71,
@@ -24896,7 +24896,7 @@ window.awakeplusData = {
             "value": 1387.87
           },
           {
-            "date": "08-18",
+            "date": "08-17",
             "open": 1387.98,
             "high": 1388.1,
             "low": 1381.73,
@@ -24904,7 +24904,7 @@ window.awakeplusData = {
             "value": 1387.98
           },
           {
-            "date": "08-19",
+            "date": "08-18",
             "open": 1386.91,
             "high": 1392.21,
             "low": 1386.85,
@@ -24912,7 +24912,7 @@ window.awakeplusData = {
             "value": 1386.91
           },
           {
-            "date": "08-20",
+            "date": "08-19",
             "open": 1391.34,
             "high": 1399.76,
             "low": 1391.8199,
@@ -24920,7 +24920,7 @@ window.awakeplusData = {
             "value": 1391.34
           },
           {
-            "date": "08-21",
+            "date": "08-20",
             "open": 1396.91,
             "high": 1403.76,
             "low": 1395.8,
@@ -24928,7 +24928,7 @@ window.awakeplusData = {
             "value": 1396.91
           },
           {
-            "date": "08-22",
+            "date": "08-21",
             "open": 1399.61,
             "high": 1400.51,
             "low": 1379.36,
@@ -24936,7 +24936,7 @@ window.awakeplusData = {
             "value": 1399.61
           },
           {
-            "date": "08-25",
+            "date": "08-24",
             "open": 1382.89,
             "high": 1388.9,
             "low": 1382.86,
@@ -24944,7 +24944,7 @@ window.awakeplusData = {
             "value": 1382.89
           },
           {
-            "date": "08-26",
+            "date": "08-25",
             "open": 1389.05,
             "high": 1398.29,
             "low": 1386.25,
@@ -24952,7 +24952,7 @@ window.awakeplusData = {
             "value": 1389.05
           },
           {
-            "date": "08-27",
+            "date": "08-26",
             "open": 1393.95,
             "high": 1398.9399,
             "low": 1392.91,
@@ -24960,7 +24960,7 @@ window.awakeplusData = {
             "value": 1393.95
           },
           {
-            "date": "08-28",
+            "date": "08-27",
             "open": 1392.75,
             "high": 1392.65,
             "low": 1383.55,
@@ -24968,7 +24968,7 @@ window.awakeplusData = {
             "value": 1392.75
           },
           {
-            "date": "08-29",
+            "date": "08-28",
             "open": 1384.41,
             "high": 1393.21,
             "low": 1383.3,
@@ -24976,7 +24976,7 @@ window.awakeplusData = {
             "value": 1384.41
           },
           {
-            "date": "09-01",
+            "date": "08-31",
             "open": 1388.84,
             "high": 1394.09,
             "low": 1387.7,
@@ -24984,7 +24984,7 @@ window.awakeplusData = {
             "value": 1388.84
           },
           {
-            "date": "09-02",
+            "date": "09-01",
             "open": 1392.9399,
             "high": 1398.2,
             "low": 1388.5699,
@@ -24992,7 +24992,7 @@ window.awakeplusData = {
             "value": 1392.9399
           },
           {
-            "date": "09-03",
+            "date": "09-02",
             "open": 1394.5699,
             "high": 1395.52,
             "low": 1386.89,
@@ -25000,7 +25000,7 @@ window.awakeplusData = {
             "value": 1394.5699
           },
           {
-            "date": "09-04",
+            "date": "09-03",
             "open": 1389.63,
             "high": 1395.5,
             "low": 1387.49,
@@ -25008,7 +25008,7 @@ window.awakeplusData = {
             "value": 1389.63
           },
           {
-            "date": "09-05",
+            "date": "09-04",
             "open": 1392.0601,
             "high": 1393.17,
             "low": 1382.4301,
@@ -25016,7 +25016,7 @@ window.awakeplusData = {
             "value": 1392.0601
           },
           {
-            "date": "09-08",
+            "date": "09-07",
             "open": 1385.51,
             "high": 1393.37,
             "low": 1384.7,
@@ -25024,7 +25024,7 @@ window.awakeplusData = {
             "value": 1385.51
           },
           {
-            "date": "09-09",
+            "date": "09-08",
             "open": 1385.72,
             "high": 1389.65,
             "low": 1382.91,
@@ -25032,7 +25032,7 @@ window.awakeplusData = {
             "value": 1385.72
           },
           {
-            "date": "09-10",
+            "date": "09-09",
             "open": 1387.25,
             "high": 1389.52,
             "low": 1385.02,
@@ -25040,7 +25040,7 @@ window.awakeplusData = {
             "value": 1387.25
           },
           {
-            "date": "09-11",
+            "date": "09-10",
             "open": 1387.2,
             "high": 1393.13,
             "low": 1386.03,
@@ -25048,7 +25048,7 @@ window.awakeplusData = {
             "value": 1387.2
           },
           {
-            "date": "09-12",
+            "date": "09-11",
             "open": 1389.5,
             "high": 1395.14,
             "low": 1385.66,
@@ -25056,7 +25056,7 @@ window.awakeplusData = {
             "value": 1389.5
           },
           {
-            "date": "09-15",
+            "date": "09-14",
             "open": 1393.7,
             "high": 1392.88,
             "low": 1384.1899,
@@ -25064,7 +25064,7 @@ window.awakeplusData = {
             "value": 1393.7
           },
           {
-            "date": "09-16",
+            "date": "09-15",
             "open": 1385.01,
             "high": 1386.48,
             "low": 1377.74,
@@ -25072,7 +25072,7 @@ window.awakeplusData = {
             "value": 1385.01
           },
           {
-            "date": "09-17",
+            "date": "09-16",
             "open": 1377.64,
             "high": 1381.85,
             "low": 1374.47,
@@ -25080,7 +25080,7 @@ window.awakeplusData = {
             "value": 1377.64
           },
           {
-            "date": "09-18",
+            "date": "09-17",
             "open": 1378.6899,
             "high": 1390.5601,
             "low": 1379.35,
@@ -25088,7 +25088,7 @@ window.awakeplusData = {
             "value": 1378.6899
           },
           {
-            "date": "09-19",
+            "date": "09-18",
             "open": 1386.75,
             "high": 1399.34,
             "low": 1387.3,
@@ -25096,7 +25096,7 @@ window.awakeplusData = {
             "value": 1386.75
           },
           {
-            "date": "09-22",
+            "date": "09-21",
             "open": 1396.23,
             "high": 1397.83,
             "low": 1389.4399,
@@ -25104,7 +25104,7 @@ window.awakeplusData = {
             "value": 1396.23
           },
           {
-            "date": "09-23",
+            "date": "09-22",
             "open": 1389.39,
             "high": 1395.13,
             "low": 1389.48,
@@ -25112,7 +25112,7 @@ window.awakeplusData = {
             "value": 1389.39
           },
           {
-            "date": "09-24",
+            "date": "09-23",
             "open": 1391.85,
             "high": 1404.8199,
             "low": 1391.85,
@@ -25120,7 +25120,7 @@ window.awakeplusData = {
             "value": 1391.85
           },
           {
-            "date": "09-25",
+            "date": "09-24",
             "open": 1403.65,
             "high": 1410.88,
             "low": 1398.13,
@@ -25128,7 +25128,7 @@ window.awakeplusData = {
             "value": 1403.65
           },
           {
-            "date": "09-26",
+            "date": "09-25",
             "open": 1408.92,
             "high": 1413.74,
             "low": 1406.95,
@@ -25136,7 +25136,7 @@ window.awakeplusData = {
             "value": 1408.92
           },
           {
-            "date": "09-29",
+            "date": "09-28",
             "open": 1408.71,
             "high": 1409.0,
             "low": 1397.73,
@@ -25144,7 +25144,7 @@ window.awakeplusData = {
             "value": 1408.71
           },
           {
-            "date": "09-30",
+            "date": "09-29",
             "open": 1399.33,
             "high": 1405.37,
             "low": 1398.39,
@@ -25152,7 +25152,7 @@ window.awakeplusData = {
             "value": 1399.33
           },
           {
-            "date": "10-01",
+            "date": "09-30",
             "open": 1403.15,
             "high": 1409.21,
             "low": 1400.2,
@@ -25160,7 +25160,7 @@ window.awakeplusData = {
             "value": 1403.15
           },
           {
-            "date": "10-02",
+            "date": "10-01",
             "open": 1401.8199,
             "high": 1408.0601,
             "low": 1398.11,
@@ -25168,7 +25168,7 @@ window.awakeplusData = {
             "value": 1401.8199
           },
           {
-            "date": "10-03",
+            "date": "10-02",
             "open": 1405.63,
             "high": 1412.21,
             "low": 1403.71,
@@ -25176,7 +25176,7 @@ window.awakeplusData = {
             "value": 1405.63
           },
           {
-            "date": "10-06",
+            "date": "10-05",
             "open": 1406.0601,
             "high": 1414.87,
             "low": 1406.0601,
@@ -25184,7 +25184,7 @@ window.awakeplusData = {
             "value": 1406.0601
           },
           {
-            "date": "10-07",
+            "date": "10-06",
             "open": 1409.92,
             "high": 1413.52,
             "low": 1407.11,
@@ -25192,7 +25192,7 @@ window.awakeplusData = {
             "value": 1409.92
           },
           {
-            "date": "10-08",
+            "date": "10-07",
             "open": 1414.5699,
             "high": 1427.61,
             "low": 1414.5699,
@@ -25200,7 +25200,7 @@ window.awakeplusData = {
             "value": 1414.5699
           },
           {
-            "date": "10-09",
+            "date": "10-08",
             "open": 1422.52,
             "high": 1423.8199,
             "low": 1415.12,
@@ -25208,7 +25208,7 @@ window.awakeplusData = {
             "value": 1422.52
           },
           {
-            "date": "10-10",
+            "date": "10-09",
             "open": 1421.51,
             "high": 1429.87,
             "low": 1417.8101,
@@ -25216,7 +25216,7 @@ window.awakeplusData = {
             "value": 1421.51
           },
           {
-            "date": "10-13",
+            "date": "10-12",
             "open": 1429.03,
             "high": 1431.9301,
             "low": 1423.89,
@@ -25224,7 +25224,7 @@ window.awakeplusData = {
             "value": 1429.03
           },
           {
-            "date": "10-14",
+            "date": "10-13",
             "open": 1426.0699,
             "high": 1435.17,
             "low": 1424.54,
@@ -25232,7 +25232,7 @@ window.awakeplusData = {
             "value": 1426.0699
           },
           {
-            "date": "10-15",
+            "date": "10-14",
             "open": 1429.4301,
             "high": 1428.59,
             "low": 1418.35,
@@ -25240,7 +25240,7 @@ window.awakeplusData = {
             "value": 1429.4301
           },
           {
-            "date": "10-16",
+            "date": "10-15",
             "open": 1420.09,
             "high": 1420.99,
             "low": 1413.42,
@@ -25248,7 +25248,7 @@ window.awakeplusData = {
             "value": 1420.09
           },
           {
-            "date": "10-17",
+            "date": "10-16",
             "open": 1415.72,
             "high": 1425.42,
             "low": 1415.75,
@@ -25256,7 +25256,7 @@ window.awakeplusData = {
             "value": 1415.72
           },
           {
-            "date": "10-20",
+            "date": "10-19",
             "open": 1419.74,
             "high": 1423.78,
             "low": 1416.26,
@@ -25264,7 +25264,7 @@ window.awakeplusData = {
             "value": 1419.74
           },
           {
-            "date": "10-21",
+            "date": "10-20",
             "open": 1419.74,
             "high": 1432.34,
             "low": 1418.15,
@@ -25272,7 +25272,7 @@ window.awakeplusData = {
             "value": 1419.74
           },
           {
-            "date": "10-22",
+            "date": "10-21",
             "open": 1430.74,
             "high": 1432.64,
             "low": 1427.1899,
@@ -25280,7 +25280,7 @@ window.awakeplusData = {
             "value": 1430.74
           },
           {
-            "date": "10-23",
+            "date": "10-22",
             "open": 1430.4,
             "high": 1441.3101,
             "low": 1430.5,
@@ -25288,7 +25288,7 @@ window.awakeplusData = {
             "value": 1430.4
           },
           {
-            "date": "10-24",
+            "date": "10-23",
             "open": 1435.84,
             "high": 1439.37,
             "low": 1432.92,
@@ -26160,7 +26160,7 @@ window.awakeplusData = {
             "value": 1508.36
           },
           {
-            "date": "03-30",
+            "date": "03-29",
             "open": 1509.21,
             "high": 1521.63,
             "low": 1509.21,
@@ -26168,7 +26168,7 @@ window.awakeplusData = {
             "value": 1507.02
           },
           {
-            "date": "03-31",
+            "date": "03-30",
             "open": 1518.28,
             "high": 1536.8199,
             "low": 1518.28,
@@ -26176,7 +26176,7 @@ window.awakeplusData = {
             "value": 1516.13
           },
           {
-            "date": "04-01",
+            "date": "03-31",
             "open": 1508.15,
             "high": 1513.28,
             "low": 1497.12,
@@ -26184,7 +26184,7 @@ window.awakeplusData = {
             "value": 1503.33
           },
           {
-            "date": "04-02",
+            "date": "04-01",
             "open": 1512.03,
             "high": 1523.51,
             "low": 1506.53,
@@ -26192,7 +26192,7 @@ window.awakeplusData = {
             "value": 1512.09
           },
           {
-            "date": "04-03",
+            "date": "04-02",
             "open": 1506.3,
             "high": 1511.4399,
             "low": 1504.3,
@@ -26200,7 +26200,7 @@ window.awakeplusData = {
             "value": 1509.22
           },
           {
-            "date": "04-06",
+            "date": "04-05",
             "open": 1509.65,
             "high": 1511.35,
             "low": 1498.4,
@@ -26208,7 +26208,7 @@ window.awakeplusData = {
             "value": 1509.26
           },
           {
-            "date": "04-07",
+            "date": "04-06",
             "open": 1507.6,
             "high": 1512.5601,
             "low": 1494.2,
@@ -26216,7 +26216,7 @@ window.awakeplusData = {
             "value": 1507.85
           },
           {
-            "date": "04-08",
+            "date": "04-07",
             "open": 1500.05,
             "high": 1500.05,
             "low": 1469.87,
@@ -26224,7 +26224,7 @@ window.awakeplusData = {
             "value": 1499.13
           },
           {
-            "date": "04-09",
+            "date": "04-08",
             "open": 1480.1,
             "high": 1484.4,
             "low": 1470.62,
@@ -26232,7 +26232,7 @@ window.awakeplusData = {
             "value": 1477.6
           },
           {
-            "date": "04-10",
+            "date": "04-09",
             "open": 1474.5,
             "high": 1486.55,
             "low": 1473.73,
@@ -26240,7 +26240,7 @@ window.awakeplusData = {
             "value": 1473.28
           },
           {
-            "date": "04-13",
+            "date": "04-12",
             "open": 1482.16,
             "high": 1496.8,
             "low": 1482.16,
@@ -26248,7 +26248,7 @@ window.awakeplusData = {
             "value": 1482.1801
           },
           {
-            "date": "04-14",
+            "date": "04-13",
             "open": 1477.4301,
             "high": 1485.14,
             "low": 1467.0601,
@@ -26256,7 +26256,7 @@ window.awakeplusData = {
             "value": 1476.84
           },
           {
-            "date": "04-15",
+            "date": "04-14",
             "open": 1470.74,
             "high": 1478.95,
             "low": 1469.24,
@@ -26264,7 +26264,7 @@ window.awakeplusData = {
             "value": 1469.42
           },
           {
-            "date": "04-16",
+            "date": "04-15",
             "open": 1472.8,
             "high": 1479.3199,
             "low": 1466.59,
@@ -26272,7 +26272,7 @@ window.awakeplusData = {
             "value": 1474.0601
           },
           {
-            "date": "04-17",
+            "date": "04-16",
             "open": 1481.75,
             "high": 1485.24,
             "low": 1453.63,
@@ -26280,7 +26280,7 @@ window.awakeplusData = {
             "value": 1477.92
           },
           {
-            "date": "04-20",
+            "date": "04-19",
             "open": 1465.15,
             "high": 1478.64,
             "low": 1464.49,
@@ -26288,7 +26288,7 @@ window.awakeplusData = {
             "value": 1465.15
           },
           {
-            "date": "04-21",
+            "date": "04-20",
             "open": 1471.0699,
             "high": 1479.12,
             "low": 1466.91,
@@ -26296,7 +26296,7 @@ window.awakeplusData = {
             "value": 1469.26
           },
           {
-            "date": "04-22",
+            "date": "04-21",
             "open": 1478.13,
             "high": 1481.9,
             "low": 1473.3199,
@@ -26304,7 +26304,7 @@ window.awakeplusData = {
             "value": 1485.8
           },
           {
-            "date": "04-23",
+            "date": "04-22",
             "open": 1477.0,
             "high": 1484.4,
             "low": 1475.48,
@@ -26312,7 +26312,7 @@ window.awakeplusData = {
             "value": 1477.96
           },
           {
-            "date": "04-24",
+            "date": "04-23",
             "open": 1481.1801,
             "high": 1485.66,
             "low": 1473.54,
@@ -26320,7 +26320,7 @@ window.awakeplusData = {
             "value": 1479.95
           },
           {
-            "date": "04-27",
+            "date": "04-26",
             "open": 1476.41,
             "high": 1477.1,
             "low": 1468.1,
@@ -26328,7 +26328,7 @@ window.awakeplusData = {
             "value": 1474.6899
           },
           {
-            "date": "04-28",
+            "date": "04-27",
             "open": 1473.09,
             "high": 1478.22,
             "low": 1470.6899,
@@ -26336,7 +26336,7 @@ window.awakeplusData = {
             "value": 1473.0
           },
           {
-            "date": "04-29",
+            "date": "04-28",
             "open": 1471.74,
             "high": 1488.1899,
             "low": 1471.14,
@@ -26344,7 +26344,7 @@ window.awakeplusData = {
             "value": 1471.99
           },
           {
-            "date": "04-30",
+            "date": "04-29",
             "open": 1485.29,
             "high": 1487.5699,
             "low": 1471.1801,
@@ -26352,7 +26352,7 @@ window.awakeplusData = {
             "value": 1487.38
           },
           {
-            "date": "05-01",
+            "date": "04-30",
             "open": 1473.45,
             "high": 1476.37,
             "low": 1466.03,
@@ -26360,7 +26360,7 @@ window.awakeplusData = {
             "value": 1474.01
           },
           {
-            "date": "05-04",
+            "date": "05-03",
             "open": 1471.64,
             "high": 1476.25,
             "low": 1463.49,
@@ -26368,7 +26368,7 @@ window.awakeplusData = {
             "value": 1471.73
           },
           {
-            "date": "05-05",
+            "date": "05-04",
             "open": 1476.05,
             "high": 1478.05,
             "low": 1466.17,
@@ -26376,7 +26376,7 @@ window.awakeplusData = {
             "value": 1476.05
           },
           {
-            "date": "05-06",
+            "date": "05-05",
             "open": 1463.35,
             "high": 1472.86,
             "low": 1439.15,
@@ -26384,7 +26384,7 @@ window.awakeplusData = {
             "value": 1473.96
           },
           {
-            "date": "05-07",
+            "date": "05-06",
             "open": 1446.17,
             "high": 1454.63,
             "low": 1445.6,
@@ -26392,7 +26392,7 @@ window.awakeplusData = {
             "value": 1444.45
           },
           {
-            "date": "05-08",
+            "date": "05-07",
             "open": 1457.63,
             "high": 1470.78,
             "low": 1457.02,
@@ -26400,7 +26400,7 @@ window.awakeplusData = {
             "value": 1454.79
           },
           {
-            "date": "05-11",
+            "date": "05-10",
             "open": 1462.21,
             "high": 1476.6899,
             "low": 1462.21,
@@ -26408,7 +26408,7 @@ window.awakeplusData = {
             "value": 1460.55
           },
           {
-            "date": "05-12",
+            "date": "05-11",
             "open": 1474.1801,
             "high": 1493.9399,
             "low": 1474.1801,
@@ -26416,7 +26416,7 @@ window.awakeplusData = {
             "value": 1474.45
           },
           {
-            "date": "05-13",
+            "date": "05-12",
             "open": 1493.1899,
             "high": 1499.79,
             "low": 1486.05,
@@ -26424,7 +26424,7 @@ window.awakeplusData = {
             "value": 1492.99
           },
           {
-            "date": "05-14",
+            "date": "05-13",
             "open": 1489.97,
             "high": 1494.02,
             "low": 1487.64,
@@ -26432,7 +26432,7 @@ window.awakeplusData = {
             "value": 1489.84
           },
           {
-            "date": "05-15",
+            "date": "05-14",
             "open": 1493.55,
             "high": 1505.78,
             "low": 1493.55,
@@ -26440,7 +26440,7 @@ window.awakeplusData = {
             "value": 1493.34
           },
           {
-            "date": "05-18",
+            "date": "05-17",
             "open": 1499.1899,
             "high": 1506.66,
             "low": 1491.88,
@@ -26448,7 +26448,7 @@ window.awakeplusData = {
             "value": 1497.15
           },
           {
-            "date": "05-19",
+            "date": "05-18",
             "open": 1493.12,
             "high": 1512.6801,
             "low": 1493.12,
@@ -26456,7 +26456,7 @@ window.awakeplusData = {
             "value": 1492.3199
           },
           {
-            "date": "05-20",
+            "date": "05-19",
             "open": 1509.36,
             "high": 1513.03,
             "low": 1492.27,
@@ -26464,7 +26464,7 @@ window.awakeplusData = {
             "value": 1507.85
           },
           {
-            "date": "05-21",
+            "date": "05-20",
             "open": 1499.03,
             "high": 1510.8101,
             "low": 1497.72,
@@ -26472,7 +26472,7 @@ window.awakeplusData = {
             "value": 1499.77
           },
           {
-            "date": "05-22",
+            "date": "05-21",
             "open": 1505.85,
             "high": 1519.14,
             "low": 1505.85,
@@ -26480,7 +26480,7 @@ window.awakeplusData = {
             "value": 1504.4
           },
           {
-            "date": "05-25",
+            "date": "05-24",
             "open": 1512.83,
             "high": 1515.46,
             "low": 1504.8,
@@ -26488,7 +26488,7 @@ window.awakeplusData = {
             "value": 1512.83
           },
           {
-            "date": "05-26",
+            "date": "05-25",
             "open": 1513.92,
             "high": 1515.16,
             "low": 1500.16,
@@ -26496,7 +26496,7 @@ window.awakeplusData = {
             "value": 1514.79
           },
           {
-            "date": "05-27",
+            "date": "05-26",
             "open": 1505.6801,
             "high": 1506.29,
             "low": 1493.36,
@@ -26504,7 +26504,7 @@ window.awakeplusData = {
             "value": 1505.4399
           },
           {
-            "date": "05-28",
+            "date": "05-27",
             "open": 1505.1801,
             "high": 1510.6899,
             "low": 1492.63,
@@ -26512,7 +26512,7 @@ window.awakeplusData = {
             "value": 1503.11
           },
           {
-            "date": "05-29",
+            "date": "05-28",
             "open": 1495.61,
             "high": 1510.1801,
             "low": 1495.61,
@@ -26520,7 +26520,7 @@ window.awakeplusData = {
             "value": 1495.29
           },
           {
-            "date": "06-01",
+            "date": "05-31",
             "open": 1507.62,
             "high": 1518.0,
             "low": 1501.95,
@@ -26528,7 +26528,7 @@ window.awakeplusData = {
             "value": 1506.84
           },
           {
-            "date": "06-02",
+            "date": "06-01",
             "open": 1512.03,
             "high": 1519.9301,
             "low": 1509.1801,
@@ -26536,7 +26536,7 @@ window.awakeplusData = {
             "value": 1511.27
           },
           {
-            "date": "06-03",
+            "date": "06-02",
             "open": 1516.9301,
             "high": 1534.55,
             "low": 1514.74,
@@ -26544,7 +26544,7 @@ window.awakeplusData = {
             "value": 1516.6
           },
           {
-            "date": "06-04",
+            "date": "06-03",
             "open": 1529.25,
             "high": 1540.05,
             "low": 1521.0,
@@ -26552,7 +26552,7 @@ window.awakeplusData = {
             "value": 1530.11
           },
           {
-            "date": "06-05",
+            "date": "06-04",
             "open": 1534.08,
             "high": 1556.39,
             "low": 1532.16,
@@ -26560,7 +26560,7 @@ window.awakeplusData = {
             "value": 1533.0699
           },
           {
-            "date": "06-08",
+            "date": "06-07",
             "open": 1554.28,
             "high": 1555.41,
             "low": 1525.11,
@@ -26568,7 +26568,7 @@ window.awakeplusData = {
             "value": 1554.48
           },
           {
-            "date": "06-09",
+            "date": "06-08",
             "open": 1529.96,
             "high": 1532.96,
             "low": 1509.72,
@@ -26576,7 +26576,7 @@ window.awakeplusData = {
             "value": 1528.88
           },
           {
-            "date": "06-10",
+            "date": "06-09",
             "open": 1525.51,
             "high": 1528.29,
             "low": 1514.87,
@@ -26584,7 +26584,7 @@ window.awakeplusData = {
             "value": 1525.8101
           },
           {
-            "date": "06-11",
+            "date": "06-10",
             "open": 1524.25,
             "high": 1533.74,
             "low": 1523.09,
@@ -26592,7 +26592,7 @@ window.awakeplusData = {
             "value": 1525.05
           },
           {
-            "date": "06-12",
+            "date": "06-11",
             "open": 1517.6,
             "high": 1523.61,
             "low": 1513.8199,
@@ -26600,7 +26600,7 @@ window.awakeplusData = {
             "value": 1517.38
           },
           {
-            "date": "06-15",
+            "date": "06-14",
             "open": 1509.24,
             "high": 1515.28,
             "low": 1503.16,
@@ -26608,7 +26608,7 @@ window.awakeplusData = {
             "value": 1509.5
           },
           {
-            "date": "06-16",
+            "date": "06-15",
             "open": 1513.23,
             "high": 1517.1899,
             "low": 1504.15,
@@ -26616,7 +26616,7 @@ window.awakeplusData = {
             "value": 1513.3101
           },
           {
-            "date": "06-17",
+            "date": "06-16",
             "open": 1512.45,
             "high": 1517.49,
             "low": 1509.37,
@@ -26624,7 +26624,7 @@ window.awakeplusData = {
             "value": 1510.96
           },
           {
-            "date": "06-18",
+            "date": "06-17",
             "open": 1524.47,
             "high": 1540.45,
             "low": 1519.21,
@@ -26632,7 +26632,7 @@ window.awakeplusData = {
             "value": 1525.42
           },
           {
-            "date": "06-19",
+            "date": "06-18",
             "open": 1535.23,
             "high": 1540.13,
             "low": 1525.09,
@@ -26640,7 +26640,7 @@ window.awakeplusData = {
             "value": 1537.5601
           },
           {
-            "date": "06-22",
+            "date": "06-21",
             "open": 1530.04,
             "high": 1541.17,
             "low": 1529.55,
@@ -26648,7 +26648,7 @@ window.awakeplusData = {
             "value": 1531.33
           },
           {
-            "date": "06-23",
+            "date": "06-22",
             "open": 1539.54,
             "high": 1541.66,
             "low": 1531.2,
@@ -26656,7 +26656,7 @@ window.awakeplusData = {
             "value": 1539.05
           },
           {
-            "date": "06-24",
+            "date": "06-23",
             "open": 1533.3101,
             "high": 1548.27,
             "low": 1533.3101,
@@ -26664,7 +26664,7 @@ window.awakeplusData = {
             "value": 1535.25
           },
           {
-            "date": "06-25",
+            "date": "06-24",
             "open": 1543.33,
             "high": 1549.08,
             "low": 1537.4399,
@@ -26672,7 +26672,7 @@ window.awakeplusData = {
             "value": 1542.76
           },
           {
-            "date": "06-26",
+            "date": "06-25",
             "open": 1544.9399,
             "high": 1549.83,
             "low": 1531.55,
@@ -26680,7 +26680,7 @@ window.awakeplusData = {
             "value": 1546.48
           },
           {
-            "date": "06-29",
+            "date": "06-28",
             "open": 1535.65,
             "high": 1545.63,
             "low": 1534.74,
@@ -26688,7 +26688,7 @@ window.awakeplusData = {
             "value": 1535.24
           },
           {
-            "date": "06-30",
+            "date": "06-29",
             "open": 1542.42,
             "high": 1554.71,
             "low": 1542.42,
@@ -26696,7 +26696,7 @@ window.awakeplusData = {
             "value": 1541.73
           },
           {
-            "date": "07-01",
+            "date": "06-30",
             "open": 1552.1,
             "high": 1558.88,
             "low": 1549.13,
@@ -26704,7 +26704,7 @@ window.awakeplusData = {
             "value": 1548.61
           },
           {
-            "date": "07-02",
+            "date": "07-01",
             "open": 1551.4,
             "high": 1556.53,
             "low": 1537.1899,
@@ -26712,7 +26712,7 @@ window.awakeplusData = {
             "value": 1551.8101
           },
           {
-            "date": "07-03",
+            "date": "07-02",
             "open": 1544.52,
             "high": 1547.65,
             "low": 1525.38,
@@ -26720,7 +26720,7 @@ window.awakeplusData = {
             "value": 1542.13
           },
           {
-            "date": "07-06",
+            "date": "07-05",
             "open": 1531.58,
             "high": 1536.55,
             "low": 1526.14,
@@ -26728,7 +26728,7 @@ window.awakeplusData = {
             "value": 1531.0
           },
           {
-            "date": "07-07",
+            "date": "07-06",
             "open": 1528.3,
             "high": 1531.5601,
             "low": 1509.86,
@@ -26736,7 +26736,7 @@ window.awakeplusData = {
             "value": 1528.76
           },
           {
-            "date": "07-08",
+            "date": "07-07",
             "open": 1521.05,
             "high": 1521.21,
             "low": 1498.96,
@@ -26744,7 +26744,7 @@ window.awakeplusData = {
             "value": 1519.86
           },
           {
-            "date": "07-09",
+            "date": "07-08",
             "open": 1504.21,
             "high": 1587.7,
             "low": 1497.49,
@@ -26752,7 +26752,7 @@ window.awakeplusData = {
             "value": 1503.35
           },
           {
-            "date": "07-10",
+            "date": "07-09",
             "open": 1507.1,
             "high": 1512.72,
             "low": 1499.15,
@@ -26760,7 +26760,7 @@ window.awakeplusData = {
             "value": 1505.91
           },
           {
-            "date": "07-13",
+            "date": "07-12",
             "open": 1498.05,
             "high": 1508.78,
             "low": 1490.84,
@@ -26768,7 +26768,7 @@ window.awakeplusData = {
             "value": 1498.48
           },
           {
-            "date": "07-14",
+            "date": "07-13",
             "open": 1498.03,
             "high": 1499.08,
             "low": 1485.0601,
@@ -26776,7 +26776,7 @@ window.awakeplusData = {
             "value": 1497.7
           },
           {
-            "date": "07-15",
+            "date": "07-14",
             "open": 1488.9399,
             "high": 1493.8199,
             "low": 1484.65,
@@ -26784,7 +26784,7 @@ window.awakeplusData = {
             "value": 1487.88
           },
           {
-            "date": "07-16",
+            "date": "07-15",
             "open": 1486.15,
             "high": 1488.8,
             "low": 1476.37,
@@ -26792,7 +26792,7 @@ window.awakeplusData = {
             "value": 1486.2
           },
           {
-            "date": "07-17",
+            "date": "07-16",
             "open": 1478.6801,
             "high": 1491.2,
             "low": 1470.0,
@@ -26800,7 +26800,7 @@ window.awakeplusData = {
             "value": 1478.85
           },
           {
-            "date": "07-20",
+            "date": "07-19",
             "open": 1487.7,
             "high": 1489.3,
             "low": 1477.09,
@@ -26808,7 +26808,7 @@ window.awakeplusData = {
             "value": 1487.39
           },
           {
-            "date": "07-21",
+            "date": "07-20",
             "open": 1474.64,
             "high": 1481.5699,
             "low": 1470.6,
@@ -26816,7 +26816,7 @@ window.awakeplusData = {
             "value": 1475.01
           },
           {
-            "date": "07-22",
+            "date": "07-21",
             "open": 1479.91,
             "high": 1484.2,
             "low": 1475.1,
@@ -26828,8 +26828,8 @@ window.awakeplusData = {
             "open": 1476.5699,
             "high": 1477.92,
             "low": 1464.88,
-            "close": 1471.0699,
-            "value": 1471.0699
+            "close": 1468.6801,
+            "value": 1468.6801
           }
         ]
       },
@@ -26838,13 +26838,13 @@ window.awakeplusData = {
         "name": "JPY/KRW",
         "symbol": "JPYKRW=X",
         "kind": "fx",
-        "value": 8.989,
-        "change": -0.0785,
-        "change_pct": -0.87,
-        "asof": "2026-07-23 16:44",
+        "value": 8.973,
+        "change": -0.0945,
+        "change_pct": -1.04,
+        "asof": "2026-07-23 09:39",
         "history": [
           {
-            "date": "07-23",
+            "date": "07-22",
             "open": 9.3942,
             "high": 9.4244,
             "low": 9.3653,
@@ -26852,7 +26852,7 @@ window.awakeplusData = {
             "value": 9.3915
           },
           {
-            "date": "07-24",
+            "date": "07-23",
             "open": 9.386,
             "high": 9.386,
             "low": 9.3188,
@@ -26860,7 +26860,7 @@ window.awakeplusData = {
             "value": 9.3849
           },
           {
-            "date": "07-25",
+            "date": "07-24",
             "open": 9.3327,
             "high": 9.3823,
             "low": 9.3074,
@@ -26868,7 +26868,7 @@ window.awakeplusData = {
             "value": 9.3326
           },
           {
-            "date": "07-28",
+            "date": "07-27",
             "open": 9.3584,
             "high": 9.368,
             "low": 9.3172,
@@ -26876,7 +26876,7 @@ window.awakeplusData = {
             "value": 9.3542
           },
           {
-            "date": "07-29",
+            "date": "07-28",
             "open": 9.3499,
             "high": 9.3882,
             "low": 9.3372,
@@ -26884,7 +26884,7 @@ window.awakeplusData = {
             "value": 9.3482
           },
           {
-            "date": "07-30",
+            "date": "07-29",
             "open": 9.358,
             "high": 9.358,
             "low": 9.2973,
@@ -26892,7 +26892,7 @@ window.awakeplusData = {
             "value": 9.3559
           },
           {
-            "date": "07-31",
+            "date": "07-30",
             "open": 9.3256,
             "high": 9.3781,
             "low": 9.2599,
@@ -26900,7 +26900,7 @@ window.awakeplusData = {
             "value": 9.3254
           },
           {
-            "date": "08-01",
+            "date": "07-31",
             "open": 9.2288,
             "high": 9.3864,
             "low": 9.2288,
@@ -26908,7 +26908,7 @@ window.awakeplusData = {
             "value": 9.2226
           },
           {
-            "date": "08-04",
+            "date": "08-03",
             "open": 9.423,
             "high": 9.4251,
             "low": 9.3509,
@@ -26916,7 +26916,7 @@ window.awakeplusData = {
             "value": 9.4343
           },
           {
-            "date": "08-05",
+            "date": "08-04",
             "open": 9.4257,
             "high": 9.4481,
             "low": 9.3942,
@@ -26924,7 +26924,7 @@ window.awakeplusData = {
             "value": 9.4251
           },
           {
-            "date": "08-06",
+            "date": "08-05",
             "open": 9.396,
             "high": 9.4377,
             "low": 9.3918,
@@ -26932,7 +26932,7 @@ window.awakeplusData = {
             "value": 9.398
           },
           {
-            "date": "08-07",
+            "date": "08-06",
             "open": 9.4057,
             "high": 9.4099,
             "low": 9.364,
@@ -26940,7 +26940,7 @@ window.awakeplusData = {
             "value": 9.4056
           },
           {
-            "date": "08-08",
+            "date": "08-07",
             "open": 9.435,
             "high": 9.4358,
             "low": 9.3677,
@@ -26948,7 +26948,7 @@ window.awakeplusData = {
             "value": 9.4323
           },
           {
-            "date": "08-11",
+            "date": "08-10",
             "open": 9.3905,
             "high": 9.4281,
             "low": 9.3873,
@@ -26956,7 +26956,7 @@ window.awakeplusData = {
             "value": 9.3984
           },
           {
-            "date": "08-12",
+            "date": "08-11",
             "open": 9.3815,
             "high": 9.3874,
             "low": 9.3449,
@@ -26964,7 +26964,7 @@ window.awakeplusData = {
             "value": 9.3825
           },
           {
-            "date": "08-13",
+            "date": "08-12",
             "open": 9.3618,
             "high": 9.368,
             "low": 9.327,
@@ -26972,7 +26972,7 @@ window.awakeplusData = {
             "value": 9.3592
           },
           {
-            "date": "08-14",
+            "date": "08-13",
             "open": 9.372,
             "high": 9.465,
             "low": 9.3638,
@@ -26980,7 +26980,7 @@ window.awakeplusData = {
             "value": 9.3702
           },
           {
-            "date": "08-15",
+            "date": "08-14",
             "open": 9.3904,
             "high": 9.4571,
             "low": 9.3904,
@@ -26988,7 +26988,7 @@ window.awakeplusData = {
             "value": 9.3967
           },
           {
-            "date": "08-18",
+            "date": "08-17",
             "open": 9.4244,
             "high": 9.4252,
             "low": 9.3676,
@@ -26996,7 +26996,7 @@ window.awakeplusData = {
             "value": 9.4246
           },
           {
-            "date": "08-19",
+            "date": "08-18",
             "open": 9.3764,
             "high": 9.4253,
             "low": 9.3764,
@@ -27004,7 +27004,7 @@ window.awakeplusData = {
             "value": 9.3758
           },
           {
-            "date": "08-20",
+            "date": "08-19",
             "open": 9.4125,
             "high": 9.5122,
             "low": 9.4125,
@@ -27012,7 +27012,7 @@ window.awakeplusData = {
             "value": 9.4176
           },
           {
-            "date": "08-21",
+            "date": "08-20",
             "open": 9.4831,
             "high": 9.4908,
             "low": 9.4388,
@@ -27020,7 +27020,7 @@ window.awakeplusData = {
             "value": 9.4805
           },
           {
-            "date": "08-22",
+            "date": "08-21",
             "open": 9.431,
             "high": 9.4319,
             "low": 9.3442,
@@ -27028,7 +27028,7 @@ window.awakeplusData = {
             "value": 9.4317
           },
           {
-            "date": "08-25",
+            "date": "08-24",
             "open": 9.3903,
             "high": 9.4255,
             "low": 9.3885,
@@ -27036,7 +27036,7 @@ window.awakeplusData = {
             "value": 9.3916
           },
           {
-            "date": "08-26",
+            "date": "08-25",
             "open": 9.4029,
             "high": 9.4716,
             "low": 9.3953,
@@ -27044,7 +27044,7 @@ window.awakeplusData = {
             "value": 9.3951
           },
           {
-            "date": "08-27",
+            "date": "08-26",
             "open": 9.4524,
             "high": 9.4627,
             "low": 9.4212,
@@ -27052,7 +27052,7 @@ window.awakeplusData = {
             "value": 9.4529
           },
           {
-            "date": "08-28",
+            "date": "08-27",
             "open": 9.4481,
             "high": 9.4487,
             "low": 9.4026,
@@ -27060,7 +27060,7 @@ window.awakeplusData = {
             "value": 9.4535
           },
           {
-            "date": "08-29",
+            "date": "08-28",
             "open": 9.4282,
             "high": 9.4689,
             "low": 9.4232,
@@ -27068,7 +27068,7 @@ window.awakeplusData = {
             "value": 9.4298
           },
           {
-            "date": "09-01",
+            "date": "08-31",
             "open": 9.4398,
             "high": 9.4881,
             "low": 9.4313,
@@ -27076,7 +27076,7 @@ window.awakeplusData = {
             "value": 9.4424
           },
           {
-            "date": "09-02",
+            "date": "09-01",
             "open": 9.4697,
             "high": 9.4697,
             "low": 9.3722,
@@ -27084,7 +27084,7 @@ window.awakeplusData = {
             "value": 9.4705
           },
           {
-            "date": "09-03",
+            "date": "09-02",
             "open": 9.387,
             "high": 9.3903,
             "low": 9.3332,
@@ -27092,7 +27092,7 @@ window.awakeplusData = {
             "value": 9.3827
           },
           {
-            "date": "09-04",
+            "date": "09-03",
             "open": 9.3914,
             "high": 9.4101,
             "low": 9.3637,
@@ -27100,7 +27100,7 @@ window.awakeplusData = {
             "value": 9.3899
           },
           {
-            "date": "09-05",
+            "date": "09-04",
             "open": 9.3862,
             "high": 9.4439,
             "low": 9.3679,
@@ -27108,7 +27108,7 @@ window.awakeplusData = {
             "value": 9.3823
           },
           {
-            "date": "09-08",
+            "date": "09-07",
             "open": 9.3423,
             "high": 9.4103,
             "low": 9.3383,
@@ -27116,7 +27116,7 @@ window.awakeplusData = {
             "value": 9.3392
           },
           {
-            "date": "09-09",
+            "date": "09-08",
             "open": 9.4024,
             "high": 9.4661,
             "low": 9.3929,
@@ -27124,7 +27124,7 @@ window.awakeplusData = {
             "value": 9.4038
           },
           {
-            "date": "09-10",
+            "date": "09-09",
             "open": 9.4118,
             "high": 9.422,
             "low": 9.3954,
@@ -27132,7 +27132,7 @@ window.awakeplusData = {
             "value": 9.4111
           },
           {
-            "date": "09-11",
+            "date": "09-10",
             "open": 9.4144,
             "high": 9.4446,
             "low": 9.4029,
@@ -27140,7 +27140,7 @@ window.awakeplusData = {
             "value": 9.4148
           },
           {
-            "date": "09-12",
+            "date": "09-11",
             "open": 9.4357,
             "high": 9.4357,
             "low": 9.3908,
@@ -27148,7 +27148,7 @@ window.awakeplusData = {
             "value": 9.4384
           },
           {
-            "date": "09-15",
+            "date": "09-14",
             "open": 9.439,
             "high": 9.439,
             "low": 9.3956,
@@ -27156,7 +27156,7 @@ window.awakeplusData = {
             "value": 9.4374
           },
           {
-            "date": "09-16",
+            "date": "09-15",
             "open": 9.3964,
             "high": 9.4271,
             "low": 9.3735,
@@ -27164,7 +27164,7 @@ window.awakeplusData = {
             "value": 9.3956
           },
           {
-            "date": "09-17",
+            "date": "09-16",
             "open": 9.4088,
             "high": 9.4297,
             "low": 9.3912,
@@ -27172,7 +27172,7 @@ window.awakeplusData = {
             "value": 9.4091
           },
           {
-            "date": "09-18",
+            "date": "09-17",
             "open": 9.3862,
             "high": 9.4186,
             "low": 9.3682,
@@ -27180,7 +27180,7 @@ window.awakeplusData = {
             "value": 9.3861
           },
           {
-            "date": "09-19",
+            "date": "09-18",
             "open": 9.3732,
             "high": 9.468,
             "low": 9.3732,
@@ -27188,7 +27188,7 @@ window.awakeplusData = {
             "value": 9.3734
           },
           {
-            "date": "09-22",
+            "date": "09-21",
             "open": 9.427,
             "high": 9.4359,
             "low": 9.3698,
@@ -27196,7 +27196,7 @@ window.awakeplusData = {
             "value": 9.4282
           },
           {
-            "date": "09-23",
+            "date": "09-22",
             "open": 9.4053,
             "high": 9.4479,
             "low": 9.4053,
@@ -27204,7 +27204,7 @@ window.awakeplusData = {
             "value": 9.404
           },
           {
-            "date": "09-24",
+            "date": "09-23",
             "open": 9.4293,
             "high": 9.4484,
             "low": 9.4087,
@@ -27212,7 +27212,7 @@ window.awakeplusData = {
             "value": 9.4284
           },
           {
-            "date": "09-25",
+            "date": "09-24",
             "open": 9.4299,
             "high": 9.4407,
             "low": 9.3969,
@@ -27220,7 +27220,7 @@ window.awakeplusData = {
             "value": 9.4363
           },
           {
-            "date": "09-26",
+            "date": "09-25",
             "open": 9.4008,
             "high": 9.4483,
             "low": 9.3933,
@@ -27228,7 +27228,7 @@ window.awakeplusData = {
             "value": 9.4013
           },
           {
-            "date": "09-29",
+            "date": "09-28",
             "open": 9.4282,
             "high": 9.4864,
             "low": 9.3922,
@@ -27236,7 +27236,7 @@ window.awakeplusData = {
             "value": 9.4287
           },
           {
-            "date": "09-30",
+            "date": "09-29",
             "open": 9.415,
             "high": 9.5049,
             "low": 9.4113,
@@ -27244,7 +27244,7 @@ window.awakeplusData = {
             "value": 9.4167
           },
           {
-            "date": "10-01",
+            "date": "09-30",
             "open": 9.4797,
             "high": 9.5632,
             "low": 9.4626,
@@ -27252,7 +27252,7 @@ window.awakeplusData = {
             "value": 9.4801
           },
           {
-            "date": "10-02",
+            "date": "10-01",
             "open": 9.5288,
             "high": 9.56,
             "low": 9.5012,
@@ -27260,7 +27260,7 @@ window.awakeplusData = {
             "value": 9.5306
           },
           {
-            "date": "10-03",
+            "date": "10-02",
             "open": 9.5506,
             "high": 9.5593,
             "low": 9.5249,
@@ -27268,7 +27268,7 @@ window.awakeplusData = {
             "value": 9.5518
           },
           {
-            "date": "10-06",
+            "date": "10-05",
             "open": 9.3994,
             "high": 9.4295,
             "low": 9.3843,
@@ -27276,7 +27276,7 @@ window.awakeplusData = {
             "value": 9.398
           },
           {
-            "date": "10-07",
+            "date": "10-06",
             "open": 9.3768,
             "high": 9.3889,
             "low": 9.339,
@@ -27284,7 +27284,7 @@ window.awakeplusData = {
             "value": 9.379
           },
           {
-            "date": "10-08",
+            "date": "10-07",
             "open": 9.3028,
             "high": 9.3633,
             "low": 9.2872,
@@ -27292,7 +27292,7 @@ window.awakeplusData = {
             "value": 9.3026
           },
           {
-            "date": "10-09",
+            "date": "10-08",
             "open": 9.3152,
             "high": 9.327,
             "low": 9.2694,
@@ -27300,7 +27300,7 @@ window.awakeplusData = {
             "value": 9.3166
           },
           {
-            "date": "10-10",
+            "date": "10-09",
             "open": 9.2893,
             "high": 9.4319,
             "low": 9.2652,
@@ -27308,7 +27308,7 @@ window.awakeplusData = {
             "value": 9.2929
           },
           {
-            "date": "10-13",
+            "date": "10-12",
             "open": 9.3986,
             "high": 9.4222,
             "low": 9.355,
@@ -27316,7 +27316,7 @@ window.awakeplusData = {
             "value": 9.3968
           },
           {
-            "date": "10-14",
+            "date": "10-13",
             "open": 9.3533,
             "high": 9.4468,
             "low": 9.3462,
@@ -27324,7 +27324,7 @@ window.awakeplusData = {
             "value": 9.3494
           },
           {
-            "date": "10-15",
+            "date": "10-14",
             "open": 9.4217,
             "high": 9.4331,
             "low": 9.382,
@@ -27332,7 +27332,7 @@ window.awakeplusData = {
             "value": 9.4202
           },
           {
-            "date": "10-16",
+            "date": "10-15",
             "open": 9.4039,
             "high": 9.4222,
             "low": 9.3543,
@@ -27340,7 +27340,7 @@ window.awakeplusData = {
             "value": 9.4062
           },
           {
-            "date": "10-17",
+            "date": "10-16",
             "open": 9.4294,
             "high": 9.5377,
             "low": 9.4259,
@@ -27348,7 +27348,7 @@ window.awakeplusData = {
             "value": 9.4304
           },
           {
-            "date": "10-20",
+            "date": "10-19",
             "open": 9.4226,
             "high": 9.4536,
             "low": 9.4002,
@@ -27356,7 +27356,7 @@ window.awakeplusData = {
             "value": 9.4063
           },
           {
-            "date": "10-21",
+            "date": "10-20",
             "open": 9.415,
             "high": 9.4535,
             "low": 9.395,
@@ -27364,7 +27364,7 @@ window.awakeplusData = {
             "value": 9.4165
           },
           {
-            "date": "10-22",
+            "date": "10-21",
             "open": 9.4209,
             "high": 9.4401,
             "low": 9.4025,
@@ -27372,7 +27372,7 @@ window.awakeplusData = {
             "value": 9.4184
           },
           {
-            "date": "10-23",
+            "date": "10-22",
             "open": 9.4113,
             "high": 9.4523,
             "low": 9.3967,
@@ -27380,7 +27380,7 @@ window.awakeplusData = {
             "value": 9.4127
           },
           {
-            "date": "10-24",
+            "date": "10-23",
             "open": 9.4084,
             "high": 9.4219,
             "low": 9.3748,
@@ -28252,7 +28252,7 @@ window.awakeplusData = {
             "value": 9.4439
           },
           {
-            "date": "03-30",
+            "date": "03-29",
             "open": 9.4186,
             "high": 9.5339,
             "low": 9.4186,
@@ -28260,7 +28260,7 @@ window.awakeplusData = {
             "value": 9.4046
           },
           {
-            "date": "03-31",
+            "date": "03-30",
             "open": 9.5036,
             "high": 9.6357,
             "low": 9.4934,
@@ -28268,7 +28268,7 @@ window.awakeplusData = {
             "value": 9.4849
           },
           {
-            "date": "04-01",
+            "date": "03-31",
             "open": 9.5085,
             "high": 9.5384,
             "low": 9.4517,
@@ -28276,7 +28276,7 @@ window.awakeplusData = {
             "value": 9.48
           },
           {
-            "date": "04-02",
+            "date": "04-01",
             "open": 9.5269,
             "high": 9.5626,
             "low": 9.4656,
@@ -28284,7 +28284,7 @@ window.awakeplusData = {
             "value": 9.5272
           },
           {
-            "date": "04-03",
+            "date": "04-02",
             "open": 9.4565,
             "high": 9.4653,
             "low": 9.4192,
@@ -28292,7 +28292,7 @@ window.awakeplusData = {
             "value": 9.4624
           },
           {
-            "date": "04-06",
+            "date": "04-05",
             "open": 9.4516,
             "high": 9.458,
             "low": 9.4047,
@@ -28300,7 +28300,7 @@ window.awakeplusData = {
             "value": 9.4453
           },
           {
-            "date": "04-07",
+            "date": "04-06",
             "open": 9.44,
             "high": 9.4586,
             "low": 9.3597,
@@ -28308,7 +28308,7 @@ window.awakeplusData = {
             "value": 9.4419
           },
           {
-            "date": "04-08",
+            "date": "04-07",
             "open": 9.4533,
             "high": 9.4566,
             "low": 9.2817,
@@ -28316,7 +28316,7 @@ window.awakeplusData = {
             "value": 9.4446
           },
           {
-            "date": "04-09",
+            "date": "04-08",
             "open": 9.3292,
             "high": 9.3439,
             "low": 9.2631,
@@ -28324,7 +28324,7 @@ window.awakeplusData = {
             "value": 9.3133
           },
           {
-            "date": "04-10",
+            "date": "04-09",
             "open": 9.2604,
             "high": 9.33,
             "low": 9.2599,
@@ -28332,7 +28332,7 @@ window.awakeplusData = {
             "value": 9.2593
           },
           {
-            "date": "04-13",
+            "date": "04-12",
             "open": 9.2819,
             "high": 9.3652,
             "low": 9.2783,
@@ -28340,7 +28340,7 @@ window.awakeplusData = {
             "value": 9.2813
           },
           {
-            "date": "04-14",
+            "date": "04-13",
             "open": 9.2832,
             "high": 9.3253,
             "low": 9.2437,
@@ -28348,7 +28348,7 @@ window.awakeplusData = {
             "value": 9.2759
           },
           {
-            "date": "04-15",
+            "date": "04-14",
             "open": 9.2648,
             "high": 9.3092,
             "low": 9.2447,
@@ -28356,7 +28356,7 @@ window.awakeplusData = {
             "value": 9.2532
           },
           {
-            "date": "04-16",
+            "date": "04-15",
             "open": 9.2695,
             "high": 9.2957,
             "low": 9.2545,
@@ -28364,7 +28364,7 @@ window.awakeplusData = {
             "value": 9.2813
           },
           {
-            "date": "04-17",
+            "date": "04-16",
             "open": 9.302,
             "high": 9.319,
             "low": 9.2199,
@@ -28372,7 +28372,7 @@ window.awakeplusData = {
             "value": 9.2833
           },
           {
-            "date": "04-20",
+            "date": "04-19",
             "open": 9.2049,
             "high": 9.3004,
             "low": 9.2049,
@@ -28380,7 +28380,7 @@ window.awakeplusData = {
             "value": 9.2052
           },
           {
-            "date": "04-21",
+            "date": "04-20",
             "open": 9.2493,
             "high": 9.2809,
             "low": 9.2172,
@@ -28388,7 +28388,7 @@ window.awakeplusData = {
             "value": 9.249
           },
           {
-            "date": "04-22",
+            "date": "04-21",
             "open": 9.2762,
             "high": 9.2988,
             "low": 9.2535,
@@ -28396,7 +28396,7 @@ window.awakeplusData = {
             "value": 9.3228
           },
           {
-            "date": "04-23",
+            "date": "04-22",
             "open": 9.2595,
             "high": 9.3054,
             "low": 9.2544,
@@ -28404,7 +28404,7 @@ window.awakeplusData = {
             "value": 9.2669
           },
           {
-            "date": "04-24",
+            "date": "04-23",
             "open": 9.2733,
             "high": 9.3033,
             "low": 9.2535,
@@ -28412,7 +28412,7 @@ window.awakeplusData = {
             "value": 9.2629
           },
           {
-            "date": "04-27",
+            "date": "04-26",
             "open": 9.2408,
             "high": 9.2572,
             "low": 9.2187,
@@ -28420,7 +28420,7 @@ window.awakeplusData = {
             "value": 9.2407
           },
           {
-            "date": "04-28",
+            "date": "04-27",
             "open": 9.2431,
             "high": 9.2663,
             "low": 9.2206,
@@ -28428,7 +28428,7 @@ window.awakeplusData = {
             "value": 9.2428
           },
           {
-            "date": "04-29",
+            "date": "04-28",
             "open": 9.2276,
             "high": 9.2856,
             "low": 9.2183,
@@ -28436,7 +28436,7 @@ window.awakeplusData = {
             "value": 9.2258
           },
           {
-            "date": "04-30",
+            "date": "04-29",
             "open": 9.285,
             "high": 9.4651,
             "low": 9.2204,
@@ -28444,7 +28444,7 @@ window.awakeplusData = {
             "value": 9.285
           },
           {
-            "date": "05-01",
+            "date": "04-30",
             "open": 9.3885,
             "high": 9.4627,
             "low": 9.3585,
@@ -28452,7 +28452,7 @@ window.awakeplusData = {
             "value": 9.3893
           },
           {
-            "date": "05-04",
+            "date": "05-03",
             "open": 9.3806,
             "high": 9.4248,
             "low": 9.3332,
@@ -28460,7 +28460,7 @@ window.awakeplusData = {
             "value": 9.3827
           },
           {
-            "date": "05-05",
+            "date": "05-04",
             "open": 9.3889,
             "high": 9.3981,
             "low": 9.2929,
@@ -28468,7 +28468,7 @@ window.awakeplusData = {
             "value": 9.3898
           },
           {
-            "date": "05-06",
+            "date": "05-05",
             "open": 9.347,
             "high": 9.3783,
             "low": 9.2238,
@@ -28476,7 +28476,7 @@ window.awakeplusData = {
             "value": 9.3463
           },
           {
-            "date": "05-07",
+            "date": "05-06",
             "open": 9.2287,
             "high": 9.3001,
             "low": 9.2287,
@@ -28484,7 +28484,7 @@ window.awakeplusData = {
             "value": 9.2299
           },
           {
-            "date": "05-08",
+            "date": "05-07",
             "open": 9.2753,
             "high": 9.3817,
             "low": 9.2753,
@@ -28492,7 +28492,7 @@ window.awakeplusData = {
             "value": 9.2756
           },
           {
-            "date": "05-11",
+            "date": "05-10",
             "open": 9.3157,
             "high": 9.3981,
             "low": 9.3157,
@@ -28500,7 +28500,7 @@ window.awakeplusData = {
             "value": 9.3102
           },
           {
-            "date": "05-12",
+            "date": "05-11",
             "open": 9.3737,
             "high": 9.4712,
             "low": 9.3737,
@@ -28508,7 +28508,7 @@ window.awakeplusData = {
             "value": 9.3711
           },
           {
-            "date": "05-13",
+            "date": "05-12",
             "open": 9.4707,
             "high": 9.5099,
             "low": 9.4201,
@@ -28516,7 +28516,7 @@ window.awakeplusData = {
             "value": 9.4708
           },
           {
-            "date": "05-14",
+            "date": "05-13",
             "open": 9.4385,
             "high": 9.4635,
             "low": 9.421,
@@ -28524,7 +28524,7 @@ window.awakeplusData = {
             "value": 9.4372
           },
           {
-            "date": "05-15",
+            "date": "05-14",
             "open": 9.4289,
             "high": 9.4979,
             "low": 9.4249,
@@ -28532,7 +28532,7 @@ window.awakeplusData = {
             "value": 9.4318
           },
           {
-            "date": "05-18",
+            "date": "05-17",
             "open": 9.4354,
             "high": 9.4817,
             "low": 9.3955,
@@ -28540,7 +28540,7 @@ window.awakeplusData = {
             "value": 9.4263
           },
           {
-            "date": "05-19",
+            "date": "05-18",
             "open": 9.395,
             "high": 9.5022,
             "low": 9.395,
@@ -28548,7 +28548,7 @@ window.awakeplusData = {
             "value": 9.3903
           },
           {
-            "date": "05-20",
+            "date": "05-19",
             "open": 9.4887,
             "high": 9.5126,
             "low": 9.4031,
@@ -28556,7 +28556,7 @@ window.awakeplusData = {
             "value": 9.4805
           },
           {
-            "date": "05-21",
+            "date": "05-20",
             "open": 9.4346,
             "high": 9.4859,
             "low": 9.4271,
@@ -28564,7 +28564,7 @@ window.awakeplusData = {
             "value": 9.4407
           },
           {
-            "date": "05-22",
+            "date": "05-21",
             "open": 9.4601,
             "high": 9.5486,
             "low": 9.4601,
@@ -28572,7 +28572,7 @@ window.awakeplusData = {
             "value": 9.4555
           },
           {
-            "date": "05-25",
+            "date": "05-24",
             "open": 9.5173,
             "high": 9.536,
             "low": 9.4785,
@@ -28580,7 +28580,7 @@ window.awakeplusData = {
             "value": 9.5172
           },
           {
-            "date": "05-26",
+            "date": "05-25",
             "open": 9.5245,
             "high": 9.5304,
             "low": 9.4245,
@@ -28588,7 +28588,7 @@ window.awakeplusData = {
             "value": 9.5294
           },
           {
-            "date": "05-27",
+            "date": "05-26",
             "open": 9.4567,
             "high": 9.46,
             "low": 9.3676,
@@ -28596,7 +28596,7 @@ window.awakeplusData = {
             "value": 9.4574
           },
           {
-            "date": "05-28",
+            "date": "05-27",
             "open": 9.4343,
             "high": 9.4662,
             "low": 9.3739,
@@ -28604,7 +28604,7 @@ window.awakeplusData = {
             "value": 9.4147
           },
           {
-            "date": "05-29",
+            "date": "05-28",
             "open": 9.3896,
             "high": 9.4803,
             "low": 9.3896,
@@ -28612,7 +28612,7 @@ window.awakeplusData = {
             "value": 9.3831
           },
           {
-            "date": "06-01",
+            "date": "05-31",
             "open": 9.4545,
             "high": 9.519,
             "low": 9.4164,
@@ -28620,7 +28620,7 @@ window.awakeplusData = {
             "value": 9.4554
           },
           {
-            "date": "06-02",
+            "date": "06-01",
             "open": 9.4736,
             "high": 9.5163,
             "low": 9.4555,
@@ -28628,7 +28628,7 @@ window.awakeplusData = {
             "value": 9.4658
           },
           {
-            "date": "06-03",
+            "date": "06-02",
             "open": 9.4851,
             "high": 9.5998,
             "low": 9.4712,
@@ -28636,7 +28636,7 @@ window.awakeplusData = {
             "value": 9.4805
           },
           {
-            "date": "06-04",
+            "date": "06-03",
             "open": 9.57,
             "high": 9.6321,
             "low": 9.5195,
@@ -28644,7 +28644,7 @@ window.awakeplusData = {
             "value": 9.5656
           },
           {
-            "date": "06-05",
+            "date": "06-04",
             "open": 9.5884,
             "high": 9.7146,
             "low": 9.5766,
@@ -28652,7 +28652,7 @@ window.awakeplusData = {
             "value": 9.5799
           },
           {
-            "date": "06-08",
+            "date": "06-07",
             "open": 9.7027,
             "high": 9.7027,
             "low": 9.5277,
@@ -28660,7 +28660,7 @@ window.awakeplusData = {
             "value": 9.6932
           },
           {
-            "date": "06-09",
+            "date": "06-08",
             "open": 9.5506,
             "high": 9.5727,
             "low": 9.4209,
@@ -28668,7 +28668,7 @@ window.awakeplusData = {
             "value": 9.5426
           },
           {
-            "date": "06-10",
+            "date": "06-09",
             "open": 9.5115,
             "high": 9.5293,
             "low": 9.4467,
@@ -28676,7 +28676,7 @@ window.awakeplusData = {
             "value": 9.513
           },
           {
-            "date": "06-11",
+            "date": "06-10",
             "open": 9.4956,
             "high": 9.5503,
             "low": 9.4918,
@@ -28684,7 +28684,7 @@ window.awakeplusData = {
             "value": 9.4998
           },
           {
-            "date": "06-12",
+            "date": "06-11",
             "open": 9.4764,
             "high": 9.5012,
             "low": 9.4561,
@@ -28692,7 +28692,7 @@ window.awakeplusData = {
             "value": 9.4786
           },
           {
-            "date": "06-15",
+            "date": "06-14",
             "open": 9.4382,
             "high": 9.464,
             "low": 9.4023,
@@ -28700,7 +28700,7 @@ window.awakeplusData = {
             "value": 9.4368
           },
           {
-            "date": "06-16",
+            "date": "06-15",
             "open": 9.4279,
             "high": 9.4663,
             "low": 9.3857,
@@ -28708,7 +28708,7 @@ window.awakeplusData = {
             "value": 9.43
           },
           {
-            "date": "06-17",
+            "date": "06-16",
             "open": 9.4284,
             "high": 9.4664,
             "low": 9.4067,
@@ -28716,7 +28716,7 @@ window.awakeplusData = {
             "value": 9.4184
           },
           {
-            "date": "06-18",
+            "date": "06-17",
             "open": 9.4985,
             "high": 9.5705,
             "low": 9.4606,
@@ -28724,7 +28724,7 @@ window.awakeplusData = {
             "value": 9.4999
           },
           {
-            "date": "06-19",
+            "date": "06-18",
             "open": 9.5259,
             "high": 9.5623,
             "low": 9.4562,
@@ -28732,7 +28732,7 @@ window.awakeplusData = {
             "value": 9.5314
           },
           {
-            "date": "06-22",
+            "date": "06-21",
             "open": 9.4784,
             "high": 9.5329,
             "low": 9.471,
@@ -28740,7 +28740,7 @@ window.awakeplusData = {
             "value": 9.4854
           },
           {
-            "date": "06-23",
+            "date": "06-22",
             "open": 9.5324,
             "high": 9.5407,
             "low": 9.4819,
@@ -28748,7 +28748,7 @@ window.awakeplusData = {
             "value": 9.5248
           },
           {
-            "date": "06-24",
+            "date": "06-23",
             "open": 9.4918,
             "high": 9.5732,
             "low": 9.4879,
@@ -28756,7 +28756,7 @@ window.awakeplusData = {
             "value": 9.5005
           },
           {
-            "date": "06-25",
+            "date": "06-24",
             "open": 9.5434,
             "high": 9.5778,
             "low": 9.5077,
@@ -28764,7 +28764,7 @@ window.awakeplusData = {
             "value": 9.5377
           },
           {
-            "date": "06-26",
+            "date": "06-25",
             "open": 9.5525,
             "high": 9.587,
             "low": 9.4718,
@@ -28772,7 +28772,7 @@ window.awakeplusData = {
             "value": 9.5569
           },
           {
-            "date": "06-29",
+            "date": "06-28",
             "open": 9.4926,
             "high": 9.5529,
             "low": 9.4895,
@@ -28780,7 +28780,7 @@ window.awakeplusData = {
             "value": 9.4853
           },
           {
-            "date": "06-30",
+            "date": "06-29",
             "open": 9.5267,
             "high": 9.5831,
             "low": 9.5172,
@@ -28788,7 +28788,7 @@ window.awakeplusData = {
             "value": 9.5205
           },
           {
-            "date": "07-01",
+            "date": "06-30",
             "open": 9.5424,
             "high": 9.5861,
             "low": 9.5233,
@@ -28796,7 +28796,7 @@ window.awakeplusData = {
             "value": 9.5215
           },
           {
-            "date": "07-02",
+            "date": "07-01",
             "open": 9.5452,
             "high": 9.6113,
             "low": 9.5362,
@@ -28804,7 +28804,7 @@ window.awakeplusData = {
             "value": 9.5536
           },
           {
-            "date": "07-03",
+            "date": "07-02",
             "open": 9.5441,
             "high": 9.593,
             "low": 9.4842,
@@ -28812,7 +28812,7 @@ window.awakeplusData = {
             "value": 9.5616
           },
           {
-            "date": "07-06",
+            "date": "07-05",
             "open": 9.4831,
             "high": 9.5092,
             "low": 9.4224,
@@ -28820,7 +28820,7 @@ window.awakeplusData = {
             "value": 9.4778
           },
           {
-            "date": "07-07",
+            "date": "07-06",
             "open": 9.4218,
             "high": 9.4448,
             "low": 9.3327,
@@ -28828,7 +28828,7 @@ window.awakeplusData = {
             "value": 9.4284
           },
           {
-            "date": "07-08",
+            "date": "07-07",
             "open": 9.3679,
             "high": 9.3701,
             "low": 9.2383,
@@ -28836,7 +28836,7 @@ window.awakeplusData = {
             "value": 9.3623
           },
           {
-            "date": "07-09",
+            "date": "07-08",
             "open": 9.2547,
             "high": 9.7726,
             "low": 9.2181,
@@ -28844,7 +28844,7 @@ window.awakeplusData = {
             "value": 9.2495
           },
           {
-            "date": "07-10",
+            "date": "07-09",
             "open": 9.2843,
             "high": 9.358,
             "low": 9.2725,
@@ -28852,7 +28852,7 @@ window.awakeplusData = {
             "value": 9.2749
           },
           {
-            "date": "07-13",
+            "date": "07-12",
             "open": 9.2548,
             "high": 9.3076,
             "low": 9.1844,
@@ -28860,7 +28860,7 @@ window.awakeplusData = {
             "value": 9.2572
           },
           {
-            "date": "07-14",
+            "date": "07-13",
             "open": 9.2196,
             "high": 9.229,
             "low": 9.1586,
@@ -28868,7 +28868,7 @@ window.awakeplusData = {
             "value": 9.2203
           },
           {
-            "date": "07-15",
+            "date": "07-14",
             "open": 9.1736,
             "high": 9.2052,
             "low": 9.1507,
@@ -28876,7 +28876,7 @@ window.awakeplusData = {
             "value": 9.1756
           },
           {
-            "date": "07-16",
+            "date": "07-15",
             "open": 9.1676,
             "high": 9.1826,
             "low": 9.0959,
@@ -28884,7 +28884,7 @@ window.awakeplusData = {
             "value": 9.1721
           },
           {
-            "date": "07-17",
+            "date": "07-16",
             "open": 9.1037,
             "high": 9.179,
             "low": 9.0458,
@@ -28892,7 +28892,7 @@ window.awakeplusData = {
             "value": 9.1064
           },
           {
-            "date": "07-20",
+            "date": "07-19",
             "open": 9.1534,
             "high": 9.1643,
             "low": 9.085,
@@ -28900,7 +28900,7 @@ window.awakeplusData = {
             "value": 9.1519
           },
           {
-            "date": "07-21",
+            "date": "07-20",
             "open": 9.0756,
             "high": 9.1054,
             "low": 9.0518,
@@ -28908,7 +28908,7 @@ window.awakeplusData = {
             "value": 9.0775
           },
           {
-            "date": "07-22",
+            "date": "07-21",
             "open": 9.0693,
             "high": 9.0958,
             "low": 9.0424,
@@ -28920,8 +28920,8 @@ window.awakeplusData = {
             "open": 9.03,
             "high": 9.039,
             "low": 8.963,
-            "close": 8.989,
-            "value": 8.989
+            "close": 8.973,
+            "value": 8.973
           }
         ]
       },
@@ -28930,18 +28930,18 @@ window.awakeplusData = {
         "name": "CNY/KRW",
         "symbol": "CNYKRW=X",
         "kind": "fx",
-        "value": 217.275,
+        "value": 217.122,
         "change": 0.0,
         "change_pct": 0.0,
-        "asof": "2026-07-23 16:44",
+        "asof": "2026-07-23 09:39",
         "history": [
           {
             "date": "07-23",
             "open": 218.055,
             "high": 218.055,
             "low": 216.536,
-            "close": 217.275,
-            "value": 217.275
+            "close": 217.122,
+            "value": 217.122
           }
         ]
       }
