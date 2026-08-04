@@ -34031,7 +34031,42 @@ window.awakeplusData = {
       "현대해상": "001450",
       "화신": "010690",
       "효성화학": "298000",
-      "후성": "093370"
+      "후성": "093370",
+      "HLB제약": "047920",
+      "LG에너지솔루션": "373220",
+      "가온칩스": "399720",
+      "고려신용정보": "049720",
+      "나우로보틱스": "459510",
+      "뉴엔AI": "463020",
+      "다날": "064260",
+      "대륙제관": "004780",
+      "마음AI": "377480",
+      "매드업": "0039P0",
+      "메드팩토": "235980",
+      "메리츠금융지주": "138040",
+      "삼성중공업": "010140",
+      "삼양식품": "003230",
+      "삼영무역": "002810",
+      "세아메카닉스": "396300",
+      "셀리드": "299660",
+      "아모레퍼시픽": "090430",
+      "아이씨에이치": "368600",
+      "엔젤로보틱스": "455900",
+      "오브젠": "417860",
+      "우리금융지주": "316140",
+      "위닉스": "044340",
+      "유한양행": "000100",
+      "일승": "333430",
+      "케이엔알시스템": "199430",
+      "코오롱티슈진": "950160",
+      "파세코": "037070",
+      "파이온엑스": "900100",
+      "포스코퓨처엠": "003670",
+      "포톤": "208710",
+      "폴라리스AI": "039980",
+      "현대무벡스": "319400",
+      "효성중공업": "298040",
+      "휴림에이텍": "078590"
 };
 
     function normalizeStockName(name) {
@@ -34652,7 +34687,7 @@ window.awakeplusData = {
         `;
         document.querySelector("#manualChartButton")?.addEventListener("click", () => {
           const manual = document.querySelector("#manualStockCode")?.value.trim() || "";
-          if (/^\d{6}$/.test(manual)) renderNaverChart(name, manual, period, true);
+          if (/^[0-9A-Z]{6}$/i.test(manual)) renderNaverChart(name, manual.toUpperCase(), period, true);
           else {
             const message = document.querySelector("#manualChartMessage");
             if (message) message.textContent = "\ucc28\ud2b8\ub97c \ubcf4\ub824\uba74 6\uc790\ub9ac \uc885\ubaa9\ucf54\ub4dc\ub97c \uc785\ub825\ud574 \uc8fc\uc138\uc694.";
@@ -34680,7 +34715,7 @@ window.awakeplusData = {
       `;
       document.querySelector("#manualChartButton")?.addEventListener("click", () => {
         const manual = document.querySelector("#manualStockCode")?.value.trim() || "";
-        if (/^\d{6}$/.test(manual)) renderNaverChart(name, manual, period, true);
+        if (/^[0-9A-Z]{6}$/i.test(manual)) renderNaverChart(name, manual.toUpperCase(), period, true);
         else box.querySelector(".chart-state").textContent = "\uc885\ubaa9\ucf54\ub4dc\ub294 6\uc790\ub9ac \uc22b\uc790\ub85c \uc785\ub825\ud574 \uc8fc\uc138\uc694.";
       });
       document.querySelectorAll("[data-chart-period]").forEach((button) => {
