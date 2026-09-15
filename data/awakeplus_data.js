@@ -1,6 +1,216 @@
 window.awakeplusData = {
-  "generated_at": "2026-09-14 14:11:41",
+  "generated_at": "2026-09-15 12:43:51",
   "todaytop15": [
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "14",
+      "stock": "포스코퓨처엠",
+      "theme": "배터리/2차전지",
+      "change_pct": "5.8",
+      "market_cap": "16.8조",
+      "trading_value": "1,033억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "포스코퓨처엠의 LFP 양극재 대규모 장기 공급 계약 체결에 따른 성장 기대감. / 국내 배터리사와의 2.7조원 규모 양극재 공급 합의에 따른 사업 확장 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "13",
+      "stock": "에스엠벡셀",
+      "theme": "",
+      "change_pct": "17.9",
+      "market_cap": "3,082억",
+      "trading_value": "524억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "에스엠벡셀, 미국 글로벌 자동차 기업과 차세대 LMR 배터리 개발 협력 소식 / 방제 드론 배터리팩 국산화 추진 및 연내 200대 공급 목표에 대한 기대감",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "12",
+      "stock": "한전기술",
+      "theme": "원전",
+      "change_pct": "4.8",
+      "market_cap": "5.5조",
+      "trading_value": "3,534억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "미국과 아시아의 원전 프로젝트 참여 기대감. / 해상풍력과 SMR 등 친환경 발전 사업 확대로 인한 성장성 부각.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "11",
+      "stock": "LG에너지솔루션",
+      "theme": "배터리/2차전지",
+      "change_pct": "4.0",
+      "market_cap": "85.5조",
+      "trading_value": "1,450억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "미국 방산업 진입 검토 소식으로 인한 시장의 긍정적 반응. / 미국산 탄산리튬 장기계약 체결로 원자재 안정성 확보 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "10",
+      "stock": "이뮨온시아",
+      "theme": "바이오/헬스케어",
+      "change_pct": "29.9",
+      "market_cap": "3,213억",
+      "trading_value": "200억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "췌장암 임상시험에서 'IMC-002'의 확대 승인이 주가 상승 요인으로 작용. / CD47 항체 신약 후보물질의 1b상 IND 변경 승인 소식이 긍정적 모멘텀 제공.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "9",
+      "stock": "두산퓨얼셀",
+      "theme": "수소",
+      "change_pct": "8.0",
+      "market_cap": "3.4조",
+      "trading_value": "1,854억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "하이엑시엄과의 3222억원 규모 연료전지 공급계약 체결에 따른 긍정적 기대감. / 미국에서의 추가 수주로 올해 총 수주액 1조 원 돌파에 따른 성장 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "8",
+      "stock": "한컴위드",
+      "theme": "우주항공#보안#가상자산/STO",
+      "change_pct": "29.8",
+      "market_cap": "1,476억",
+      "trading_value": "489억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "스테이블코인 관련주 동반 상승에 따른 긍정적 영향. / 중동 금 공급망 연계한 '골드 RWA' 사업 착수 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "7",
+      "stock": "하이젠알앤엠",
+      "theme": "로봇",
+      "change_pct": "24.4",
+      "market_cap": "7,707억",
+      "trading_value": "449억",
+      "stars": "0",
+      "special_signal": "",
+      "reason": "정부의 제조 AI 육성 드라이브와 로봇주 훈풍에 따른 상한가 기대감. / 로봇 및 모빌리티용 영구자석 구동모듈을 핵심기술로 선정한 미래 비전.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "6",
+      "stock": "SFA반도체",
+      "theme": "반도체/소부장",
+      "change_pct": "14.3",
+      "market_cap": "1,545억",
+      "trading_value": "661억",
+      "stars": "1",
+      "special_signal": "",
+      "reason": "AI 반도체 후공정 외주화에 따른 수혜 기대감. / 기관의 지속적인 매수세에 대한 긍정적 반응. / 아톤 ⭐",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "5",
+      "stock": "한국첨단소재",
+      "theme": "광학/광통신#양자기술",
+      "change_pct": "30.0",
+      "market_cap": "1,012억",
+      "trading_value": "1,337억",
+      "stars": "2",
+      "special_signal": "역사적 거래량",
+      "reason": "광통신 글로벌 사업화 시동에 따른 성장 기대감. / 독자 개발한 PLC 기술을 통한 시장 점유율 확대 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "4",
+      "stock": "원익홀딩스",
+      "theme": "",
+      "change_pct": "13.7",
+      "market_cap": "1.9조",
+      "trading_value": "2,259억",
+      "stars": "2",
+      "special_signal": "",
+      "reason": "로봇 관련주로서 글로벌 휴머노이드 생산 확대 전망에 따른 기대감. / 정부의 제조업 AI 전환 확산 착수로 인한 로봇 산업 내 위치 부각.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "3",
+      "stock": "삼익제약",
+      "theme": "바이오/헬스케어",
+      "change_pct": "26.6",
+      "market_cap": "1,182억",
+      "trading_value": "2,193억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "탈모 치료제 투자 열풍과 관련된 테마 상승세에 따른 기대감. / 탈모 치료제 관련 특허 보유로 인한 시장 내 강력한 경쟁력 부각.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "2",
+      "stock": "에스피지",
+      "theme": "로봇",
+      "change_pct": "13.0",
+      "market_cap": "2.3조",
+      "trading_value": "3,153억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "로봇산업용 감속기 및 액추에이터 사업 확대로 글로벌 휴머노이드 생산 확대 전망에 따른 기대감. / 삼성전자와의 협력으로 로봇 사업 핵심 부품 공급망 강화에 따른 수혜 기대감.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "15:20",
+      "rank": "1",
+      "stock": "삼현",
+      "theme": "로봇#방산#자동차/부품",
+      "change_pct": "29.8",
+      "market_cap": "1.7조",
+      "trading_value": "1,513억",
+      "stars": "3",
+      "special_signal": "",
+      "reason": "피지컬 AI 및 휴머노이드 로봇 테마의 강세로 인한 주가 상승 기대감. / 정부의 제조업 AI 전환 확산 착수에 따른 로봇 관련주 전망.",
+      "source": "todaytop15",
+      "collected_at": "2026-09-15 12:43:31"
+    },
     {
       "date": "2026-09-14",
       "time": "15:20",
@@ -9544,6 +9754,70 @@ window.awakeplusData = {
   ],
   "newhigh": [
     {
+      "date": "2026-09-15",
+      "time": "",
+      "stock": "피에스케이홀딩스",
+      "category": "반도체/소부장",
+      "newhigh_type": "역사적",
+      "change_pct": "+7.3",
+      "trading_value": "441억",
+      "market_cap": "",
+      "current_price": "",
+      "investment_point": "",
+      "recent_results": "",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/607",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "",
+      "stock": "인피니트헬스케어",
+      "category": "바이오/헬스케어",
+      "newhigh_type": "역사적 / 52주 최대거래",
+      "change_pct": "+14.5",
+      "trading_value": "2.9조",
+      "market_cap": "3,159억",
+      "current_price": "12,950원",
+      "investment_point": "654억 원 규모의 대규모 현금 배당 발표에 따른 투자자들의 긍정적 반응. / 의료 IT 분야의 독보적 기술력과 글로벌 시장 점유율 확대에 대한 기대감.",
+      "recent_results": "2026.2Q 255억/ 49억/ 254억 / 2026.1Q 321억/ 95억/ 134억 / 2025.4Q 300억/ 116억/ 125억 / 2025.3Q 221억/ -15억/ 143억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/607",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "",
+      "stock": "동아지질",
+      "category": "반도체/소부장",
+      "newhigh_type": "52주 신고가 신규 돌파",
+      "change_pct": "+5.4",
+      "trading_value": "1.1조",
+      "market_cap": "2,097억",
+      "current_price": "18,690원",
+      "investment_point": "동아지질의 싱가포르 창이공항 동부 확장 지반개량 공사 수주로 해외 사업 확장 기대감. / 100억 규모 자사주 신탁계약 체결로 인한 주가 부양 기대감.",
+      "recent_results": "2026.2Q 1,119억/ 50억/ 55억 / 2026.1Q 1,238억/ 51억/ 42억 / 2025.4Q 1,275억/ 51억/ 66억 / 2025.3Q 1,309억/ 52억/ 49억",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/607",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "",
+      "stock": "JW신약",
+      "category": "바이오/헬스케어",
+      "newhigh_type": "52주",
+      "change_pct": "+8.2",
+      "trading_value": "1,591억",
+      "market_cap": "",
+      "current_price": "",
+      "investment_point": "",
+      "recent_results": "",
+      "source": "sin+allnewhigh",
+      "detail_url": "https://www.awakeplus.co.kr/board/sin/607",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
       "date": "2026-09-14",
       "time": "",
       "stock": "탑코미디어",
@@ -9557,7 +9831,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9573,7 +9847,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 644억/ 55억/ 20억 / 2026.1Q 583억/ 34억/ 63억 / 2025.4Q 647억/ 64억/ 8억 / 2025.3Q 528억/ 36억/ 31억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9589,7 +9863,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 255억/ 49억/ 254억 / 2026.1Q 321억/ 95억/ 134억 / 2025.4Q 300억/ 116억/ 125억 / 2025.3Q 221억/ -15억/ 143억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9605,7 +9879,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9621,7 +9895,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 25억/ -28억/ -34억 / 2026.1Q 33억/ -28억/ -28억 / 2025.4Q 87억/ -25억/ -18억 / 2025.3Q 30억/ -18억/ -19억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9637,7 +9911,7 @@ window.awakeplusData = {
       "recent_results": "2026.3Q 314억/ 95억/ 92억(E) / 2026.2Q 313억/ 95억/ 113억 / 2026.1Q 272억/ 77억/ 78억 / 2025.4Q 227억/ 44억/ 53억 / 2025.3Q 208억/ 54억/ 53억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9653,7 +9927,7 @@ window.awakeplusData = {
       "recent_results": "2026.2Q 476억/ 62억/ 61억 / 2026.1Q 419억/ 6억/ 9억 / 2025.4Q 431억/ -35억/ -22억 / 2025.3Q 432억/ 9억/ 13억",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-14",
@@ -9669,7 +9943,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/606",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9685,7 +9959,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9701,7 +9975,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9717,7 +9991,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9733,7 +10007,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9749,7 +10023,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9765,7 +10039,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9781,7 +10055,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-11",
@@ -9797,7 +10071,7 @@ window.awakeplusData = {
       "recent_results": "",
       "source": "sin+allnewhigh",
       "detail_url": "https://www.awakeplus.co.kr/board/sin/605",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "date": "2026-09-10",
@@ -21051,24 +21325,6 @@ window.awakeplusData = {
   "posts": [
     {
       "source": "sin",
-      "date": "2026-08-31",
-      "time": "",
-      "title": "52주 신고가 돌파종목(2026년 08월 31일) - AWAKEPLUS",
-      "url": "https://www.awakeplus.co.kr/board/sin/597",
-      "row_count": "10",
-      "collected_at": "2026-09-02 12:08:37"
-    },
-    {
-      "source": "allnewhigh",
-      "date": "2026-08-31",
-      "time": "",
-      "title": "52주 신고가 돌파종목(2026년 08월 31일) - AWAKEPLUS",
-      "url": "https://www.awakeplus.co.kr/board/allnewhigh/597",
-      "row_count": "10",
-      "collected_at": "2026-09-02 12:08:37"
-    },
-    {
-      "source": "sin",
       "date": "2026-09-01",
       "time": "",
       "title": "52주 신고가 돌파종목(2026년 09월 01일) - AWAKEPLUS",
@@ -21200,7 +21456,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 09월 11일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/605",
       "row_count": "8",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "source": "allnewhigh",
@@ -21209,7 +21465,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 09월 11일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/605",
       "row_count": "8",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "source": "sin",
@@ -21218,7 +21474,7 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 09월 14일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/sin/606",
       "row_count": "8",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
     },
     {
       "source": "allnewhigh",
@@ -21227,7 +21483,25 @@ window.awakeplusData = {
       "title": "52주 신고가 돌파종목(2026년 09월 14일) - AWAKEPLUS",
       "url": "https://www.awakeplus.co.kr/board/allnewhigh/606",
       "row_count": "8",
-      "collected_at": "2026-09-14 14:11:24"
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "source": "sin",
+      "date": "2026-09-15",
+      "time": "",
+      "title": "52주 신고가 돌파종목(2026년 09월 15일) - AWAKEPLUS",
+      "url": "https://www.awakeplus.co.kr/board/sin/607",
+      "row_count": "4",
+      "collected_at": "2026-09-15 12:43:31"
+    },
+    {
+      "source": "allnewhigh",
+      "date": "2026-09-15",
+      "time": "",
+      "title": "52주 신고가 돌파종목(2026년 09월 15일) - AWAKEPLUS",
+      "url": "https://www.awakeplus.co.kr/board/allnewhigh/607",
+      "row_count": "4",
+      "collected_at": "2026-09-15 12:43:31"
     }
   ],
   "leader_scores": [
@@ -21334,6 +21608,19 @@ window.awakeplusData = {
       "theme": "건설/주택"
     },
     {
+      "stock": "JW신약",
+      "score": 46,
+      "sources": [
+        "TOP15",
+        "sin+allnewhigh"
+      ],
+      "signals": [
+        "상승률 10%+",
+        "신고가 9회"
+      ],
+      "theme": "바이오/헬스케어"
+    },
+    {
       "stock": "신한지주",
       "score": 46,
       "sources": [
@@ -21399,19 +21686,6 @@ window.awakeplusData = {
         "신고가 11회"
       ],
       "theme": "은행/보험#금융/지주/밸류업"
-    },
-    {
-      "stock": "JW신약",
-      "score": 43,
-      "sources": [
-        "TOP15",
-        "sin+allnewhigh"
-      ],
-      "signals": [
-        "상승률 10%+",
-        "신고가 8회"
-      ],
-      "theme": "바이오/헬스케어"
     },
     {
       "stock": "골프존홀딩스",
@@ -21619,7 +21893,7 @@ window.awakeplusData = {
     }
   ],
   "market_snapshot": {
-    "generated_at": "2026-09-14 14:11:42",
+    "generated_at": "2026-09-15 12:43:52",
     "source": "Yahoo Finance chart API",
     "items": [
       {
@@ -21627,10 +21901,10 @@ window.awakeplusData = {
         "name": "KOSPI",
         "symbol": "^KS11",
         "kind": "index",
-        "value": 6684.37,
-        "change": -225.54,
-        "change_pct": -3.26,
-        "asof": "2026-09-14 00:00",
+        "value": 6627.26,
+        "change": -57.11,
+        "change_pct": -0.85,
+        "asof": "2026-09-15 00:00",
         "history": [
           {
             "date": "09-15",
@@ -23575,6 +23849,14 @@ window.awakeplusData = {
             "low": 6654.82,
             "close": 6684.37,
             "value": 6684.37
+          },
+          {
+            "date": "09-15",
+            "open": 6659.25,
+            "high": 6715.46,
+            "low": 6582.2,
+            "close": 6627.26,
+            "value": 6627.26
           }
         ]
       },
@@ -23583,10 +23865,10 @@ window.awakeplusData = {
         "name": "KOSDAQ",
         "symbol": "^KQ11",
         "kind": "index",
-        "value": 806.79,
-        "change": -13.85,
-        "change_pct": -1.69,
-        "asof": "2026-09-14 00:00",
+        "value": 812.41,
+        "change": 5.62,
+        "change_pct": 0.7,
+        "asof": "2026-09-15 00:00",
         "history": [
           {
             "date": "09-15",
@@ -25531,6 +25813,14 @@ window.awakeplusData = {
             "low": 799.77,
             "close": 806.79,
             "value": 806.79
+          },
+          {
+            "date": "09-15",
+            "open": 806.49,
+            "high": 824.37,
+            "low": 801.97,
+            "close": 812.41,
+            "value": 812.41
           }
         ]
       },
@@ -25539,9 +25829,9 @@ window.awakeplusData = {
         "name": "S&P500",
         "symbol": "^GSPC",
         "kind": "index",
-        "value": 7620.92,
-        "change": -36.06,
-        "change_pct": -0.47,
+        "value": 7619.98,
+        "change": -37.0,
+        "change_pct": -0.48,
         "asof": "2026-09-14 13:30",
         "history": [
           {
@@ -27547,10 +27837,10 @@ window.awakeplusData = {
           {
             "date": "09-14",
             "open": 7611.44,
-            "high": 7624.07,
-            "low": 7596.33,
-            "close": 7620.92,
-            "value": 7620.92
+            "high": 7647.99,
+            "low": 7592.28,
+            "close": 7619.98,
+            "value": 7619.98
           }
         ]
       },
@@ -27559,9 +27849,9 @@ window.awakeplusData = {
         "name": "NASDAQ",
         "symbol": "^IXIC",
         "kind": "index",
-        "value": 26144.35,
-        "change": -188.69,
-        "change_pct": -0.72,
+        "value": 26186.41,
+        "change": -146.63,
+        "change_pct": -0.56,
         "asof": "2026-09-14 13:30",
         "history": [
           {
@@ -29567,10 +29857,10 @@ window.awakeplusData = {
           {
             "date": "09-14",
             "open": 26018.5,
-            "high": 26155.15,
-            "low": 25992.54,
-            "close": 26144.35,
-            "value": 26144.35
+            "high": 26329.98,
+            "low": 25992.55,
+            "close": 26186.41,
+            "value": 26186.41
           }
         ]
       },
@@ -29579,9 +29869,9 @@ window.awakeplusData = {
         "name": "DOW",
         "symbol": "^DJI",
         "kind": "index",
-        "value": 52495.65,
-        "change": -77.64,
-        "change_pct": -0.15,
+        "value": 52421.2,
+        "change": -152.09,
+        "change_pct": -0.29,
         "asof": "2026-09-14 13:30",
         "history": [
           {
@@ -31588,9 +31878,9 @@ window.awakeplusData = {
             "date": "09-14",
             "open": 52750.88,
             "high": 52750.88,
-            "low": 52385.52,
-            "close": 52495.65,
-            "value": 52495.65
+            "low": 52278.89,
+            "close": 52421.2,
+            "value": 52421.2
           }
         ]
       },
@@ -31599,10 +31889,10 @@ window.awakeplusData = {
         "name": "Nikkei225",
         "symbol": "^N225",
         "kind": "index",
-        "value": 63492.99,
-        "change": -518.35,
-        "change_pct": -0.81,
-        "asof": "2026-09-14 00:00",
+        "value": 63484.1,
+        "change": -8.89,
+        "change_pct": -0.01,
+        "asof": "2026-09-15 00:00",
         "history": [
           {
             "date": "09-16",
@@ -33547,6 +33837,14 @@ window.awakeplusData = {
             "low": 62726.18,
             "close": 63492.99,
             "value": 63492.99
+          },
+          {
+            "date": "09-15",
+            "open": 63190.37,
+            "high": 64101.0,
+            "low": 63067.18,
+            "close": 63484.1,
+            "value": 63484.1
           }
         ]
       },
@@ -33555,10 +33853,10 @@ window.awakeplusData = {
         "name": "Shanghai",
         "symbol": "000001.SS",
         "kind": "index",
-        "value": 3885.33,
-        "change": -2.78,
-        "change_pct": -0.07,
-        "asof": "2026-09-14 01:30",
+        "value": 3864.28,
+        "change": -21.05,
+        "change_pct": -0.54,
+        "asof": "2026-09-15 01:30",
         "history": [
           {
             "date": "09-15",
@@ -35495,6 +35793,14 @@ window.awakeplusData = {
             "low": 3867.02,
             "close": 3885.33,
             "value": 3885.33
+          },
+          {
+            "date": "09-15",
+            "open": 3879.73,
+            "high": 3891.62,
+            "low": 3858.15,
+            "close": 3864.28,
+            "value": 3864.28
           }
         ]
       },
@@ -35503,10 +35809,10 @@ window.awakeplusData = {
         "name": "TAIEX",
         "symbol": "^TWII",
         "kind": "index",
-        "value": 45862.52,
-        "change": -322.33,
-        "change_pct": -0.7,
-        "asof": "2026-09-14 01:00",
+        "value": 45511.49,
+        "change": -351.03,
+        "change_pct": -0.77,
+        "asof": "2026-09-15 01:00",
         "history": [
           {
             "date": "09-15",
@@ -37443,6 +37749,14 @@ window.awakeplusData = {
             "low": 45398.43,
             "close": 45862.52,
             "value": 45862.52
+          },
+          {
+            "date": "09-15",
+            "open": 45847.27,
+            "high": 46009.85,
+            "low": 45491.97,
+            "close": 45511.49,
+            "value": 45511.49
           }
         ]
       },
@@ -37451,10 +37765,10 @@ window.awakeplusData = {
         "name": "USD/KRW",
         "symbol": "KRW=X",
         "kind": "fx",
-        "value": 1348.38,
-        "change": 0.21,
-        "change_pct": 0.02,
-        "asof": "2026-09-14 14:11",
+        "value": 1359.04,
+        "change": 14.4,
+        "change_pct": 1.07,
+        "asof": "2026-09-15 12:43",
         "history": [
           {
             "date": "09-14",
@@ -39521,12 +39835,20 @@ window.awakeplusData = {
             "value": 1348.17
           },
           {
-            "date": "09-14",
-            "open": 1342.4,
-            "high": 1350.0601,
-            "low": 1341.05,
-            "close": 1348.38,
-            "value": 1348.38
+            "date": "09-13",
+            "open": 1343.71,
+            "high": 1349.85,
+            "low": 1342.85,
+            "close": 1344.64,
+            "value": 1344.64
+          },
+          {
+            "date": "09-15",
+            "open": 1346.79,
+            "high": 1364.78,
+            "low": 1345.04,
+            "close": 1359.04,
+            "value": 1359.04
           }
         ]
       },
@@ -39535,10 +39857,10 @@ window.awakeplusData = {
         "name": "JPY/KRW",
         "symbol": "JPYKRW=X",
         "kind": "fx",
-        "value": 8.688,
-        "change": -0.0393,
-        "change_pct": -0.45,
-        "asof": "2026-09-14 14:08",
+        "value": 8.742,
+        "change": -0.0203,
+        "change_pct": -0.23,
+        "asof": "2026-09-15 12:38",
         "history": [
           {
             "date": "09-14",
@@ -41605,12 +41927,20 @@ window.awakeplusData = {
             "value": 8.7273
           },
           {
-            "date": "09-14",
-            "open": 8.73,
-            "high": 8.751,
-            "low": 8.669,
-            "close": 8.688,
-            "value": 8.688
+            "date": "09-13",
+            "open": 8.7631,
+            "high": 8.7726,
+            "low": 8.6829,
+            "close": 8.7623,
+            "value": 8.7623
+          },
+          {
+            "date": "09-15",
+            "open": 8.704,
+            "high": 8.773,
+            "low": 8.691,
+            "close": 8.742,
+            "value": 8.742
           }
         ]
       },
@@ -41619,18 +41949,18 @@ window.awakeplusData = {
         "name": "CNY/KRW",
         "symbol": "CNYKRW=X",
         "kind": "fx",
-        "value": 201.0,
+        "value": 202.418,
         "change": 0.0,
         "change_pct": 0.0,
-        "asof": "2026-09-14 14:08",
+        "asof": "2026-09-15 12:38",
         "history": [
           {
-            "date": "09-14",
-            "open": 200.159,
-            "high": 201.228,
-            "low": 199.988,
-            "close": 201.0,
-            "value": 201.0
+            "date": "09-15",
+            "open": 200.6,
+            "high": 203.144,
+            "low": 200.598,
+            "close": 202.418,
+            "value": 202.418
           }
         ]
       }
@@ -41640,11 +41970,11 @@ window.awakeplusData = {
   "summary": {
     "range_start": "",
     "range_end": "",
-    "todaytop15_date": "2026-09-14",
-    "todaytop15_count": 636,
-    "newhigh_date": "2026-09-14",
-    "newhigh_count": 719,
-    "newhigh_raw_count": 1438,
-    "post_count": 136
+    "todaytop15_date": "2026-09-15",
+    "todaytop15_count": 650,
+    "newhigh_date": "2026-09-15",
+    "newhigh_count": 723,
+    "newhigh_raw_count": 1446,
+    "post_count": 138
   }
 };
